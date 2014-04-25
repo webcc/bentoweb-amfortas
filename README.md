@@ -10,6 +10,9 @@ The user testing framework to analyse the developed Test Suites has two major co
 + Apache HTTP Server
 + TCDL
 
+## Run
+Visit : http://localhost:8080/Amfortas/amfortas/home.html
+
 
 
  
