@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+	<!--  SOME COMMONS -->
+	<message key="amformas.forms.common.login">Aanmelden</message>
+	<message key="amformas.forms.forgotpass.title">
+		Wachtwoord opnieuw instellen
+	</message>
+	<message key="amformas.forms.forgotpass.link">
+		Uw Wachtwoord vergeten?
+	</message>
+
+	<!-- ==============================================================================
+		header
+		============================================================================== -->
+	<message key="amformas.header.jump.menu">
+		Ga naar navigatie menu
+	</message>
+	<message key="amformas.header.jump.content">
+		Ga naar pagina-inhoud
+	</message>
+
+	<!-- ==============================================================================
+		non authentication area
+		============================================================================== -->
+	<!--
+		Navigation
+	-->
+	<message key="amformas.navigation.home">Startpagina</message>
+	<message key="amformas.navigation.sign_in">Aanmelden</message>
+	<message key="amformas.navigation.register">Registreer</message>
+	<message key="amformas.navigation.instructions">
+		Instructies
+	</message>
+	<message key="amformas.navigation.help">Help</message>
+	<message key="amformas.navigation.tutorial">Demonstratie</message>
+	<message key="amformas.navigation.start">Start evaluatie</message>
+	<message key="amformas.navigation.desc.head">
+		Hoofdnavigatie
+	</message>
+
+	<!--
+		Login
+	-->
+	<message key="amformas.login.title">Aanmeldingspagina</message>
+	<message key="amformas.login.email">Email gebruiker</message>
+	<message key="amformas.login.password">Wachtwoord</message>
+	<message key="amformas.login.fail">
+		Probeer alstublieft opnieuw
+	</message>
+
+	<message key="amformas.login.text1">
+		<p>
+			Indien u zich wilt aanmelden, dient u zich eerst te
+			<a href="register.html">Registeren</a>
+			.
+		</p>
+		<p>
+			Meldt u hieronder aan om deel te nemen aan de evaluatie
+			betreffende webtoegankelijkheid.
+		</p>
+		<p>
+			Indien u meer dan Ã©Ã©n profiel hebt, kunt u op de volgende
+			pagina kiezen welke u wilt gebruiken.
+		</p>
+	</message>
+
+	<message key="amformas.login.text2">
+		<!--<p>
+			If this is your first visit to the website, please do the
+			<a href="tutorial.html">introductory tutorial</a>
+			</p>  -->
+		<p>
+			Wanneer u hulp nodig hebt, neem dan contact op met
+			<a href="mailto:amfortas@bentoweb.org">
+				amfortas@bentoweb.org
+			</a>
+		</p>
+	</message>
+
+	<!--
+		Login-failed
+	-->
+	<message key="amformas.login-failed.title">
+		Aanmelden mislukt
+	</message>
+	<message key="amformas.login-failed.error.novalidation">
+		<p>
+			Het aanmelden is mislukt. U dient eerst uw mailadres te
+			bevestigen door de link te volgen in onze laatste mail.
+			Indien u problemen ondervindt, contacteer a.u.b. :
+			<a href="mailto:amfortas@bentoweb.org">
+				amfortas@bentoweb.org
+			</a>
+		</p>
+	</message>
+	<message key="amformas.login-failed.error.notactive">
+		<p>
+			Het aanmelden is mislukt. U bent geregistreerd maar uw
+			account is nog niet geactiveerd. U zal van onze
+			administrator een email ontvangen zodra uw account actief
+			is. Bedankt voor uw geduld.
+		</p>
+	</message>
+	<message key="amformas.login-failed.error.failure">
+		<p>
+			Het aanmelden in mislukt. Mogelijk een verkeerd e-mail
+			addres of wachtwoord. Probeer het opnieuw:
+			<a href="sign-in.html">Aanmelden</a>
+		</p>
+	</message>
+	<!--
+		page: home.html text
+	-->
+	<message key="amformas.home.title">
+		Inleiding bij de BenToWeb Evaluatie Website
+	</message>
+	<message key="amformas.home.text">
+		<p>
+			Hartelijk dank dat u met ons wilt samenwerken om het web
+			beter toegankelijk te maken.
+		</p>
+		<p>
+			Het BenToWeb project heeft deze website ontwikkeld om de
+			toegankelijkheid te evalueren van vaak voorkomende kenmerken
+			op webpaginaâ€™s die problemen voor de gebruiker kunnen
+			veroorzaken. Deze kenmerken omvatten afbeeldingen,
+			formulieren en het gebruik van kleuren.
+		</p>
+		<p>
+			Er zal u gevraagd worden informatie te verschaffen over
+			afzonderlijke kenmerken door vragen te beantwoorden en
+			opmerkingen te geven over voorbeelden die u op deze website
+			getoond worden. Het is belangrijk om de gevolgen te
+			begrijpen die deze afzonderlijke kenmerken hebben voor
+			diverse gebruikers van het internet, zodat we er zeker van
+			kunnen zijn dat de toegankelijkheid van elk aspect van het
+			web behandeld wordt.
+		</p>
+		<p>
+			De informatie die u verstrekt wordt rechtstreeks doorgegeven
+			aan het World Wide Web Consortium (W3C), het orgaan dat de
+			standaarden voor het web ontwikkelt, en zal een belangrijke
+			invloed uitoefenen op de toekomstige ontwikkelingen op het
+			gebied van webtoegankelijkheid. Het is de eerste keer dat
+			dergelijke diepte-informatie bij zoâ€™n diverse groep
+			gebruikers verzameld wordt. Het zal onze kennis over de
+			manier waarop mensen het web echt gebruiken enorm vergroten.
+			Door met ons samen te werken aan dit project helpt u mee het
+			web meer bruikbaar te maken voor iedereen.
+		</p>
+		<p>
+			Aangezien dit een nieuwe manier is om informatie te
+			verzamelen, vragen we u enig geduld uit te oefenen, mocht u
+			op problemen stoten. Wij verzoeken u ons uw feedback te
+			bezorgen als u ergens een probleem hebt en ons ook te
+			informeren over de gemakkelijkheid waarmee u de opdrachten
+			uitvoert (verdere details over hoe dit precies in zijn werk
+			gaat vindt u hieronder).
+		</p>
+		<p>
+			Wees er u vooral van bewust dat we niet uw mogelijkheden bij
+			het gebruik van het web of uw kennis evalueren, maar de
+			doeltreffendheid waarmee het web u informatie levert.
+		</p>
+	</message>
+
+	<!--
+		page: recruit sucess
+	-->
+	<message key="amformas.recruit-success.title">
+		Uw registratie is geslaagd
+	</message>
+	<message key="amformas.recruit-success.text">
+		<p>
+			U zult onmiddellijk een email ontvangen met daarin een link
+			om uw emailadres te bevestigen.
+		</p>
+	</message>
+
+	<!--
+		page: register.html text
+	-->
+	<message key="amformas.register.title">Registreer</message>
+	<message key="amformas.register.text">
+		<p>
+			Wilt u onderstaande vragenlijst invullen a.u.b.? Dit zal ons
+			in staat stellen om u voorbeelden aan te bieden die
+			overeenstemmen met het hulpmiddel en de web browser die u
+			gewoonlijk gebruikt â€“ wij noemen dit uw profiel.
+		</p>
+		<p>
+			De vragenlijst bestaat uit drie delen, deze dienen allemaal
+			volledig ingevuld te worden om u als BenToWeb beoordelaar te
+			kunnen registreren.
+		</p>
+		<p>
+			Indien u dit wenst kunt u naderhand andere profielen
+			toevoegen door de profiel link in het menu te selecteren.
+			Dit kan zinvol zijn als u in diverse omstandigheden
+			verschillende combinaties van hulpmiddelen gebruikt.
+		</p>
+		<p>
+			Wanneer u de vragenlijst hebt beÃ«indigd zult u een email
+			ontvangen om uw emailadres te bevestigen. Daarna zal onze
+			administrator uw account activeren. We zullen u dan via
+			email informeren zodra het evaluatieproces van start gaat.
+		</p>
+		<p>
+			<em>Opmerking:</em>
+			Alle velden die aangeduid zijn met het teken '*' moeten
+			minstens beantwoord worden.
+		</p>
+	</message>
+	<message key="amformas.register.link1">Registreer nu</message>
+
+	<!--
+		page: instructions.help text
+	-->
+	<message key="amformas.instructions.title">
+		Instructies voor gebruikersevaluatie
+	</message>
+	<message key="amformas.instructions.text">
+		<p>
+			De BenToWeb website zal u 20 voorbeelden aanbieden in Ã©Ã©n
+			sessie. Deze voorbeelden zullen afgestemd zijn op de
+			webbrowser en het hulpmiddel dat u gebruikt (de website zal
+			dat weten doordat u de vragenlijst hebt ingevuld). Werk elk
+			voorbeeld op uw eigen manier af a.u.b.; lees eerst de
+			instructies en beantwoord vervolgens de vraag. Onderaan elke
+			pagina is er een knop genaamd â€˜Volgend voorbeeldâ€™ die u
+			naar het volgende voorbeeld brengt wanneer u tevreden bent
+			met het antwoord dat u gegeven hebt.Wanneer u zich aanmeldt
+			zal de BenToWeb website u maximum 20 voorbeelden aanbieden
+			voor de sessie, afhankelijk van hoeveel er beschikbaar zijn
+			die overeenkomen met uw profiel. Deze voorbeelden zullen
+			afgestemd zijn op dewebbrowser en het hulpmiddel dat u
+			gebruikt (de website zal dat weten doordat u de vragenlijst
+			hebt ingevuld). Werk elk voorbeeld op uw eigen manier af
+			a.u.b.; lees eerst de instructies en beantwoord vervolgens
+			de vraag. Onderaan elke pagina is er een knop genaamd
+			â€˜Volgend voorbeeldâ€™ die u naar het volgende voorbeeld
+			brengt wanneer u tevreden bent met het antwoord dat u
+			gegeven hebt.
+		</p>
+		<p>
+			Zo af en toe zult U ontdekken dat het niet mogelijk is de
+			taak uit te voeren die gevraagd wordt. Maak U hierover geen
+			zorgen, wij testen *niet* Uw handigheid betreffende het
+			internet of Uw hulpmiddel, wij testen uitsluitend of het
+			internet op een juist manier informatie presenteert. Het kan
+			voorkomen dat of Uw browser, of Uw hulpmiddel zaken niet
+			goed weergeeft en U daardoor een bepaalde test niet kan
+			doen. Dit is nu precies wat wij willen uitzoeken. Wij hopen
+			dat het niet te frustrerend is.
+		</p>
+		<p>
+			U kan soms de indruk hebben dat u meerdere keren eenzelfde
+			vraag of een vraag over dezelfde testfile aangeboden krijgt.
+			U hoeft zich hierover geen zorgen te maken : dit is zeer
+			waarschijnlijk een gevolg van het feit dat we een aantal
+			verschillende aspecten willen testen van eenzelfde
+			webformaat, bijvoorbeeld hoe het werkt voor mensen met
+			verschillende beperkingen en technologische hulpmiddelen. U
+			kan nakijken dat u een andere vraag krijgt aangeboden door
+			te letten op het volgnummer dat bovenaan de pagina met de
+			vraag verschijnt. Dit zal beginnen met 1/20 (wanneer het
+			systeem 20 vragen heeft gevonden die overeenkomen met uw
+			profiel, dit nummer kan ook lager zijn), daarna 2/20 en zo
+			verder terwijl u uw reeks van testvragen afwerkt.
+		</p>
+		<p>
+			Kent u het antwoord niet, weet u niet goed wat er gevraagd
+			wordt of hebt u het gevoel dat de online toepassing gewoon
+			niet correct werkt, klikt u dan a.u.b. op de knop â€˜ik weet
+			nietâ€™ onderaan de pagina. Zo komt u op een pagina via
+			welke u ons feedback kunt geven over de reden waarom u de
+			vraag niet hebt beantwoord. Klik vervolgens op de knop
+			'Volgende voorbeeld' om het volgende voorbeeld te krijgen.
+		</p>
+		<p>
+			Walanneer u alles u de 20 voorbeelden in uw reeks hebt
+			afgewerkt, wordt uw credit status berekend en zal u de
+			mogelijkheid geboden worden de toepassing te verlaten of
+			een20 andere reeks voorbeelden te evalueren. U kunt ons ook
+			bijkomende feedback geven wat betreft de online toepassing.
+		</p>
+		<p>
+			Nogmaals bedankt om met ons samen te werken om het web meer
+			toegankelijk te maken.
+		</p>
+	</message>
+
+	<!--
+		page: help.html text
+	-->
+	<message key="amformas.help.title">Help</message>
+	<message key="amformas.help.text">
+		<p>
+			Indien u problemen ondervindt, aarzel niet ons te
+			contacteren:
+			<a href="mailto:amfortas@bentoweb.org">
+				amfortas@bentoweb.org
+			</a>
+		</p>
+	</message>
+	<!-- ==============================================================================
+		authentication area
+		============================================================================== -->
+	<!--
+		Navigation
+	-->
+	<message key="amformas.auth.navigation.home">Startpagina</message>
+	<message key="amformas.auth.navigation.start_test">
+		Start evaluatie
+	</message>
+	<message key="amformas.auth.navigation.profiles">Profielen</message>
+	<message key="amformas.auth.navigation.instructions">
+		Instructies
+	</message>
+	<message key="amformas.auth.navigation.help">Help</message>
+	<message key="amformas.auth.navigation.adminusers">
+		Gebruikers administratie
+	</message>
+	<message key="amformas.auth.navigation.admints">
+		Testomgeving administratie
+	</message>
+	<message key="amformas.auth.navigation.testresults">
+		Testresultaten
+	</message>
+	<message key="amformas.auth.navigation.logout">Afmelden</message>
+
+	<!--
+		page: welcome text
+	-->
+	<message key="amformas.auth.welcome.title">Uw profiel</message>
+	<message key="amformas.auth.welcome.admin">Beheerder</message>
+	<message key="amformas.auth.welcome.welcome">
+		Welkom bij BenToWeb
+	</message>
+	<message key="amformas.auth.welcome.text">
+		<p>
+			Uw profiel stelt ons in staat om U tekst voorbeelden te
+			presenteren die overeenkomen met de door U opgeven
+			technologische hulpmiddelen, gebruikte apparaat voor
+			internet toegang of aangepaste webbowser
+		</p>
+	</message>
+	<message key="amformas.auth.welcome.legend">
+		Uw active profiel
+	</message>
+	<message key="amformas.auth.welcome.ua">Browser:</message>
+	<message key="amformas.auth.welcome.at">Hulpmiddel:</message>
+	<message key="amformas.auth.welcome.dev">Apparaat:</message>
+	<message key="amformas.auth.welcome.changeprofile">
+		Wilt u voordat U begint UwVoordat U met de test begint,
+		<a href='selectprofile'>
+			controleer eerst uw profiel controleren
+		</a>
+		en werk het bij indien nodig. ?
+	</message>
+	<message key="amformas.auth.welcome.start">
+		<a href="start-test">Start evaluatie</a>
+	</message>
+
+	<!--
+		page: selectprofile text
+	-->
+	<message key="amformas.auth.selectprofile.title">
+		Profiel selectie
+	</message>
+	<message key="amformas.auth.selectprofile.text1">
+		<p>
+			Uw eerste profiel is samengesteld op basis van de informatie
+			die U ingevoerd hebt tijdens de registratie. Indien deze
+			informatie ondertussen is gewijzigd (bijvoorbeeld omdat U
+			voor uw hulpmiddel of browser naar een nieuwere versie bent
+			overgeschakeld),
+			<a href="mailto:amfortas@bentoweb.org">
+				stuur een email naar onze administrator
+			</a>
+			met daarin de wijzigingen en uw profiel zal worden
+			bijgewerkt. Wij zullen u per email op de hoogte brengen
+			wanneer dit gebeurd is, en dan kan u verdere testen
+			uitvoeren. Het krediet dat u reeds verzameld hebt tijdens
+			vorige testen blijft behouden.Wilt U een
+			<a href="add-profile.html">nieuw profiel</a>
+			aanmaken voor iedere combinatie van hulpmiddelen die U
+			gebruikt? Als de registratiegegevens veranderd zijn (b.v.
+			een nieuwe versie van software voor Uw hulpmiddel), Wilt U
+			dan ook een nieuw profiel aanmaken?
+		</p>
+		<p>
+			Wilt U Uw accountinstellingen controleren en in geval van
+			onjuistheden contact met
+			<a href="mailto: amfortas@bentoweb.org">
+				amfortas@bentoweb.org
+			</a>
+		</p>
+		<p></p>
+	</message>
+	<message key="amformas.auth.selectprofile.selection">
+		Profiel selectie
+	</message>
+	<message key="amformas.auth.selectprofile.legendactive">
+		Profiel-test actief
+	</message>
+	<message key="amformas.auth.selectprofile.profile">Profiel</message>
+	<message key="amformas.auth.selectprofile.selectsubmit">
+		Activeer
+	</message>
+	<message key="amformas.auth.selectprofile.userprofile">
+		Persoonsgegevens
+	</message>
+	<message key="amformas.auth.selectprofile.ua">Browser:</message>
+	<message key="amformas.auth.selectprofile.at">Hulpmiddel:</message>
+	<message key="amformas.auth.selectprofile.dev">Apparaat:</message>
+	<message key="amformas.auth.selectprofile.os">
+		Operating system:
+	</message>
+	<message key="amformas.auth.selectprofile.uasettings">
+		Browser instelling:
+	</message>
+	<message key="amformas.auth.selectprofile.ossettings">
+		Operating system instelling:
+	</message>
+	<message key="amformas.auth.selectprofile.name">Naam:</message>
+	<message key="amformas.auth.selectprofile.email">Email:</message>
+	<message key="amformas.auth.selectprofile.natlang">
+		Moedertaal:
+	</message>
+	<message key="amformas.auth.selectprofile.langlevel">
+		Engels niveau:
+	</message>
+	<message key="amformas.auth.selectprofile.agerange">
+		Leeftijd tussen:
+	</message>
+	<message key="amformas.auth.selectprofile.disability">
+		Beperking:
+	</message>
+	<message key="amformas.auth.selectprofile.status">status</message>
+	<message key="amformas.auth.selectprofile.created">
+		aanmaakdatum
+	</message>
+	<message key="amformas.auth.selectprofile.detail">detail</message>
+	<message key="amformas.auth.selectprofile.show">toon</message>
+	<message key="amformas.auth.selectprofile.activate">
+		activeer
+	</message>
+	<message key="amformas.auth.selectprofile.active">actief</message>
+	<message key="amformas.auth.selectprofile.inactive">
+		niet actief
+	</message>
+	<message key="amformas.auth.selectprofile.action">actie</message>
+	<message key="amformas.auth.selectprofile.tablecaption">
+		Gedetailleerd overzicht en selectie van actief profiel
+	</message>
+
+	<!--
+		page: evaluation test
+	-->
+	<message key="amformas.auth.runtest.title">
+		Test Case Evaluatie
+	</message>
+	<message key="amformas.auth.runtest.note">
+		Wilt U de vraag nauwkeurig lezen, de link klikken en vervolgens
+		de vraag beantwoorden?
+	</message>
+	<message key="amformas.auth.runtest.text1">
+		Bekijk de test case
+	</message>
+	<message key="amformas.auth.runtest.text2">
+		[opent in een nieuw venster, wat U moet sluiten voordat U verder
+		kunt gaan]
+	</message>
+	<message key="amformas.auth.runtest.fieldset.legend">
+		Evaluatie
+	</message>
+	<message key="amformas.auth.runtest.button">Verzenden</message>
+	<message key="amformas.auth.runtest.dontknow_button">
+		Ik weet het niet
+	</message>
+	<message key="amformas.auth.runtest.dontknow_label">
+		Indien u niet weet wat u moet antwoorden, geef de reden aan en
+		druk op de knop 'Ik weet het niet'. Het systeem zal u dan naar
+		de volgende beschikbare test brengen
+	</message>
+	<!--
+		page evaluation succeed
+	-->
+	<message key="amformas.auth.runfinished.title">
+		Evaluatie ronde klaar
+	</message>
+	<message key="amformas.auth.runfinished.text">
+		<p>Gefeliciteerd, U bent klaar met Uw test cases.</p>
+		<p>
+			Indien U door wil gaan met een volgende groep klik dan op
+			link:
+			<a href="start-test">Start evaluatie</a>
+		</p>
+	</message>
+
+	<!--
+		test suites
+	-->
+	<message key="amformas.auth.testsuites.title">Test Suites</message>
+	<message key="amformas.auth.testsuites.txtselect">
+		U hebt momenteel toegang tot de volgende test suites, Maak Uw
+		keuze:
+	</message>
+	<message key="amformas.auth.testsuites.txtnoselect">
+		Sorry, dit profiel heeft geen toegang tot de huidige test suite.
+	</message>
+	<message key="amformas.auth.testsuites.link.title">titel</message>
+	<message key="amformas.auth.testsuites.link.action">link</message>
+	<message key="amformas.auth.testsuites.link.txt">
+		start de test
+	</message>
+
+	<!--
+		test results
+	-->
+	<message key="amformas.auth.testresults.title">
+		Testresultaten
+	</message>
+
+	<!--
+		info
+	-->
+	<message key="amformas.auth.info.notc.title">Informatie</message>
+	<message key="amformas.auth.info.notc.text">
+		<p>Er zijn geen vervolg test cases voor Uw huidige profiel.</p>
+	</message>
+
+</catalogue>

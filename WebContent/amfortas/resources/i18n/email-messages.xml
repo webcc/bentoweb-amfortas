@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+<!-- email to user for reminding pass -->
+	<message key="amfortas.email2user.forgotpass.subject">
+		Amfortas: Password reset
+	</message>
+	<message key="amfortas.email2user.forgotpass.text1">
+		For resetting your password you need to visit:
+	</message>
+	<message key="amformas.mail-forgotpass-reply.success">
+		You should have received an email with instructions how to reset your password.
+	</message>
+	<message key="amformas.mail-forgotpass-reply.fail">
+		Your password has failed to update.
+	</message>
+	<message key="amformas.mail-forgotpass-reply.done">
+		Your password has been successfully updated.
+	</message>
+	<message key="amformas.mail-forgotpass-reply.title">
+		Password Reset Reply
+	</message>
+
+<!-- Verify email to user -->
+	<message key="amfortas.email2user.verify.subject">
+		Amfortas email verification email
+	</message>
+	<message key="amfortas.email2user.common.dear">
+		Dear
+	</message>
+	<message key="amfortas.email2user.verify.text1">
+		You need to visit
+	</message>
+	<message key="amfortas.email2user.verify.text2">
+		for validating you email address.
+If clicking doesn't work, Cut and Paste the line above into your Web browser's address bar or in the file->open (ctrl-o)  edit field.
+
+If the link can't be copied in one action or if the link is split over several lines, repeat the Cut and Paste for each line.
+Take care that no spaces are in the browsers address.
+        </message>
+	<message key="amfortas.email2user.verify.text3">
+		The administrator will then activate your account and send you another
+		email to inform you that you may start testing.  For any further help,
+		please use this email address.
+	</message>
+<!-- Status email to user -->
+	<message key="amfortas.email2user.status.subject">
+		Amfortas account information email
+	</message>
+	<message key="amfortas.email2user.status.text1">
+		The status of your account is:
+	</message>
+	<message key="amfortas.email2user.status.text2">
+		If you think this is not correct
+		please contact the administrator.
+	</message>
+
+	<message key="amfortas.email.accountstatus.verified">
+		Email Verified but not active.
+	</message>
+	<message key="amfortas.email.accountstatus.activated">
+		Active.
+	</message>
+	<message key="amfortas.email.accountstatus.notverified">
+		Email not verified (not active)
+	</message>
+<!--  mail-verify-reply.xml	 -->
+	<message key="amformas.mail-verify-reply.title">
+		Email Verification Reply
+	</message>
+	<message key="amformas.mail-verify-reply.success">
+		Your e-mail address was verified successfully.
+	</message>
+	<message key="amformas.mail-verify-reply.already">
+		You have already verified your email successfully.
+		If you meet problems with your account contact system administrator.
+	</message>
+	<message key="amformas.mail-verify-reply.fail">
+		You email failed to be verified.
+	</message>
+	<message key="amformas.mail-verify-reply.fail-nokey">
+		Please include the key sent to you for email verification.
+	</message>
+</catalogue>

@@ -1,0 +1,120 @@
+<content xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  
+  <jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+
+	<h1>Users' Statistics</h1>  
+ 	   
+   	<!-- list of all testprofiles -->
+   <!-- 	<h1>${profilesData.length}</h1> -->
+	<jx:if test="${profilesData.length>0}">
+		<fieldset class="userdetail">
+   			<legend>Test profiles</legend>
+		  		<table>
+	   			<tr>
+	   				<th>TpId</th>
+	   				<th>UserId</th>
+	   				<th>Email</th>
+	   				<th>DateCreate</th>
+	   				<th>Browser</th>
+	   				<th>AT</th>
+	   				<th>Device</th>
+	   				<th>OS</th>
+	   				<th>UA Setting</th>
+	   				<th>OS Setting</th>
+					<th>Credit</th>
+					<th>TODO</th>
+		 		</tr>
+	  			<jx:forEach var="tp" items="${profilesData}">
+ 					<tr>
+ 						<td>${tp.testprofile.getTestProfileId()}</td>
+ 						<td>${tp.user.getUserId()}</td>
+ 						<td>${tp.user.getEmail()}</td>
+ 						<td>${tp.testprofile.getDateCreation()}</td>
+ 						<td>
+		
+				<jx:forEach var="ua" items="${tp.uaList}">
+					<i18n:text catalogue="recruit" key="${ua.getUserAgent().getNameKey()}"/>
+						<jx:if test="${ua.getVersion()!=''}">
+							( ${ua.getVersion()} )
+						</jx:if>
+					<br/>					
+				</jx:forEach>
+				<jx:forEach var="uao" items="${tp.uaListOther}">
+					${uao.getBrowserOther()}
+						<jx:if test="${uao.getVersion()!=''}">
+							( ${uao.getVersion()} )
+						</jx:if>									
+					<br/>
+				</jx:forEach>
+				</td>
+				
+				<td>
+						<jx:forEach var="at" items="${tp.atList}">
+							<i18n:text catalogue="recruit" key="${at.assistiveTechnology.getNameKey()}"/> (
+								<jx:if test="${at.getVersion()!=null}">
+									${at.getVersion()},
+								</jx:if>
+								<i18n:text catalogue="recruit" key="${at.atExperience.getNameKey()}"/> )
+							<br/>
+						</jx:forEach>
+						<jx:forEach var="ato" items="${tp.atListOther}">
+							${ato.getAssistiveTechnologyOther()}
+								<jx:if test="${ato.getVersion()!=''}">
+									${ato.getVersion()},
+								</jx:if>
+								<i18n:text catalogue="recruit" key="${ato.atExperience.getNameKey()}"/> )
+							<br/>
+						</jx:forEach>
+				</td>
+				
+				
+					<td>
+							<jx:if test="${tp.device.device.getNameKey()!='amformas.recruit.ans.common.other'}">
+											<i18n:text catalogue="recruit" key="${tp.device.device.getNameKey()}"/>
+									</jx:if>
+									<jx:if test="${tp.device.device.getNameKey()=='amformas.recruit.ans.common.other'}">
+											${tp.device.getDeviceOther()}
+									</jx:if>
+									( <i18n:text catalogue="recruit" key="${tp.device.atExperience.getNameKey()}"/> )
+												
+					</td>
+					<td>
+ 						<jx:if test="${tp.os!=null}">
+								<jx:if test="${tp.os.operatingSystem.getNameKey()!='amformas.recruit.ans.common.other'}">
+										<i18n:text catalogue="recruit" key="${tp.os.operatingSystem.getNameKey()}"/>
+								</jx:if>
+								<jx:if test="${tp.os.operatingSystem.getNameKey()=='amformas.recruit.ans.common.other'}">
+										${tp.os.getOsOther()}
+								</jx:if>
+								<jx:if test="${tp.os.getVersion()!=''}">
+									( ${tp.os.getVersion()} )
+								</jx:if>
+							</jx:if>
+					</td>
+					<td>
+								<jx:forEach var="uas" items="${tp.uaListSetting}">
+									<i18n:text catalogue="recruit" key="${uas.userAgentSetting.getNameKey()}"/><br/>
+								</jx:forEach>
+								<jx:forEach var="uaso" items="${tp.uaListSettingOther}">
+									${uaso.getSettingOther()}<br/>
+								</jx:forEach>
+					</td>
+					<td>
+										<jx:forEach var="oss" items="${tp.osListSetting}">
+											<i18n:text catalogue="recruit" key="${oss.operatingSystemSetting.getNameKey()}"/><br/>
+										</jx:forEach>
+										<jx:forEach var="osso" items="${tp.osListSettingOther}">
+											${osso.getSettingOther()}<br/>
+										</jx:forEach> 
+					</td>
+					<td>${tp.creditQ}</td>
+					<td>${tp.todoQ}</td>
+			</tr>
+		</jx:forEach>
+		</table>
+		</fieldset>
+	</jx:if>
+ 					
+
+</content>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<system systemId="http://bentoweb.org/refs/schemas/tcdl1.xsd"
+		uri="tcdl1.xsd" />
+	<system systemId="http://bentoweb.org/refs/schemas/tcdl1.1.xsd"
+		uri="tcdl1.1.xsd" />
+	<system systemId="http://bentoweb.org/refs/schemas/rulesets.xsd"
+		uri="rulesets.xsd" />
+	<system
+		systemId="http://dublincore.org/schemas/xmls/simpledc20021212.xsd"
+		uri="../dublincore/simpledc20021212.xsd" />
+	<system systemId="http://www.w3.org/2004/07/xhtml/xhtml1-strict.xsd"
+		uri="../w3c/xhtml1-strict-btw.xsd" />
+	<system systemId="http://bentoweb.org/refs/schemas/xlink.xsd"
+		uri="../w3c/xlink.xsd" />
+	<system systemId="http://www.w3.org/2001/xml.xsd" uri="../w3c/xml.xsd" />
+</catalog>
+
+
+

@@ -1,0 +1,11 @@
+<content xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  
+  <jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+   
+    <h1><i18n:text catalogue="admin" key="amfortas.admin.response.title"/></h1> 
+    
+    <p><i18n:text catalogue="admin" key="${messagekey}"/> </p>
+    <div><a href="admin_users"><i18n:text catalogue="admin" key="amfortas.admin.response.backtouseradmin"/></a></div>
+
+</content>

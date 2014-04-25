@@ -1,0 +1,174 @@
+<fd:form
+  xmlns:fd="http://apache.org/cocoon/forms/1.0#definition"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+  <fd:validation>
+  	    <fd:javascript>
+  	    <![CDATA[
+  	    	cocoon.load("resources/flow/general_helperfunctions.js");
+			var success = true;
+			
+			var success1 = ifother(widget,"user_uses_user_agent-user_agent_id","user_uses_user_agent-browser_other","amformas.recruit.errormsg.user_agent_id","amformas.recruit.ans.common.other");
+			var success2 = ifother(widget,"user_uses_os-user_uses_os_id","user_uses_os-os_other","amformas.recruit.errormsg.os_id","amformas.recruit.ans.common.other");
+			var success3 = ifother(widget,"user_uses_device-device_id","user_uses_ua_setting-device_setting_other","amformas.recruit.errormsg.device_id","amformas.recruit.ans.common.other");
+			
+			var success4 = ifyes(widget,"user_agent_setting","user_uses_ua_setting-user_agent_setting_id","amformas.recruit.errormsg.user_agent_setting","amformas.recruit.ans.common.yes");
+			var success5 = ifyes(widget,"user_uses_os_setting","user_uses_os_setting-operating_system_setting_id","amformas.recruit.errormsg.user_uses_os_setting","amformas.recruit.ans.common.yes");
+			
+			
+			if(success1 && success2 && success3 && success4 && success5)
+				return true;
+			else
+				return false;
+
+//		java.lang.System.err.println("user_agent_id___: "+user_agent_id.value);
+//		java.lang.System.err.println("browser_other___: "+browser_other.value);
+
+		]]>
+	    </fd:javascript>
+	</fd:validation>  
+
+<fd:widgets>
+
+<!-- ++++++++++ FORM 4 ++++++++++ -->
+ 	
+  	<!-- Q10 -->
+ 	<fd:field id="user_uses_user_agent-user_agent_id" required="false">
+    	<fd:label><i18n:text key="amformas.recruit.q.user_agents"/></fd:label>
+    	<fd:hint><i18n:text key="amformas.recruit.errormsg.user_agent_id_otherempty"/></fd:hint>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="user_agents"
+                   value-path="value" label-path="label" />
+  	</fd:field>  
+  	
+  	<fd:field id="user_uses_user_agent-browser_other" required="false">
+      <fd:label><i18n:text key="amformas.recruit.ans.common.other_ans"/></fd:label>
+      <fd:hint><i18n:text key="amformas.recruit.errormsg.common.other"/></fd:hint>
+      <fd:datatype base="string"/>
+    </fd:field>
+  	
+  	<fd:field id="user_uses_user_agent-vesion" required="false">
+      <fd:label><i18n:text key="amformas.recruit.q.version"/></fd:label>
+      <fd:datatype base="string"/>
+    </fd:field>
+  	
+  	<!-- Q10.1 -->  	
+  	<fd:field id="user_agent_setting" required="false">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.user_agent_setting"/>
+    	</fd:label>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="at_usage"
+                   value-path="value" label-path="label" />
+  	</fd:field>  
+  	  	
+  	<!-- Q10.2 -->
+  	<fd:multivaluefield id="user_uses_ua_setting-user_agent_setting_id" required="false">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.user_agent_setting.user_agent_setting_id"/>
+    	</fd:label>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="user_agent_settings"
+                   value-path="value" label-path="label" />
+  	</fd:multivaluefield>  
+  	
+	<fd:field id="user_uses_ua_setting-ua_setting_other" required="false">
+      <!-- <fd:label><i18n:text key="amformas.recruit.ans.common.other_ans"/></fd:label> -->
+      <fd:hint><i18n:text key="amformas.recruit.ans.common.other_ans"/></fd:hint>
+      <fd:datatype base="string"/>
+    </fd:field>
+    
+    
+    <!-- Q10.3 -->
+    
+    <fd:field id="user_uses_os-user_uses_os_id" required="false">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.user_uses_os.user_uses_os_id"/>
+    	</fd:label>
+    	<fd:hint><i18n:text key="amformas.recruit.errormsg.os_id_otherempty"/></fd:hint>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="operating_systems"
+                   value-path="value" label-path="label" />
+  	</fd:field>  
+  	
+	<fd:field id="user_uses_os-os_other" required="false">
+      <fd:label><i18n:text key="amformas.recruit.ans.common.other_ans"/></fd:label>
+      <fd:hint><i18n:text key="amformas.recruit.ans.common.other_ans"/></fd:hint>
+      <fd:datatype base="string"/>
+    </fd:field>
+    
+    <fd:field id="user_uses_os-version" required="false">
+      <fd:label><i18n:text key="amformas.recruit.q.version"/></fd:label>
+      <fd:datatype base="string"/>
+    </fd:field>
+    
+    <!-- Q10.4 -->
+    
+    <fd:field id="user_uses_os_setting" required="false">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.os_settings"/>
+    	</fd:label>
+    	<fd:hint><i18n:text key="amformas.recruit.errormsg.user_uses_os_setting_yesno"/></fd:hint>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="at_usage"
+                   value-path="value" label-path="label" />
+  	</fd:field>  
+
+  	<fd:multivaluefield id="user_uses_os_setting-operating_system_setting_id" required="false">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.os_settings_id"/>
+    	</fd:label>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="operating_system_settings"
+                   value-path="value" label-path="label" />
+  	</fd:multivaluefield>  
+  	
+	<fd:field id="user_uses_ua_setting-os_setting_other" required="false">
+      <!-- <fd:label><i18n:text key="amformas.recruit.ans.common.other_ans"/></fd:label> -->
+      <fd:hint><i18n:text key="amformas.recruit.ans.common.other_ans"/></fd:hint>
+      <fd:datatype base="string"/>
+    </fd:field>
+    
+    
+    <!-- Q11 -->
+    
+    <fd:field id="user_uses_device-device_id" required="false">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.device_id"/>
+    	</fd:label>
+    	<fd:hint><i18n:text key="amformas.recruit.errormsg.device_id_otherempty"/></fd:hint>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="devices"
+                   value-path="value" label-path="label" />
+  	</fd:field>  
+  	
+	<fd:field id="user_uses_ua_setting-device_setting_other" required="false">
+      <fd:label><i18n:text key="amformas.recruit.ans.common.other_ans"/></fd:label>
+      <fd:hint><i18n:text key="amformas.recruit.ans.common.other_ans"/></fd:hint>
+      <fd:datatype base="string"/>
+    </fd:field>
+    
+    <!-- Q11.1 -->
+    <fd:field id="user_uses_device-experience_id" required="false">
+    	<fd:label><i18n:text key="amformas.recruit.q.device_experience_id"/></fd:label>
+    	<fd:hint><i18n:text key="amformas.recruit.errormsg.experience_id"/></fd:hint>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="at_experiences"
+                   value-path="value" label-path="label" />
+  	</fd:field> 
+    
+    <!-- Q12 -->
+    <fd:field id="user-hours_per_week" required="false">
+    	<fd:label><i18n:text key="amformas.recruit.q.hours_per_week"/></fd:label>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="hours_per_weeks"
+                   value-path="value" label-path="label" />
+	<fd:hint><i18n:text key="amformas.recruit.errormsg.hours_per_week"/></fd:hint>                   
+  	</fd:field> 
+    <fd:submit id="thesubmit">
+  		<fd:label><i18n:text catalogue="recruit" key="amformas.forms.common.submit"/></fd:label>
+  	</fd:submit>
+  	 
+</fd:widgets>
+
+</fd:form>

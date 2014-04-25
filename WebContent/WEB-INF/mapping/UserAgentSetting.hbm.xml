@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.UserAgentSetting" table="user_agent_setting" catalog="amfortas">
+        <id name="userAgentSettingId" type="integer">
+            <column name="user_agent_setting_id" />
+            <generator class="identity" />
+        </id>
+        <property name="nameKey" type="string">
+            <column name="name_key" />
+        </property>
+        <property name="nameDefault" type="string">
+            <column name="name_default" />
+        </property>
+        <set name="userUsesUaSettings" inverse="true">
+            <key>
+                <column name="user_agent_setting_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserUsesUaSetting" />
+        </set>
+    </class>
+</hibernate-mapping>

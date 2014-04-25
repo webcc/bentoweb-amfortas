@@ -1,0 +1,38 @@
+<content xmlns:ft="http://apache.org/cocoon/forms/1.0#template"
+  xmlns:fi="http://apache.org/cocoon/forms/1.0#instance"
+  xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  
+  <jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+
+    <h1><i18n:text key="amformas.recruit.title.at_speech_recognition"/></h1>
+	<ft:form-template action="#{$continuation/id}.cont#Content" method="POST">
+		<fi:group>
+        	<fi:styling layout="columns"/>
+        	<fi:items>
+			 	<fi:group>
+        			<fi:styling layout="combination"/>
+        			<fi:items>	
+						<ft:widget id="user_uses_assistive_technology-assistive_technology_id">
+							<fi:styling list-type="radio" list-orientation="vertical"/>
+						</ft:widget>
+						<ft:widget id="user_uses_assistive_technology-assistive_technology_other"/>
+					</fi:items>
+				</fi:group>       				
+				<ft:widget id="user_uses_assistive_technology-version"/>
+				<ft:widget id="user_uses_assistive_technology-at_experience_id">
+					<fi:styling list-type="radio" list-orientation="vertical"/>
+				</ft:widget>
+				<ft:widget id="another-assistive_technology">
+					<fi:styling list-type="radio" list-orientation="vertical"/>
+				</ft:widget>
+        	</fi:items>
+      	</fi:group>
+      	<fi:group>
+        	<fi:styling layout="rows"/> 
+        	<fi:items>
+        		<ft:widget id="thesubmit"/>
+			</fi:items>	
+		</fi:group>    
+    </ft:form-template>
+    </content>

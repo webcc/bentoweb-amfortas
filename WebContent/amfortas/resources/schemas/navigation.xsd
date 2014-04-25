@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="base-url" type="xs:string"/>
+	<xs:element name="desc" type="xs:string"/>
+	<xs:element name="group">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="desc" minOccurs="0"/>
+				<xs:element ref="item" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="title" use="required" type="xs:string"/>
+			<xs:attribute name="link" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="item">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="desc" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="title" use="required" type="xs:string"/>
+			<xs:attribute name="link" use="required" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="navigation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="base-url" minOccurs="0"/>
+				<xs:element ref="group" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,156 @@
+<fd:form
+  xmlns:fd="http://apache.org/cocoon/forms/1.0#definition"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+  <fd:validation>
+  	    <fd:javascript>
+	    	var language_id = widget.lookupWidget("language_id");
+	    	var language_other = widget.lookupWidget("language_other");
+		//cocoon.log.info("language_id___: "+language_id.value);
+		//cocoon.log.info("language_other___: "+language_other.value);
+	    	
+	    	if(language_id.value=="amformas.recruit.ans.language_id.0")//other
+	    	{
+	    		if(language_other.value!=null)
+	    			return true;
+	    		else
+	    		{
+	    			language_other.setValidationError(new Packages.org.apache.cocoon.forms.validation.ValidationError("amformas.recruit.errormsg.language_id_otherempty", true));
+	    			return false;
+	    		}
+	    	}
+	    	else
+	    	{
+	    		if(language_other.value==null)
+	    			return true;
+	    		else
+	    		{
+	    			language_other.setValidationError(new Packages.org.apache.cocoon.forms.validation.ValidationError("amformas.recruit.errormsg.language_id_noother", true));
+	    			return false;
+	    		}
+	    	}
+	    </fd:javascript>
+	</fd:validation>  
+  
+<fd:widgets>
+
+<!-- ++++++++++ FORM 1 ++++++++++ -->
+<!-- Q1 -->
+	<fd:field id="name_first" required="true">
+    	<fd:label><i18n:text key="amformas.recruit.q.name_first"/></fd:label>
+    	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.field_firstname"/></fd:hint>
+    	<fd:datatype base="string"/>
+	    <fd:validation>
+	      <fd:length min="2">
+	     	 <fd:failmessage><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.field_firstname"/></fd:failmessage>
+	      </fd:length>
+	    </fd:validation>
+	    
+  	</fd:field>
+<!-- Q2 -->
+	<fd:field id="name_last" required="true">
+    	<fd:label><i18n:text key="amformas.recruit.q.name_last"/></fd:label>
+    	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.field_lastname"/></fd:hint>
+    	<fd:datatype base="string"/>	 
+	    <fd:validation>
+	      <fd:length min="2">
+	     	 <fd:failmessage><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.field_lastname"/></fd:failmessage>
+	      </fd:length>
+	    </fd:validation>
+  	</fd:field>
+  	
+	<fd:field id="password" required="true">
+    	<fd:label><i18n:text key="amformas.recruit.q.password"/></fd:label>
+    	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.pass_length"/></fd:hint>
+    	<fd:datatype base="string"/>
+	    <fd:validation>
+	      <fd:length min="4" max="20">
+		      <fd:failmessage><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.pass_length"/></fd:failmessage>
+	      </fd:length>
+	    </fd:validation>
+  	</fd:field>
+	<fd:field id="confirmPassword" required="true">
+    	<fd:label><i18n:text key="amformas.recruit.q.confirmPassword"/></fd:label>
+    	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.pass_not_equal"/></fd:hint>
+    	<fd:datatype base="string"/>
+	    <fd:validation>
+	    	<fd:assert test="password = confirmPassword">
+				<fd:failmessage><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.pass_not_equal"/></fd:failmessage>
+			</fd:assert>
+	    </fd:validation>
+  	</fd:field> 	
+  	
+<!-- Q3 -->
+	<fd:field id="sex" required="true">
+	  	<fd:label><i18n:text key="amformas.recruit.q.sex"/></fd:label>
+    	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.sex"/></fd:hint>	  	
+  		<fd:datatype base="string"/>
+  		<fd:selection-list type="flow-jxpath" list-path="sex" value-path="value" label-path="label" />               
+  	</fd:field>
+<!-- Q4 -->  	 	
+    <fd:field id="email" required="true">
+      <fd:label><i18n:text key="amformas.recruit.q.email"/></fd:label>
+   	  <fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.email"/></fd:hint>     
+      <fd:datatype base="string"/>
+      <fd:validation>
+      <!-- 
+	    <fd:javascript>
+	      if(this.value==null)
+	      {
+	      	this.setValidationError(new Packages.org.apache.cocoon.forms.validation.ValidationError("amformas.recruit.errormsg.field_req", true));
+	      	return false;
+	      }	  
+	      else
+	      	return true;
+	     </fd:javascript>
+	      -->
+        <fd:email>
+        	<fd:failmessage><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.email"/></fd:failmessage>
+        </fd:email>
+	     
+	     <fd:javascript>
+	      cocoon.load("resources/flow/load_recruit.js");
+	      if(isEmailAvailable(this.value)==false)
+	      {
+	      	this.setValidationError(new Packages.org.apache.cocoon.forms.validation.ValidationError("amformas.recruit.errormsg.email_reserved", true));
+	      	return false;
+	      }
+	      else
+	      	return true;
+	    </fd:javascript>
+
+	  </fd:validation>
+    </fd:field>
+    
+<!-- Q5 -->    
+    <fd:field id="age_range_id" required="true">
+	  	<fd:label><i18n:text key="amformas.recruit.q.age_range_id"/></fd:label>
+	  	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.age_range"/></fd:hint>    
+  		<fd:datatype base="string"/>
+  		<fd:selection-list type="flow-jxpath" list-path="age_ranges" value-path="value" label-path="label" />
+    </fd:field>
+<!-- Q6 (only in english language version) -->
+	<fd:field id="language_id" required="true">
+	  	<fd:label><i18n:text key="amformas.recruit.q.language_id"/></fd:label>
+	  	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.language_id_otherempty"/></fd:hint>    
+  		<fd:datatype base="string"/>
+  		<fd:selection-list type="flow-jxpath" list-path="languages" value-path="value" label-path="label" />
+    </fd:field>
+
+	<fd:field id="language_other" required="false">
+		<fd:label><i18n:text key="amformas.recruit.ans.common.other"/></fd:label>
+    	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.other_lang"/></fd:hint>		
+    	<fd:datatype base="string"/>
+	    <fd:validation>
+	      <fd:length min="2">
+	      	<fd:failmessage><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.other_lang"/></fd:failmessage>
+	      </fd:length>	      
+	    </fd:validation>	
+    </fd:field>
+    
+    <fd:submit id="thesubmit">
+  		<fd:label><i18n:text catalogue="recruit" key="amformas.forms.common.submit"/></fd:label>
+  	</fd:submit>
+  	
+</fd:widgets>
+</fd:form>

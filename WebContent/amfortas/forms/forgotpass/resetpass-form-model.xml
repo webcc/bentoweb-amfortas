@@ -1,0 +1,31 @@
+<fd:form
+  xmlns:fd="http://apache.org/cocoon/forms/1.0#definition"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+<fd:widgets>
+	<fd:field id="password" required="true">
+    	<fd:label><i18n:text key="amformas.recruit.q.password"/></fd:label>
+    	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.pass_length"/></fd:hint>
+    	<fd:datatype base="string"/>
+	    <fd:validation>
+	      <fd:length min="4" max="20">
+		      <fd:failmessage><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.pass_length"/></fd:failmessage>
+	      </fd:length>
+	    </fd:validation>
+  	</fd:field>
+	<fd:field id="confirmPassword" required="true">
+    	<fd:label><i18n:text key="amformas.recruit.q.confirmPassword"/></fd:label>
+    	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.pass_not_equal"/></fd:hint>
+    	<fd:datatype base="string"/>
+	    <fd:validation>
+	    	<fd:assert test="password = confirmPassword">
+				<fd:failmessage><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.pass_not_equal"/></fd:failmessage>
+			</fd:assert>
+	    </fd:validation>
+  	</fd:field> 	
+    <fd:submit id="thesubmit">
+  		<fd:label><i18n:text catalogue="recruit" key="amformas.forms.common.submit"/></fd:label>
+  	</fd:submit>      	
+</fd:widgets>
+
+</fd:form>

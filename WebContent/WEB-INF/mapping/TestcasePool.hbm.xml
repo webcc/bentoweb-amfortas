@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.TestcasePool" table="testcase_pool" catalog="amfortas">
+        <id name="testcasePoolId" type="integer">
+            <column name="testcase_pool_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="testcaseSet" class="org.bentoweb.amfortas.hibernate.om.TestcaseSet" fetch="select">
+            <column name="testcase_set_id" not-null="true" />
+        </many-to-one>
+        <property name="testcaseId" type="string">
+            <column name="testcase_id" />
+        </property>
+        <property name="scenarioId" type="string">
+            <column name="scenario_id" />
+        </property>
+        <property name="dateStart" type="timestamp">
+            <column name="date_start" length="19" />
+        </property>
+        <property name="dateFinished" type="timestamp">
+            <column name="date_finished" length="19" />
+        </property>
+        <property name="finished" type="boolean">
+            <column name="finished" />
+        </property>
+    </class>
+</hibernate-mapping>

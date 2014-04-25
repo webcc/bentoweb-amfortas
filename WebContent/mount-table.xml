@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--+
+    | Special directories
+    +-->
+<mount-table>
+    <!--mount uri-prefix="amfortas" src="./amfortas/sitemap.xmap"/-->
+    <!-- 
+    <mount uri-prefix="test" src="./amfortas/sitemap-test.xmap"/>
+    <mount uri-prefix="ts" src="./amfortas/sitemap-ts.xmap"/>
+     -->
+    <mount uri-prefix="test" src="./amfortas/sitemap-test.xmap"/>
+    <mount uri-prefix="off" src="./amfortas/sitemap.xmap"/>
+    <mount uri-prefix="amfortas" src="./amfortas/sitemap.xmap"/>
+    <!--
+     <mount uri-prefix="amfortas" src="./amfortas/sitemap-off.xmap"/> 
+     -->
+</mount-table>

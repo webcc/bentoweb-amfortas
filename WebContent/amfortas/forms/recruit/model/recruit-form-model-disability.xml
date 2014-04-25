@@ -1,0 +1,61 @@
+<fd:form
+  xmlns:fd="http://apache.org/cocoon/forms/1.0#definition"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+
+<fd:widgets>
+
+<!-- ++++++++++ FORM 2 ++++++++++ -->
+<!-- Q7 (only in english language version and for those who have not given english in Q5) -->
+	<fd:field id="language_experience_id" required="true">
+    	<fd:label><i18n:text key="amformas.recruit.q.language_experience_id"/></fd:label>
+    	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.language_experience_id"/></fd:hint>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="language_experiences"
+                   value-path="value" label-path="label" />
+  	</fd:field>    
+<!-- Q8 -->
+	<fd:multivaluefield id="disability_id" required="true">
+    	<fd:label><i18n:text key="amformas.recruit.q.disability_id"/></fd:label>
+    	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.disability_id_none"/></fd:hint>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="disabilities"
+                   value-path="value" label-path="label" />
+        <!--  
+		 <fd:validation>
+		 	    <fd:javascript>
+		 	    //java.lang.System.err.println("this.value: " + this.value.toString());
+		 	    //java.lang.System.err.println("this.value: " + this.value.length);		 	    
+		    	if(this.value.length==0) 
+		    	{
+		   			this.setValidationError(new Packages.org.apache.cocoon.forms.validation.ValidationError("amformas.recruit.errormsg.disability_id_none", true));
+		   			return false;
+		    	}
+		    	else
+		    		return true;
+		    </fd:javascript>
+		</fd:validation> 
+          -->          
+  	</fd:multivaluefield>  
+  	<fd:field id="disability_other" required="false">
+      <fd:label><i18n:text key="amformas.recruit.ans.common.other_ans"/></fd:label>
+      <fd:hint><i18n:text key="amformas.recruit.errormsg.common.other"/></fd:hint>
+      <fd:datatype base="string"/>
+    </fd:field>
+  	
+<!-- Q9 -->  	
+  	<fd:field id="assistive_technology" required="true">
+	  	<fd:label><i18n:text key="amformas.recruit.q.assistive_technology"/></fd:label>
+	  	<fd:hint><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.assistive_technology"/></fd:hint>
+  		<fd:datatype base="string"/>
+  		<fd:selection-list type="flow-jxpath" list-path="at_usage"
+                   value-path="value" label-path="label" />
+  	</fd:field>
+
+    <fd:submit id="thesubmit">
+  		<fd:label><i18n:text catalogue="recruit" key="amformas.forms.common.submit"/></fd:label>
+  	</fd:submit>
+  	 
+</fd:widgets>
+
+</fd:form>

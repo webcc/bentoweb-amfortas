@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.UserUsesDevice" table="user_uses_device" catalog="amfortas">
+        <id name="userUsesDeviceId" type="integer">
+            <column name="user_uses_device_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="atExperience" class="org.bentoweb.amfortas.hibernate.om.AtExperience" fetch="select">
+            <column name="at_experience_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="device" class="org.bentoweb.amfortas.hibernate.om.Device" fetch="select">
+            <column name="device_id" not-null="true" />
+        </many-to-one>
+        <property name="deviceOther" type="string">
+            <column name="device_other" />
+        </property>
+        <set name="testProfiles" inverse="true">
+            <key>
+                <column name="user_uses_device_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.TestProfile" />
+        </set>
+    </class>
+</hibernate-mapping>

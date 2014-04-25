@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maildocument xmlns:mail="http://bentoweb.org/sendmail"
+ xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+ xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+>
+<jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+	<mail:sendmail >
+		<mail:mailto>${user_email}</mail:mailto>
+		<mail:mailsubject><i18n:text catalogue="email" key="amfortas.email2user.forgotpass.subject"/></mail:mailsubject>
+		<mail:mailbody>
+<i18n:text catalogue="email" key="amfortas.email2user.common.dear"/> ${user_lastname} ${user_firstname},
+<i18n:text catalogue="email" key="amfortas.email2user.forgotpass.text1"/> ${cocoon.parameters.webapp_url}${resetUrl}
+		</mail:mailbody>
+	</mail:sendmail>
+</maildocument>

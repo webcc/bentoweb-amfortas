@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.User" table="user" catalog="amfortas">
+        <id name="userId" type="integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="sex" class="org.bentoweb.amfortas.hibernate.om.Sex" fetch="select">
+            <column name="sex_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="language" class="org.bentoweb.amfortas.hibernate.om.Language" fetch="select">
+            <column name="language_id" not-null="true" />
+        </many-to-one>
+        <property name="password" type="string">
+            <column name="password" />
+        </property>
+        <property name="nameFirst" type="string">
+            <column name="name_first" />
+        </property>
+        <property name="nameLast" type="string">
+            <column name="name_last" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" unique="true" />
+        </property>
+        <property name="languageNativeOther" type="string">
+            <column name="language_native_other" />
+        </property>
+        <property name="dateRegister" type="timestamp">
+            <column name="date_register" length="19" />
+        </property>
+        <property name="statusUser" type="byte">
+            <column name="status_user" />
+        </property>
+        <property name="mailConfHash" type="string">
+            <column name="mail_conf_hash" />
+        </property>
+        <set name="userHasRoles" inverse="true">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserHasRole" />
+        </set>
+        <set name="testProfiles" inverse="true">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.TestProfile" />
+        </set>
+    </class>
+</hibernate-mapping>

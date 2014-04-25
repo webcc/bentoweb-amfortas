@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.UserProfile" table="user_profile" catalog="amfortas">
+        <id name="userProfileId" type="integer">
+            <column name="user_profile_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="languageExperience" class="org.bentoweb.amfortas.hibernate.om.LanguageExperience" fetch="select">
+            <column name="language_experience_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="hoursPerWeek" class="org.bentoweb.amfortas.hibernate.om.HoursPerWeek" fetch="select">
+            <column name="hours_per_week_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="ageRange" class="org.bentoweb.amfortas.hibernate.om.AgeRange" fetch="select">
+            <column name="age_range_id" not-null="true" />
+        </many-to-one>
+        <property name="disabilityOther" type="string">
+            <column name="disability_other" />
+        </property>
+        <property name="isActive" type="boolean">
+            <column name="is_active" />
+        </property>
+        <property name="dateCreation" type="timestamp">
+            <column name="date_creation" length="19" />
+        </property>
+        <set name="testProfileHasUserProfiles" inverse="true">
+            <key>
+                <column name="user_profile_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.TestProfileHasUserProfile" />
+        </set>
+        <set name="userProfileHasDisabilities" inverse="true">
+            <key>
+                <column name="user_profile_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserProfileHasDisability" />
+        </set>
+        <set name="testresults" inverse="true">
+            <key>
+                <column name="user_profile_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.Testresult" />
+        </set>
+    </class>
+</hibernate-mapping>

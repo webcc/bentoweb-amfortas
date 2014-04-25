@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.UserHasRole" table="user_has_role" catalog="amfortas">
+        <composite-id name="id" class="org.bentoweb.amfortas.hibernate.om.UserHasRoleId">
+            <key-property name="userId" type="integer">
+                <column name="user_id" />
+            </key-property>
+            <key-property name="roleId" type="integer">
+                <column name="role_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="user" class="org.bentoweb.amfortas.hibernate.om.User" update="false" insert="false" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="role" class="org.bentoweb.amfortas.hibernate.om.Role" update="false" insert="false" fetch="select">
+            <column name="role_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

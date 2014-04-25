@@ -1,0 +1,232 @@
+body {
+	margin:0em;
+	padding:0em;
+	font-family:verdana, arial, helvetica, sans-serif;
+	color:#333;
+	background-color:white;
+	font: 1em verdana, arial, helvetica, sans-serif;
+	}
+	
+h1 {
+	margin: 0em;
+	padding: 0em 0em 0.5em 0em;
+	font-size:2em;
+	font-weight:900;
+	color:#444;
+	}
+	 
+p, div {
+	margin: 0em 0em 1em 0em;
+	padding: 0em;
+	}
+	
+a {
+	text-decoration:none;
+	font-weight:600;
+	font-family:verdana, arial, helvetica, sans-serif;
+	}
+
+a:link {color:#8B4513}  
+a:visited {color:#8B4513}
+a:hover {background-color:#FDFDF0; text-decoration: underline;}
+
+fieldset {
+	padding: 0em 0.5em 0.5em 0.5em;	
+}
+
+ul.menulist {
+	list-style-type: none;
+	margin: 0em 0em 0em 0em;
+	padding: 1em 1em 1em 1em;
+}
+
+ul.menulist li {
+	padding: 0em 0em 0.1em 0em;
+}
+
+ul.form-group{
+	margin: 0em 0em 0em 1em;
+	padding: 0em 0em 0em 0em;
+}
+
+ul.form-group li { 
+	padding: 0em 0em 0.5em 0em;
+	list-style-type: none;
+	padding-top: 0.5em;
+}
+ul.form-group li label.main{
+	font-size: 120%;
+	font-weight: bold;
+	margin-bottom: 1em;
+	
+}
+.forms-field-required
+{
+	font-weight: bolder;
+} 
+
+.profilelist {
+	background-color:#FDFDF0;	
+}
+
+.profilelist li {
+	font-size:90%;	
+}
+
+.proftxtsmall {
+	font-size:90%;
+	font-weight: normal;
+}
+
+.proftxtbold {
+	font-weight: bold;
+}
+
+.runtest p {
+	margin: 0em 0em 0.5em 0em;
+	padding: 0em;	
+}
+
+.userdetail {
+	background-color:#FDFDF0;
+	font-size:90%;
+	margin-top:0.4em;
+}
+
+.userdetail span {
+	font-weight: bold;
+}
+
+.userdetail h2 {
+	font-size:100%;
+	font-weight: bold;
+	margin: 0.3em 0em 0em 0em;
+	padding: 0em;	
+}
+
+.floatleft {
+	float:left;
+	padding: 0em 1.5em 0em 0em;
+	margin: 0em;	
+}
+
+ul {
+	margin: 0.1em 0em 0.7em 1.5em;
+	padding: 0em 0em 0em 0em;
+}
+
+input.text {
+	margin-left:0em;
+	font-family:verdana, arial, helvetica, sans-serif;
+}
+
+table {
+	border-width:0px;
+	background-color:#FDFDF0;
+	border-style:dashed;
+	border-color:#777;
+	border-width:1px;
+	border-collapse:collapse;
+	font-size:95%;
+	margin-top: 0.3em;
+}
+
+td, th {
+	border-style:dashed;
+	border-color:#777;
+	border-width:1px;
+	border-collapse:collapse;
+	padding: 0.1em 0.2em 0.1em 0.2em
+}
+
+select, input {
+	margin-left:0em;
+	margin-right:0.5em;
+	font-family:verdana, arial, helvetica, sans-serif;
+	margin-top: 0.5em;
+}
+
+#Header {
+	margin: 3em 0em 0em 0em;
+	padding:1em 0em 0em 1em;
+	border-style:solid;
+	border-color:#777;
+	border-width:1px 0px;
+	background-color:#FDFDF0;
+
+}
+
+#Content {
+	position: absolute;
+	top: 6.5em;
+	left: 12em;
+	margin: 0em 2em 0em 0em;
+	}
+
+#Menu {
+	position: absolute;
+	top: 6.5em;
+	left: 1em;
+	width: 10em;
+	background-color:#FDFDF0;
+	border:1px dashed #777;
+	}
+
+.forms-validation-message a {
+	background-color:#FDFDF0;
+	border:1px dashed #777;
+	margin-left: 0.5em;
+	width: 25em;
+	display:inline;
+	color: #CD0000;
+	}
+#errorsummesgs {
+	background-color:#FDFDF0;
+	color: #CD0000;
+	border:1px dashed #777;
+	}
+	
+#errorsummesgs a {
+	color: #CD0000;
+}
+	
+#errorsummesgs span{
+	font-size:150%;
+	}
+
+.txtMed {
+	font-size:120%;
+}
+
+.txtMedb {
+	font-size:120%;
+	font-weight: bold;
+}
+
+.userguidance {
+	font-size:110%;
+}
+
+.hidden {
+	position: absolute;
+	top: 0em;
+	left: -100em;
+}
+input
+{
+	margin-left:1em;
+}
+
+.maintainance {
+	padding: 1.5em 2em 1.5em 2em;
+	border:2px solid red;
+	background-color:#FDFDF0;
+}
+.tp_row_false
+{
+	background-color:#D4D4D4;
+}
+.tp_row_true
+{
+	border: medium double #006600; 
+}

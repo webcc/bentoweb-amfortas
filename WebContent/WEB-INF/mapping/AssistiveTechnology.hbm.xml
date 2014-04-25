@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.AssistiveTechnology" table="assistive_technology" catalog="amfortas">
+        <id name="assistiveTechnologyId" type="integer">
+            <column name="assistive_technology_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="assistiveTechnologyTypes" class="org.bentoweb.amfortas.hibernate.om.AssistiveTechnologyTypes" fetch="select">
+            <column name="assistive_technology_types_id" not-null="true" />
+        </many-to-one>
+        <property name="nameKey" type="string">
+            <column name="name_key" />
+        </property>
+        <property name="nameDefault" type="string">
+            <column name="name_default" />
+        </property>
+        <property name="vendor" type="string">
+            <column name="vendor" />
+        </property>
+        <property name="visible" type="boolean">
+            <column name="visible" />
+        </property>
+        <set name="userUsesAssistiveTechnologies" inverse="true">
+            <key>
+                <column name="assistive_technology_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserUsesAssistiveTechnology" />
+        </set>
+    </class>
+</hibernate-mapping>

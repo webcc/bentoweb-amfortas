@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.UserAgentPlugin" table="user_agent_plugin" catalog="amfortas">
+        <id name="userAgentPluginId" type="integer">
+            <column name="user_agent_plugin_id" />
+            <generator class="identity" />
+        </id>
+        <property name="nameKey" type="string">
+            <column name="name_key" />
+        </property>
+        <property name="nameDefault" type="string">
+            <column name="name_default" />
+        </property>
+        <property name="vendor" type="string">
+            <column name="vendor" />
+        </property>
+        <set name="userUsesUaPlugins" inverse="true">
+            <key>
+                <column name="user_agent_plugin_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserUsesUaPlugin" />
+        </set>
+    </class>
+</hibernate-mapping>

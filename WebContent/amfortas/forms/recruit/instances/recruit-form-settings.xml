@@ -1,0 +1,102 @@
+<content xmlns:ft="http://apache.org/cocoon/forms/1.0#template"
+  xmlns:fi="http://apache.org/cocoon/forms/1.0#instance"
+  xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  
+  <jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+  
+    <h1><i18n:text key="amformas.recruit.title.at_settings"/></h1>
+	<ft:form-template action="#{$continuation/id}.cont#Content" method="POST">
+		<fi:group>
+        	<fi:styling layout="columns"/>
+        	<fi:items>
+        	<jx:if test="${talkingbrowser == false}">
+			<fieldset>
+				<legend>
+					<i18n:text catalogue="recruit" key="amformas.recruit.setting.fs.browser"/>
+				</legend>
+			 	<fi:group>
+        			<fi:styling layout="combination"/>
+        			<fi:items>				
+						<ft:widget id="user_uses_user_agent-user_agent_id">
+							<fi:styling list-type="radio" list-orientation="vertical"/>
+						</ft:widget>
+						<ft:widget id="user_uses_user_agent-browser_other"/>
+					</fi:items>
+				</fi:group>				
+				<ft:widget id="user_uses_user_agent-vesion"/>
+				<ft:widget id="user_agent_setting">
+					<fi:styling list-type="radio" list-orientation="vertical"/>
+				</ft:widget>
+			 	<fi:group>
+        			<fi:styling layout="combination"/>
+        			<fi:items>		
+					<ft:widget id="user_uses_ua_setting-user_agent_setting_id">
+						<fi:styling list-type="checkbox" list-orientation="vertical"/>
+					</ft:widget>
+					<ft:widget id="user_uses_ua_setting-ua_setting_other"/>
+					</fi:items>
+				</fi:group>					
+			</fieldset>
+			</jx:if>
+			<br />
+			<fieldset>
+				<legend>
+					<i18n:text catalogue="recruit" key="amformas.recruit.setting.fs.os"/>
+				</legend>
+			 	<fi:group>
+        			<fi:styling layout="combination"/>
+        			<fi:items>				
+						<ft:widget id="user_uses_os-user_uses_os_id">
+							<fi:styling list-type="radio" list-orientation="vertical"/>
+						</ft:widget>
+						<ft:widget id="user_uses_os-os_other"/>
+					</fi:items>
+				</fi:group>
+				<ft:widget id="user_uses_os-version"/>
+				<ft:widget id="user_uses_os_setting">
+					<fi:styling list-type="radio" list-orientation="vertical"/>
+				</ft:widget>
+			 	<fi:group>
+        			<fi:styling layout="combination"/>
+        			<fi:items>			
+						<ft:widget id="user_uses_os_setting-operating_system_setting_id">
+							<fi:styling list-type="checkbox" list-orientation="vertical" />
+						</ft:widget>
+						<ft:widget id="user_uses_ua_setting-os_setting_other"/>
+					</fi:items>
+				</fi:group>							
+			</fieldset>
+			<br />
+			<fieldset>
+				<legend>
+					<i18n:text catalogue="recruit" key="amformas.recruit.setting.fs.device"/>
+				</legend>
+			 	<fi:group>
+        			<fi:styling layout="combination"/>
+        			<fi:items>				
+						<ft:widget id="user_uses_device-device_id">
+							<fi:styling list-type="radio" list-orientation="vertical" />
+						</ft:widget>
+						<ft:widget id="user_uses_ua_setting-device_setting_other"/>
+					</fi:items>
+				</fi:group>
+				<ft:widget id="user_uses_device-experience_id">
+					<fi:styling list-type="radio" list-orientation="vertical"/>
+				</ft:widget>
+				<jx:if test="${showlastquestion == true}">
+					<ft:widget id="user-hours_per_week">
+						<fi:styling list-type="radio" list-orientation="vertical"/>
+					</ft:widget>
+				</jx:if>
+			</fieldset>
+        	</fi:items>
+      	</fi:group>
+      	<fi:group>
+        	<fi:styling layout="rows"/> 
+        	<fi:items>
+        		<ft:widget id="thesubmit"/>
+			</fi:items>	
+		</fi:group>    
+    </ft:form-template>
+    </content>

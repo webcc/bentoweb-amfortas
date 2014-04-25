@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+<!-- email to user for reminding pass -->
+<message key="amfortas.email2user.forgotpass.subject">
+        Amfortas: Wachtwoord opnieuw instellen
+</message>
+<message key="amfortas.email2user.forgotpass.text1">
+        Om uw wachtwoord opnieuw in te stellen, ga naar:
+</message>
+<message key="amformas.mail-forgotpass-reply.success">
+        U zou een email ontvangen moeten hebben met instructies over het opnieuw instellen van uw wachtwoord.
+</message>
+<message key="amformas.mail-forgotpass-reply.fail">
+        Het bijwerken van uw wachtwoord is mislukt.
+</message>
+<message key="amformas.mail-forgotpass-reply.done">
+        Uw wachtwoord is met succes bijgewerkt.
+</message>
+<message key="amformas.mail-forgotpass-reply.title">
+        Antwoord wachtwoord opnieuw instellen
+</message>
+	<!-- Verify email to user -->
+	<message key="amfortas.email2user.verify.subject">
+Amfortas verificatie email
+</message>
+	<message key="amfortas.email2user.common.dear">
+Geachte
+</message>
+	<message key="amfortas.email2user.verify.text1">
+U moet
+</message>
+	<message key="amfortas.email2user.verify.text2">
+bezoeken om uw e-mailadres te valideren.
+
+Als het klikken op de link niet werkt,  knip en plak de link dan in je browsers adresbalk of bestand->open (ctrl-o) invoerveld.
+Als de link niet in een keer gecopieerd kan worden of verdeeld is over meerdere regels, herhaal het knippen en plakken voor iedere regel.
+Let op dat er geen spaties in het adres staan in je browser-veld.
+</message>
+	<message key="amfortas.email2user.verify.text3">
+De administrator zal dan uw account activeren en u middels een andere e-mail daarover informeren. Voor hulp kunt u op die e-mail antwoorden.
+</message>
+	<!-- Status email to user -->
+	<message key="amfortas.email2user.status.subject">
+Amfortas account informatie email
+</message>
+	<message key="amfortas.email2user.status.text1">
+Mijnheer, mevrouw,
+
+Onlangs hebt u zich aangemeld als kandidaat testgebruiker voor de BenToWeb gebruikerstest, waarvoor hartelijk dank.
+
+Wij kunnen u meedelen dat de testomgeving online is en uw account geactiveerd. U kan dus nu aanmelden via http://bentoweb.org/amfortas/home.html met uw gebruikersnaam en wachtwoord, waarna u aan de test kan deelnemen.
+
+Houd er aub rekening mee dat mogelijks nog niet alle testen online zijn en de lijst mogelijks nog wordt aangevuld. Het is dan ook aangeraden dit regelmatig te checken. Tevens kan het voorkomen dat voor bepaalde gebruikersprofielen minder dan 20 tests beschikbaar zijn, in dat geval hebt u recht op de minimumvergoeding.
+
+Wij wensen u veel succes met de tests. Aarzel niet ons te contacteren indien u problemen ondervindt of nog vragen hebt in dit verband.
+
+Vriendelijke groeten,
+
+Tony Verelst, ISdAC
+chairman@isdac.org
+Direct phone +32 11 720012
+
+Derk van de Velde, Accessibility Foundation
+d.vandevelde@accessibility.nl
+Tel: +31 (0)30 - 2398244
+
+</message>
+        <message key="amfortas.email2user.status.text2">
+Als u problemen ondervindt met uw account, neem dan contact op met de administrator.
+</message>
+	<message key="amfortas.email.accountstatus.verified">
+Email bevestigd maar niet actief.
+</message>
+	<message key="amfortas.email.accountstatus.activated">
+Actief.
+</message>
+	<message key="amfortas.email.accountstatus.notverified">
+Email niet bevestigd (niet actief)
+</message>
+	<!-- mail-verify-reply.xml -->
+	<message key="amformas.mail-verify-reply.title">
+Email bevestigingsantwoord
+</message>
+	<message key="amformas.mail-verify-reply.success">
+Uw email is succesvol bevestigd.
+</message>
+	<message key="amformas.mail-verify-reply.already">
+U hebt uw email reeds succesvol bevestigd. Als u problemen ondervindt met uw account, contacteer de systeem administrator.
+</message>
+	<message key="amformas.mail-verify-reply.fail">
+Uw email kon niet bevestigd worden.
+</message>
+	<message key="amformas.mail-verify-reply.fail-nokey">
+Sluit de sleutel in die u toegestuurd is voor de bevestiging van uw e-mail.
+</message>
+</catalogue>

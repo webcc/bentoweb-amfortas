@@ -1,0 +1,240 @@
+<content xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  
+  <jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+   
+    <h1><i18n:text catalogue="admin" key="amfortas.admin.userdetail.title"/></h1>
+    <jx:if test="${userexists=='true'}">
+	    <a href="?userid=${previous}"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.link.previous"/></a>|<a href="?userid=${next}"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.link.next"/></a>
+		<!-- general information -->
+	    <fieldset class="userdetail">
+	    	<legend><i18n:text catalogue="admin" key="amfortas.admin.userdetail.legend.userdata"/></legend>
+ 		   	<span><i18n:text catalogue="admin" key="amfortas.admin.userdetail.label.name"/>:</span> ${user.getNameFirst()} ${user.getNameLast()}<br/>
+	 		<span><i18n:text catalogue="admin" key="amfortas.admin.user.email"/>:</span> ${user.getEmail()}<br/>
+	  	  	<span><i18n:text catalogue="admin" key="amfortas.admin.userdetail.label.nativelanguage"/>:</span>
+	    	<jx:if test="${user.language.getNameKey()!='amformas.recruit.ans.language_id.0'}">
+	    		<i18n:text catalogue="recruit" key="${user.language.getNameKey()}"/>
+	    	</jx:if>
+	    	<jx:if test="${user.language.getNameKey()=='amformas.recruit.ans.language_id.0'}">
+	    		${user.getLanguageNativeOther()}
+	    	</jx:if><br/>
+	    	<span><i18n:text catalogue="admin" key="amfortas.admin.user.date"/>:</span> ${user.getDateRegister()}<br/>
+	    	<span><i18n:text catalogue="admin" key="amfortas.admin.userdetail.label.status"/>:</span>
+	    	<jx:if test="${user.getStatusUser()=='0'}">
+	    		<span style="color:red;"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.veripending"/></span>
+	    		(<a href="?userid=${user.getUserId()}&amp;action=verify"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.link.verify"/></a> | 
+	    		 <a href="?userid=${user.getUserId()}&amp;action=activate"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.link.activate"/></a>)
+	    	</jx:if>
+	     	<jx:if test="${user.getStatusUser()=='1'}">
+   	 			<span style="color:red;"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.veri"/></span>
+   	 			(<a href="?userid=${user.getUserId()}&amp;action=activate"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.link.activate"/></a>)
+   	 		</jx:if>
+    		<jx:if test="${user.getStatusUser()=='2'}">
+	    		<span style="color:green;"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.active"/></span>
+	    		(<a href="?userid=${user.getUserId()}&amp;action=deactivate"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.link.deactivate"/></a>)
+   		 	</jx:if>   		 	
+ 	   </fieldset>
+ 	   <!-- user profile detail -->
+	   	   <fieldset class="userdetail">
+    			<legend><i18n:text catalogue="admin" key="amfortas.admin.userdetail.legend.profiledetailuser"/></legend>
+				<span><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.agerange"/>:</span> <i18n:text catalogue="recruit" key="${userprofile.ageRange.getNameKey()}" /><br/>
+				<span><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.englishlevel"/>:</span> <i18n:text catalogue="recruit" key="${userprofile.languageExperience.getNameKey()}" /><br/>
+				<span><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.webus"/>:</span> <i18n:text catalogue="recruit" key="${userprofile.hoursPerWeek.getNameKey()}" /><br/>
+				<jx:if test="${disability.size()>0}">
+				<span><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.disability"/>:</span>
+				<ul>
+					<jx:forEach var="dis" items="${disability}">
+						<li><i18n:text catalogue="recruit" key="${dis.disability.getNameKey()}"/></li>
+					</jx:forEach>
+				</ul> 
+			</jx:if>
+    	   </fieldset>
+    	   
+    		<fieldset class="userdetail">
+    			<legend><i18n:text catalogue="admin" key="amfortas.admin.userdetail.legend.testprofiles"/></legend>
+  		  		<table>
+ 		   			<tr>
+    				<th><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.tpid"/></th>
+    				<th><i18n:text catalogue="admin" key="amfortas.admin.user.status"/></th>
+    				<th><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.datecreated"/></th>
+    				<th><i18n:text catalogue="site" key="amformas.auth.selectprofile.action"/></th>
+    				<th>Test suites</th>
+   		 			</tr>
+  		  			<jx:forEach var="tp" items="${testprofileall}">
+    					<tr class="tp_row_${tp.isIsActive()}">
+	    					<td><a href="?userid=${user.getUserId()}&amp;tpid=${tp.getTestProfileId()}">${tp.getTestProfileId()}</a></td>
+	    					<td>
+	    						<jx:if test="${tp.isIsActive()==true}">
+	    							<span style="color:green;"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.active"/></span>
+	    						</jx:if>
+	      						<jx:if test="${tp.isIsActive()==false}">
+	    							<span style="color:red;"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.inactive"/></span>
+	    						</jx:if>
+	    					</td>
+	    					<td>${tp.getDateCreation()}</td>
+	    					<td><a href="?userid=${user.getUserId()}&amp;action=show&amp;tpid=${tp.getTestProfileId()}"><i18n:text catalogue="site" key="amformas.auth.selectprofile.show"/></a></td>
+							<td>
+									<jx:forEach var="tsp" items="${datasourceAdapter.getAssignedTestSuites(tp)}">
+	  		  							<h2>${tsp.getTitle()}</h2>
+	  		  								<p>
+	  		  									${tsp.getDescription()}
+	  		  									<br/>From: ${tsp.getDateStart()} to  ${tsp.getDateEnd()}]
+	  		  									<br/><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.tcdone"/>: ${datasourceAdapter.getCountCreditForProfileNTestSuite(tp, tsp)}
+	  		  								</p>
+	  		  								<ol style="height:150px;overflow: auto;padding: 8px;border: 1px solid #666;background-color: #ccc;">
+							    				<jx:forEach var="credit" items="${datasourceAdapter.getCreditForProfileNTestSuite(tp, tsp)}">
+													<li>${credit.getTestcaseId()} / ${credit.getScenarioId()}</li>
+							    				</jx:forEach>
+						    				</ol> 	
+						    				<p><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.tcopen"/>:  ${datasourceAdapter.getCountTODOForProfileNTestSuite(tp, tsp)}</p>
+						    				<ol style="height:150px;overflow: auto;padding: 8px;border: 1px solid #666;background-color: #ccc;">
+							    				<jx:forEach var="todo" items="${datasourceAdapter.getTODOForProfileNTestSuite(tp, tsp)}">
+													<li>${todo.getTestcaseId()} / ${todo.getScenarioId()}</li>
+							    				</jx:forEach>
+					    					</ol>		
+  		  							</jx:forEach>
+							</td>
+		
+   						</tr>
+    				</jx:forEach>
+    			</table>
+       		</fieldset>    	
+       		
+       		 <!-- list of all testprofiles -->
+ 	   <jx:if test="${testprofileall.size()>0}">	   	   
+       		<!-- testprofile detail -->
+       		<fieldset class="userdetail">
+       			<legend><i18n:text catalogue="admin" key="amfortas.admin.userdetail.legend.profiledetail"/> (${testprofile.getTestProfileId()})</legend>
+       			<div class="floatleft">
+				<jx:if test="${uaList.size()>0 || uaListOther.size()>0}">
+				<span><i18n:text catalogue="site" key="amformas.auth.selectprofile.ua"/></span>
+				<ul>
+				<jx:forEach var="ua" items="${uaList}">
+					<li><i18n:text catalogue="recruit" key="${ua.userAgent.getNameKey()}"/>
+						<jx:if test="${ua.getVersion()!=''}">
+							,ver.: ${ua.getVersion()}  / <i18n:text catalogue="recruit" key="${ua.atExperience.getNameKey()}"/>
+						</jx:if>
+					</li>					
+				</jx:forEach>				
+				<jx:forEach var="uao" items="${uaListOther}">
+					<li>(Other) ${uao.getBrowserOther()}
+						<jx:if test="${uao.getVersion()!=''}">
+							,ver.: ${uao.getVersion()} / <i18n:text catalogue="recruit" key="${uao.atExperience.getNameKey()}"/>
+						</jx:if>									
+					</li>
+				</jx:forEach>
+				</ul>
+			</jx:if>
+			<jx:if test="${(atList.size()>0) || (atListOther.size()>0)}">
+				<span><i18n:text catalogue="site" key="amformas.auth.selectprofile.at"/></span>
+				<ul>
+				<jx:forEach var="at" items="${atList}">
+					<li><i18n:text catalogue="recruit" key="${at.assistiveTechnology.getNameKey()}"/> (
+						<jx:if test="${at.getVersion()!=null}">
+							${at.getVersion()},
+						</jx:if>
+						<i18n:text catalogue="recruit" key="${at.atExperience.getNameKey()}"/> )
+					</li>
+				</jx:forEach>
+				<jx:forEach var="ato" items="${atListOther}">
+					<li>${ato.getAssistiveTechnologyOther()}
+						<jx:if test="${ato.getVersion()!=''}">
+							${ato.getVersion()},
+						</jx:if>
+						<i18n:text catalogue="recruit" key="${ato.atExperience.getNameKey()}"/> )
+					</li>
+				</jx:forEach>
+				</ul>
+			</jx:if>
+			<jx:if test="${device!=null}">
+				<span><i18n:text catalogue="site" key="amformas.auth.selectprofile.dev"/></span>
+				<ul>
+				<li>
+					<jx:if test="${device.device.getNameKey()!='amformas.recruit.ans.common.other'}">
+							<i18n:text catalogue="recruit" key="${device.device.getNameKey()}"/>
+					</jx:if>
+					<jx:if test="${device.device.getNameKey()=='amformas.recruit.ans.common.other'}">
+							${device.getDeviceOther()}
+					</jx:if>
+					( <i18n:text catalogue="recruit" key="${device.atExperience.getNameKey()}"/> )
+				</li>
+				</ul>
+			</jx:if>
+			<jx:if test="${os!=null}">
+				<span><i18n:text catalogue="site" key="amformas.auth.selectprofile.os"/></span>
+				<ul>
+				<li>
+					<jx:if test="${os.operatingSystem.getNameKey()!='amformas.recruit.ans.common.other'}">
+							<i18n:text catalogue="recruit" key="${os.operatingSystem.getNameKey()}"/>
+					</jx:if>
+					<jx:if test="${os.operatingSystem.getNameKey()=='amformas.recruit.ans.common.other'}">
+							${os.getOsOther()}
+					</jx:if>
+					<jx:if test="${os.getVersion()!=''}">
+						( ${os.getVersion()} )
+					</jx:if>
+				</li>
+				</ul>
+			</jx:if>
+			<jx:if test="${(uaListSetting.size()>0) || (uaListSettingOther.size()>0)}">
+				<span><i18n:text catalogue="site" key="amformas.auth.selectprofile.uasettings"/></span>
+					<ul>
+						<jx:forEach var="uas" items="${uaListSetting}">
+							<li><i18n:text catalogue="recruit" key="${uas.userAgentSetting.getNameKey()}"/></li>
+						</jx:forEach>
+						<jx:forEach var="uaso" items="${uaListSettingOther}">
+							<li>${uaso.getSettingOther()}</li>
+						</jx:forEach>
+					</ul>
+			</jx:if>
+			<jx:if test="${(osListSetting.size()>0) || (osListSettingOther.size()>0)}">
+				<span><i18n:text catalogue="site" key="amformas.auth.selectprofile.ossettings"/></span>
+					<ul>
+						<jx:forEach var="oss" items="${osListSetting}">
+							<li><i18n:text catalogue="recruit" key="${oss.operatingSystemSetting.getNameKey()}"/></li>
+						</jx:forEach>
+						<jx:forEach var="osso" items="${osListSettingOther}">
+							<li>${osso.getSettingOther()}</li>
+						</jx:forEach> 
+					</ul>
+			</jx:if>
+    		</div>
+    		<div>
+    			<span><i18n:text catalogue="admin" key="amfortas.admin.userdetail.label.testsuites"/></span>
+    			<jx:if test="${tsuser.size()>0}">
+    			<table style="margin-top:0.5em;">
+    				<tr>
+    					<th><i18n:text catalogue="admin" key="amfortas.admin.userdetail.table.tsname"/></th>
+    					<th><i18n:text catalogue="admin" key="amfortas.admin.userdetail.table.tsaction"/></th>
+    				</tr>
+    				<jx:forEach var="ts" items="${tsuser}">
+    					<tr>
+    						<td>${ts.testSuite.getTitle()}</td>
+    						<td><a href="?userid=${user.getUserId()}&amp;action=delts&amp;tsid=${ts.testSuite.getTestSuiteId()}&amp;${testprofile.getTestProfileId()}"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.delete"/></a></td>
+    					</tr>
+    				</jx:forEach>
+    			</table> 
+    			</jx:if>
+    		    <form>
+    			<select name="tsid">
+    				<jx:forEach var="ts" items="${testsuites}">
+    					<option value="${ts.getTestSuiteId()}">${ts.getTitle()}</option>
+    				</jx:forEach>
+    			</select>
+    			<input type="submit" name="subaddts" value="Add" />
+    			<input type="hidden" name="userid" value="${user.getUserId()}" />
+    			<input type="hidden" name="tpid" value="${testprofile.getTestProfileId()}" />
+    			</form>
+    		</div>
+       		</fieldset>
+       		    		   
+       </jx:if>
+       <p style="padding-top:0.5em;">
+       <a href="?userid=${previous}"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.link.previous"/></a>|<a href="?userid=${next}"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.link.next"/></a>
+       </p>
+    </jx:if>
+    <jx:if test="${userexists=='false'}">
+    	<p><i18n:text catalogue="admin" key="amfortas.admin.userdetail.txt.notexists" /></p>
+		<a href="?userid=${back}"><i18n:text catalogue="admin" key="amfortas.admin.userdetail.link.back" /></a>
+    </jx:if>
+</content>

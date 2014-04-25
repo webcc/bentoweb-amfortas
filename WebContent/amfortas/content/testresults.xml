@@ -1,0 +1,114 @@
+<content xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  
+  <jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+   
+    <h1><i18n:text catalogue="admin" key="amfortas.admin.testresults.title"/></h1>
+    <fieldset class="userdetail">
+    	<legend>Test Result Criteria</legend>
+    	<form method="post">
+    		<h2>User</h2>
+    		<select name="searchcrit">
+    			<option value="1">Surname</option>
+    			<option value="2">First name</option>
+    			<option value="3">e-Mail</option>
+    		</select>
+    		<input type="text" name="searchtxt" value="" />
+    		<input type="submit" value="Search User" name="subUser" />	
+    	</form>
+    	<form method="post">
+    		<jx:if test="${users != null}">
+    			<table>
+    				<tr>
+    					<th>Check</th>
+    					<th>User</th>
+    					<th>e-Mail</th>
+    				</tr>
+    				<jx:forEach var="item" items="${users}">
+    					<tr>
+    						<td><input id="${item.getTestProfileId()}" type="radio" name="tProfileId" value="${item.getTestProfileId()}" /></td>
+    						<td><label for="${item.getTestProfileId()}">${item.user.getNameFirst()} ${item.user.getNameLast()}</label></td>
+    						<td><label for="${item.getTestProfileId()}">${item.user.getEmail()}</label></td>
+    					</tr>
+    				</jx:forEach>
+    			</table>
+    		</jx:if>
+    		<h2>Testsuite/Guidelines</h2>
+    		<select name="testsuite">
+    			<jx:forEach var="testsuite" items="${testSuiteList}">
+    				<option value="${testsuite.getTestSuiteId()}">${testsuite.getTitle()}</option>
+    			</jx:forEach>
+    		</select>
+    		<select name="guideline">
+    			<option value="all">all</option>
+    			<option value="1.1">1.1</option>
+    			<option value="1.2">1.2</option>
+    			<option value="1.3">1.3</option>
+    			<option value="1.4">1.4</option>
+    			<option value="2.1">2.1</option>
+    			<option value="2.2">2.2</option>
+    			<option value="2.3">2.3</option>
+    			<option value="2.4">2.4</option>
+    			<option value="2.5">2.5</option>
+    			<option value="3.1">3.1</option>
+    			<option value="3.2">3.2</option>
+    			<option value="4.1">4.1</option>
+    			<option value="4.2">4.2</option>
+    		</select>
+    		<input type="submit" value="Select Testresult" name="subResult" />
+    	</form>
+    </fieldset>
+    <jx:if test="${result!=null}">
+    <fieldset  class="userdetail">
+    	<legend>Test Result</legend>
+    	<h2>List of test results:</h2>
+    	<table>
+    		<tr>
+    		<th>UID</th>
+    		<th>TpID</th>
+    		<th>Age</th>
+    		<th>Sex</th>
+    		<th>Testcase</th>
+    		<th>Scenario</th>
+    		<th>exp.Result</th>
+    		<th>Type</th>
+    		<th>Code</th>
+    		<th>Answer</th>
+    		<th>Text</th>
+    		<th>Disability</th>
+    		<th>AT-type</th>
+    		<th>AT-product</th>
+    		<th>UA-type</th>
+    		<th>UA-product</th>
+    		<th>Device</th>
+    		<th>OS</th>
+    		<th>Date</th>
+    		</tr>
+    		<jx:forEach var="item" items="${result}">
+    			<tr>
+    				<td>${item["UID"]}</td>
+    				<td>${item["TpID"]}</td>
+    				<td>${item["age"]}</td>
+    				<td>${item["sex"]}</td>
+    				<td>${item["testcaseid"]}</td>
+    				<td>${item["scenarioid"]}</td>
+    				<td>${item["expresult"]}</td>
+	    			<td>${item["type"]}</td>
+	    			<td>${item["code"]}</td>
+    				<td>${item["answer"]}</td>
+    				<td>${item["text"]}</td>
+    				<td>${item["disability"]}</td>
+    				<td>${item["at_types"]}</td>
+    				<td>${item["at"]}</td>
+    				<td>${item["ua_types"]}</td>
+    				<td>${item["ua"]}</td>
+    				<td>${item["device"]}</td>
+    				<td>${item["os"]}</td>
+    				<td>${item["date"]}</td>
+    			</tr>
+    		</jx:forEach>  		
+    	</table>
+    </fieldset>
+    </jx:if>
+ </content>
+ 

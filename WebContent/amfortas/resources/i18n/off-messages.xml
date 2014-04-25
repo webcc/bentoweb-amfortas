@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+	<!--
+		page: maintainance-info
+	-->
+	<message key="amformas.maintainance.title">
+		Maintainance Information
+	</message>
+	<message key="amformas.maintainance.text">
+		Sorry, Amfortas is currently offline, cause of maintainance
+		work!
+	</message>
+
+	<!--
+		page: nectround
+	-->
+	<message key="amformas.nextround.title">
+		Offline till next round
+	</message>
+	<message key="amformas.nextround.text">
+		2nd round of evaluation has been closed. We would like to thank
+		you all for your contribution. We are now processing the results
+		and preparing for the next (3rd) one. Please visit us again in a
+		few days for more testing. People who have recently registered may 
+		not be activated until next round
+	</message>
+
+</catalogue>

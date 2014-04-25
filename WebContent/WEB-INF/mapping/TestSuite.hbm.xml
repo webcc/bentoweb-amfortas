@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.TestSuite" table="test_suite" catalog="amfortas">
+        <id name="testSuiteId" type="integer">
+            <column name="test_suite_id" />
+            <generator class="identity" />
+        </id>
+        <property name="title" type="string">
+            <column name="title" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="indexFileUri" type="string">
+            <column name="index_file_uri" />
+        </property>
+        <property name="metadataFilesUri" type="string">
+            <column name="metadata_files_uri" />
+        </property>
+        <property name="testFilesUri" type="string">
+            <column name="test_files_uri" />
+        </property>
+        <property name="mappingFileUri" type="string">
+            <column name="mapping_file_uri" />
+        </property>
+        <property name="timesPerTestCase" type="integer">
+            <column name="timesPerTestCase" />
+        </property>
+        <property name="testCasesPerUser" type="integer">
+            <column name="testCasesPerUser" />
+        </property>
+        <property name="dateStart" type="timestamp">
+            <column name="date_start" length="19" />
+        </property>
+        <property name="dateEnd" type="timestamp">
+            <column name="date_end" length="19" />
+        </property>
+        <property name="isActive" type="boolean">
+            <column name="is_active" />
+        </property>
+        <property name="object" type="binary">
+            <column name="object" />
+        </property>
+        <set name="testcaseSets" inverse="true">
+            <key>
+                <column name="test_suite_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.TestcaseSet" />
+        </set>
+        <set name="testProfileHasTestSuites" inverse="true">
+            <key>
+                <column name="test_suite_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.TestProfileHasTestSuite" />
+        </set>
+        <set name="testresults" inverse="true">
+            <key>
+                <column name="test_suite_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.Testresult" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.AtExperience" table="at_experience" catalog="amfortas">
+        <id name="atExperienceId" type="integer">
+            <column name="at_experience_id" />
+            <generator class="identity" />
+        </id>
+        <property name="nameKey" type="string">
+            <column name="name_key" />
+        </property>
+        <property name="nameDefault" type="string">
+            <column name="name_default" />
+        </property>
+        <set name="userUsesAssistiveTechnologies" inverse="true">
+            <key>
+                <column name="at_experience_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserUsesAssistiveTechnology" />
+        </set>
+        <set name="userUsesDevices" inverse="true">
+            <key>
+                <column name="at_experience_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserUsesDevice" />
+        </set>
+        <set name="userUsesUserAgents" inverse="true">
+            <key>
+                <column name="at_experience_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserUsesUserAgent" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<fd:form
+  xmlns:fd="http://apache.org/cocoon/forms/1.0#definition"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  <fd:validation>
+  	    <fd:javascript>
+  	    <![CDATA[
+  	    	cocoon.load("resources/flow/general_helperfunctions.js");
+			var success = true;
+			
+			var success1 = ifother(widget,"assistive_technology-assistive_technology_types_id","assistive_technology_type_other","amformas.recruit.errormsg.assistive_technology_types_id","amformas.recruit.ans.assistive_technology_types_id.other");
+		
+			if(success1)
+				return true;
+			else
+				return false;
+
+//		java.lang.System.err.println("user_agent_id___: "+user_agent_id.value);
+//		java.lang.System.err.println("browser_other___: "+browser_other.value);
+
+		]]>
+	    </fd:javascript>
+	</fd:validation> 
+<fd:widgets>
+
+<!-- ++++++++++ FORM 3 ++++++++++ -->
+	<!-- Q9.1 (if Q9 yes) -->
+ 	<fd:field id="assistive_technology-assistive_technology_types_id" required="true">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.assistive_technology_types_id"/>
+    	</fd:label>
+    	<fd:hint><i18n:text key="amformas.recruit.errormsg.assistive_technology_types_id"/></fd:hint>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="at_types"
+                   value-path="value" label-path="label" />
+  	</fd:field>   
+  	
+  	<fd:field id="assistive_technology_type_other" required="false">
+      <!--<fd:label><i18n:text key="amformas.recruit.ans.common.other_ans"/></fd:label> -->
+      <fd:hint><i18n:text key="amformas.recruit.errormsg.common.other"/></fd:hint>
+      <fd:datatype base="string"/>
+    </fd:field>
+    <fd:submit id="thesubmit">
+  		<fd:label><i18n:text catalogue="recruit" key="amformas.forms.common.submit"/></fd:label>
+  	</fd:submit>
+
+</fd:widgets>
+
+</fd:form>

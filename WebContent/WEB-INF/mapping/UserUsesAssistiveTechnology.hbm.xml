@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.UserUsesAssistiveTechnology" table="user_uses_assistive_technology" catalog="amfortas">
+        <id name="userUsesAtId" type="integer">
+            <column name="user_uses_at_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="assistiveTechnology" class="org.bentoweb.amfortas.hibernate.om.AssistiveTechnology" fetch="select">
+            <column name="assistive_technology_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="testProfile" class="org.bentoweb.amfortas.hibernate.om.TestProfile" fetch="select">
+            <column name="test_profile_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="atExperience" class="org.bentoweb.amfortas.hibernate.om.AtExperience" fetch="select">
+            <column name="at_experience_id" not-null="true" />
+        </many-to-one>
+        <property name="version" type="string">
+            <column name="version" />
+        </property>
+        <property name="assistiveTechnologyOther" type="string">
+            <column name="assistive_technology_other" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.TestProfileHasUserProfile" table="test_profile_has_user_profile" catalog="amfortas">
+        <composite-id name="id" class="org.bentoweb.amfortas.hibernate.om.TestProfileHasUserProfileId">
+            <key-property name="testProfileId" type="integer">
+                <column name="test_profile_id" />
+            </key-property>
+            <key-property name="userProfileId" type="integer">
+                <column name="user_profile_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="testProfile" class="org.bentoweb.amfortas.hibernate.om.TestProfile" update="false" insert="false" fetch="select">
+            <column name="test_profile_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userProfile" class="org.bentoweb.amfortas.hibernate.om.UserProfile" update="false" insert="false" fetch="select">
+            <column name="user_profile_id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

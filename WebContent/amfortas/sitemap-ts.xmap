@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--+
+  | Test suites' Sitemap.
+  +-->
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+
+  <!-- ===== Default components ===== -->
+  <map:components>
+
+    <!-- ===== Generators ===== -->
+    <map:generators default="file">
+      <map:generator name="cvsdirectory"
+        src="org.bentoweb.amfortas.cocoon.generation.CVSDirectoryGenerator" />
+      <map:generator name="cvsfile"
+        src="org.bentoweb.amfortas.cocoon.generation.CVSFileGenerator" />
+    </map:generators>
+
+    <!-- ===== Transformers ===== -->
+    <map:transformers default="xslt" />
+
+    <!-- ===== Readers ===== -->
+    <map:readers default="resource">
+      <map:reader name="cvsreader"
+        src="org.bentoweb.amfortas.cocoon.reading.CVSReader" />
+    </map:readers>
+
+    <!-- ===== Serializers ===== -->
+    <map:serializers default="xhtml" />
+
+    <!-- ===== Matchers ===== -->
+    <map:matchers default="wildcard" />
+
+    <!-- ===== Selectors ===== -->
+    <map:selectors default="request-parameter" />
+
+    <!-- ===== Actions ===== -->
+
+  </map:components>
+
+  <!-- ===== Views ===== -->
+  <map:views>
+  </map:views>
+
+  <!-- ===== Pipelines ===== -->
+  <map:pipelines>
+ 
+    <!-- ===== Global variables ===== -->
+    <map:component-configurations>
+        <global-variables>
+            <xhtml1_ts_resources>XHTML1_TestSuite/testfiles/resources</xhtml1_ts_resources>
+        </global-variables>
+    </map:component-configurations>
+
+    <!-- ===== Mapping requests ===== -->
+    <map:pipeline>
+    
+      <!-- ===== Static resources ===== -->
+      <map:match pattern="resources/**">
+        <map:read type="cvsreader" src="{global:xhtml1_ts_resources}/{1}">
+          <map:parameter name="serverkey" value="bentoweb" />
+        </map:read>
+      </map:match>
+
+      <map:match pattern="cvsdirectory/**">
+        <map:generate type="cvsdirectory">
+          <map:parameter name="serverkey" value="bentoweb" />
+          <map:parameter name="module" value="{1}" />
+        </map:generate>
+        <!--<map:transform src="resources/xsl/mainTS.xslt" type="xslt">
+          <map:parameter name="lang" value="en" />
+        </map:transform>
+        -->
+        <!--<map:transform src="resources/xsl/directory2html.xslt" type="xslt">
+        </map:transform>-->
+        
+		<!--<map:transform type="log">
+  		<map:parameter name="logfile" value="cvsdir.log"/>
+  		<map:parameter name="append" value="no"/>
+  		</map:transform>        -->
+        <!--<map:serialize type="xhtml" />      -->
+        <map:serialize type="xml" />
+      </map:match>
+      
+      <map:match pattern="**/*.xml">
+        <map:generate type="cvsfile">
+          <map:parameter name="serverkey" value="bentoweb" />
+          <map:parameter name="module" value="{1}/{2}.xml" />
+        </map:generate>
+        <!--
+        <map:transform src="resources/xsl/tcdl1.1_to_xhtml_print_en.xslt" type="xslt" />
+        -->
+        <map:transform type="log">
+  		<map:parameter name="logfile" value="/home-local/carlos/cvsdir.log"/>
+  		<map:parameter name="append" value="no"/>
+  		</map:transform> 
+        <map:serialize type="xml" />
+      </map:match>
+      
+      <map:match pattern="**/*.html">
+        <map:generate type="cvsfile">
+          <map:parameter name="serverkey" value="bentoweb" />
+          <map:parameter name="module" value="{1}/{2}.html" />
+        </map:generate>
+        <map:serialize type="xhtml" />
+      </map:match>      
+
+      <map:match pattern="**/*.*">
+        <map:read type="cvsreader" src="{1}/{2}.{3}">
+          <map:parameter name="serverkey" value="bentoweb" />
+        </map:read>
+      </map:match>
+      
+      
+      <!-- original by carlos 
+      <map:match pattern="metadata/**/*.xml">
+        <map:generate type="cvsfile">
+          <map:parameter name="serverkey" value="bentoweb" />
+          <map:parameter name="module" value="{1}/{2}.xml" />
+        </map:generate>
+        <map:transform src="stylesheets/tcdl1.1_to_xhtml_user_all.xslt" type="xslt" />
+        <map:serialize type="xhtml" />
+      </map:match>
+      -->
+
+    </map:pipeline>
+    
+  </map:pipelines>
+  
+</map:sitemap>

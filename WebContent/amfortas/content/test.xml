@@ -1,0 +1,29 @@
+<content xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  
+  <jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+   
+    <h1>Test</h1> 
+    
+
+<table border="1">
+	<tr>
+		<th>CaseId</th>
+		<th>Scenario Id</th>
+		<th>Grade ${metadataURI}</th>
+	</tr>
+	<!-- 
+<jx:if test="${(winners == null) &amp;&amp; (winners.size()>0)}">
+ -->
+	<jx:forEach var="testCaseScenario" items="${winners}">
+		<tr>
+			<td><a href="?id=${prefURI}${testCaseScenario.getTestCaseId()}">${testCaseScenario.getTestCaseId()}</a></td>
+			<td>${testCaseScenario.getScenarioId()}</td>
+			<td>${testCaseScenario.getGrade()}</td>
+		</tr>
+	</jx:forEach>
+	<!-- 
+</jx:if>
+ -->
+</table>
+</content>

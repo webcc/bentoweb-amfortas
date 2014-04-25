@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  		 xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+	      
+	<runheader><i18n:text catalogue="site" key="amformas.auth.runtest.title"/></runheader>
+	<runnote><i18n:text catalogue="site" key="amformas.auth.runtest.note"/></runnote>
+	<runtext1><i18n:text catalogue="site" key="amformas.auth.runtest.text1"/></runtext1>
+	<runtext2><i18n:text catalogue="site" key="amformas.auth.runtest.text2"/></runtext2>
+	<runlegend><i18n:text catalogue="site" key="amformas.auth.runtest.fieldset.legend"/></runlegend>
+	<runbutton><i18n:text catalogue="site" key="amformas.auth.runtest.button"/></runbutton>
+	<dontknow_button><i18n:text catalogue="site" key="amformas.auth.runtest.dontknow_button"/></dontknow_button>
+	<dontknow_label><i18n:text catalogue="site" key="amformas.auth.runtest.dontknow_label"/></dontknow_label>
+</content>

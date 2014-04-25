@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+		 xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+		 
+	<h1><i18n:text catalogue="site" key="amformas.auth.testsuites.title"/></h1>
+	<jx:if test="${tsview.size()>0}">
+		<p><i18n:text catalogue="site" key="amformas.auth.testsuites.txtselect"/></p>
+		<table>
+			<tr>
+				<th><i18n:text catalogue="site" key="amformas.auth.testsuites.link.title"/></th>
+				<th><i18n:text catalogue="site" key="amformas.auth.testsuites.link.action"/></th>
+			</tr>
+			<jx:forEach var="ts" items="${tsview}">
+				<tr>
+					<td>${ts.testSuite.getTitle()}</td>
+					<td><a href="?tsid=${ts.testSuite.getTestSuiteId()}"><i18n:text catalogue="site" key="amformas.auth.testsuites.link.txt"/></a></td>
+				</tr>
+			</jx:forEach>			
+		</table>
+	</jx:if>
+	<jx:if test="${tsview.size()==0}">
+		<p><i18n:text catalogue="site" key="amformas.auth.testsuites.txtnoselect"/></p>
+	</jx:if>
+</content>

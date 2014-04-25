@@ -1,0 +1,68 @@
+<fd:form
+  xmlns:fd="http://apache.org/cocoon/forms/1.0#definition"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  <fd:validation>
+  	    <fd:javascript>
+  	    <![CDATA[
+  	    	cocoon.load("resources/flow/general_helperfunctions.js");
+			var success = true;
+			var success1 = ifother(widget,"user_uses_assistive_technology-assistive_technology_id","user_uses_assistive_technology-assistive_technology_other","amformas.recruit.errormsg.assistive_technology_types_id","amformas.recruit.atgeneral.other");
+			if(success1)
+				return true;
+			else
+				return false;
+		]]>
+	    </fd:javascript>
+	</fd:validation>  
+
+<fd:widgets>
+
+<!-- ++++++++++ FORM for AT - Alternative input devices  ++++++++++ -->
+  	<fd:field id="user_uses_assistive_technology-assistive_technology_id" required="true">
+    	<fd:label><i18n:text key="amformas.recruit.q.alterin"/></fd:label>
+    	<fd:hint><i18n:text key="amformas.recruit.errormsg.assistive_technology_types_id"/></fd:hint>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="assistive_technologies"
+                   value-path="value" label-path="label" />
+  	</fd:field>  	
+
+<!-- ++++++++++ FORM for AT - all ++++++++++ -->
+
+	<fd:field id="user_uses_assistive_technology-assistive_technology_other" required="false">
+      <fd:label><i18n:text key="amformas.recruit.ans.common.other"/></fd:label>
+      <fd:hint><i18n:text key="amformas.recruit.errormsg.common.other"/></fd:hint>
+      <fd:datatype base="string"/>
+    </fd:field>
+    
+   	<fd:field id="user_uses_assistive_technology-version" required="false">
+      <fd:label><i18n:text key="amformas.recruit.q.version"/></fd:label>
+      <fd:datatype base="string"/>
+    </fd:field>
+	<!-- 9.3 X -->
+  	<fd:field id="user_uses_assistive_technology-at_experience_id" required="true">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.assistive_technology.experience_id"/>:
+    	</fd:label>
+    	<fd:hint><i18n:text key="amformas.recruit.errormsg.experience_id"/></fd:hint>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="at_experiences"
+                   value-path="value" label-path="label" />
+  	</fd:field> 
+
+  	<!-- Q9.3 X -->
+ 
+  	<fd:field id="another-assistive_technology" required="true">
+	  	<fd:label><i18n:text key="amformas.recruit.q.assistive_technology_other"/></fd:label>
+	  	<fd:hint><i18n:text key="amformas.recruit.errormsg.assistive_technology"/></fd:hint>
+  		<fd:datatype base="string"/>
+  		<fd:selection-list type="flow-jxpath" list-path="at_usage"
+                   value-path="value" label-path="label" />
+  	</fd:field>
+
+    <fd:submit id="thesubmit">
+  		<fd:label><i18n:text catalogue="recruit" key="amformas.forms.common.submit"/></fd:label>
+  	</fd:submit>
+  	 
+</fd:widgets>
+
+</fd:form>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigation xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
+xmlns:jx="http://apache.org/cocoon/templates/jx/1.0">
+	<group title="">
+		<desc><i18n:text catalogue="site" key="amformas.navigation.desc.head"/></desc>
+
+	<jx:if test="${(cocoon.parameters.user_role_name==null)}">
+		<item link="home.html">
+			<title>
+			<i18n:text catalogue="site" key="amformas.navigation.home"/></title>
+			<desc><i18n:text catalogue="site" key="amformas.navigation.desc.home"/></desc> 
+		</item>
+	</jx:if>
+					
+	<jx:if test="${(request.getRequestURI().indexOf('start-recruit.html')==-1)}">
+		<jx:if test="${(cocoon.continuation.id==null) || (cocoon.continuation.id=='')}">
+	
+			<item title="Sign In" link="sign-in.html">
+				<title><i18n:text catalogue="site" key="amformas.navigation.sign_in"/></title>
+				<desc><i18n:text catalogue="site" key="amformas.navigation.desc.sign_in"/></desc>
+			</item>
+			<item title="Register" link="register.html">
+				<title><i18n:text catalogue="site" key="amformas.navigation.register"/></title>
+				<desc><i18n:text catalogue="site" key="amformas.navigation.desc.register"/></desc>
+			</item>
+			<item title="Instructions" link="instructions.html">
+				<title><i18n:text catalogue="site" key="amformas.navigation.instructions"/></title>
+				<desc><i18n:text catalogue="site" key="amformas.navigation.desc.instructions"/></desc>
+			</item>
+			
+		</jx:if>
+	</jx:if>
+
+
+		<item title="Help" link="help.html">
+			<title><i18n:text catalogue="site" key="amformas.navigation.help"/></title>
+			<desc><i18n:text catalogue="site" key="amformas.navigation.desc.help"/></desc>
+		</item>
+	</group>
+</navigation>

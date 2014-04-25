@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+	<h1><i18n:text catalogue="site" key="amformas.instructions.title"/></h1>
+	<p><i18n:text catalogue="site" key="amformas.instructions.text"/></p>
+</content>

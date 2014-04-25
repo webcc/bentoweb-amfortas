@@ -1,0 +1,27 @@
+<fd:form
+  xmlns:fd="http://apache.org/cocoon/forms/1.0#definition"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+<fd:widgets>
+	<fd:field id="email">
+    	<fd:label><i18n:text catalogue="site" key="amformas.login.email"/>:</fd:label>
+    	<fd:datatype base="string"/>
+	    <fd:validation>
+        <fd:email>
+        	<fd:failmessage><i18n:text catalogue="recruit" key="amformas.recruit.errormsg.email"/></fd:failmessage>
+        </fd:email>
+	    </fd:validation>
+  	</fd:field>
+	<fd:field id="password">
+    	<fd:label><i18n:text catalogue="site" key="amformas.login.password"/>:</fd:label>
+    	<fd:datatype base="string"/>
+	    <fd:validation>
+	      <fd:length min="1"/>
+	    </fd:validation>
+  	</fd:field>	
+    <fd:submit id="thesubmit">
+  		<fd:label><i18n:text catalogue="site" key="amformas.forms.common.login"/></fd:label>
+  	</fd:submit>      	
+</fd:widgets>
+
+</fd:form>

@@ -1,0 +1,84 @@
+<content xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  
+  <jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+   
+    <h1>Admin Test Suites</h1>
+    
+    <jx:if test="${done}!=null">
+    	<p>Action Completed! <a href="admin_testsuites">Back to admin testsuites page</a></p>
+    </jx:if>
+    
+    
+    <jx:if test="${testSuiteList}">
+    <p>No of test suites: ${l}</p>    
+    </jx:if>
+	    <jx:forEach var="testsuite" items="${testSuiteList}">
+		    <table id="testsuites_admin" style="margin-top:1em;width:90%;border-top:5px">
+		    	<tr>
+		    		<th style="width:20%">Test Suite ID</th>
+		    		<td style="width:80%">${testsuite.getTestSuiteId()}</td>
+		    	</tr>	    	
+		    	<tr>
+		    		<th>Is Test Suite Active?</th>
+		    		<td>${testsuite.isIsActive()}</td>
+		    	</tr>
+		    	<tr>
+		    		<th>Title</th>
+		    		<td>${testsuite.getTitle()}</td>
+		    	</tr>
+		    	<tr>
+		    		<th>Description</th>
+		    		<td>${testsuite.getDescription()}</td>
+		    	</tr>
+		    	<tr>
+		    		<th>Location (URI) of the test cases index file</th>
+		    		<td><a href="${testsuite.getIndexFileUri()}">${testsuite.getIndexFileUri()}</a></td>
+		    	</tr>
+		    	<tr>
+		    		<th>Location (URI) of TCDL files folder</th>
+		    		<td><a href="${testsuite.getMetadataFilesUri()}">${testsuite.getMetadataFilesUri()}</a></td>
+		    	</tr>
+		    	<tr>
+		    		<th>Location (URI) of test files folder</th>
+		    		<td><a href="${testsuite.getTestFilesUri()}">${testsuite.getTestFilesUri()}</a></td>
+		    	</tr>
+		    	
+		    	<tr>
+		    		<th>Maximum number of times a test-case-scenario must be evaluated</th>
+		    		<td>${testsuite.getTimesPerTestCase()}</td>
+		    	</tr>
+		    	<tr>
+		    		<th>Number of test-case-scenarios assigned per user request</th>
+		    		<td>${testsuite.getTestCasesPerUser()}</td>
+		    	</tr>
+		    	<tr>
+		    		<th>Date Started</th>
+		    		<td>${testsuite.getDateStart()}</td>
+		    	</tr>
+		    	<tr>
+		    		<th>Date Ended</th>
+		    		<td>${testsuite.getDateEnd()}</td>
+		    	</tr>
+		    	<tr>
+		    		<th>Available actions for this test suite</th>
+		    		<td><div>
+		    			<form name="form_test_${testsuite.getTestSuiteId()}" method="post">
+			    			<input type="hidden" name="testsuiteid" value="${testsuite.getTestSuiteId()}"/>
+			    			<select name="action">
+					    		<jx:if test="${!testsuite.isIsActive()}">
+					    			<option value="activate">Activate and load (it takes some minitues - no refresh)</option>
+					    		</jx:if>
+								<jx:if test="${testsuite.isIsActive()}">
+									<option value="reload">Reload (it takes some minitues - no refresh)</option>
+									<option value="deactivate">DeActivate</option>									
+					    		</jx:if>	
+				    		</select>
+				    		<input type="Submit" value="Proceed"/>			    		
+				    	</form>
+			    		</div>
+		    		</td>
+		    	</tr>		    	
+		    </table>
+	    </jx:forEach>    
+</content>

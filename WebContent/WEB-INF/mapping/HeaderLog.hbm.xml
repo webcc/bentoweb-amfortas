@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.HeaderLog" table="header_log" catalog="amfortas">
+        <id name="headerLogId" type="integer">
+            <column name="header_log_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="testresult" class="org.bentoweb.amfortas.hibernate.om.Testresult" fetch="select">
+            <column name="testresult_id" not-null="true" />
+        </many-to-one>
+        <property name="headerKey" type="string">
+            <column name="header_key" />
+        </property>
+        <property name="headerValue" type="string">
+            <column name="header_value" />
+        </property>
+    </class>
+</hibernate-mapping>

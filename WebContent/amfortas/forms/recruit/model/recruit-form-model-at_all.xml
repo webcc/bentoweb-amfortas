@@ -1,0 +1,243 @@
+<fd:form
+  xmlns:fd="http://apache.org/cocoon/forms/1.0#definition"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+<fd:widgets>
+
+<!--  @TODO: need to select.. maybe aggregate with common or templating -->
+
+<!-- ++++++++++ FORM for AT - Screen readers ++++++++++ -->
+  	<!-- 9.2  -->
+  	<fd:field id="user_uses_assistive_technology-assistive_technology_id" required="true">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.screen_readers"/>:
+    	</fd:label>
+    	<fd:datatype base="string"/>
+	    <fd:selection-list>
+		  	<fd:item value="1">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.screen_reader_id.1"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="2">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.screen_reader_id.2"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="3">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.screen_reader_id.3"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="0">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.other"/></fd:label>
+		  	</fd:item>
+		</fd:selection-list>
+  	</fd:field>  
+
+  	
+<!-- ++++++++++ FORM for AT - Talking browsers ++++++++++ -->
+  	<fd:field id="assistive_technology-assistive_technology_id" required="true">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.talking_browsers"/>:
+    	</fd:label>
+    	<fd:datatype base="string"/>
+	    <fd:selection-list>
+		  	<fd:item value="1">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.talking_browser_id.1"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="2">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.talking_browser_id.2"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="3">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.talking_browser_id.3"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="0">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.other"/></fd:label>
+		  	</fd:item>
+		</fd:selection-list>
+  	</fd:field>  
+  	
+    
+ <!-- ++++++++++ FORM for AT - Screen reader and magnification combination ++++++++++ -->
+  	<fd:field id="assistive_technology-assistive_technology_id" required="true">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.sr_N_magn_sw"/>:
+    	</fd:label>
+    	<fd:datatype base="string"/>
+	    <fd:selection-list>
+		  	<fd:item value="1">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.sr_N_magn_sw_id.1"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="2">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.sr_N_magn_sw_id.2"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="3">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.sr_N_magn_sw_id.3"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="0">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.other"/></fd:label>
+		  	</fd:item>
+		</fd:selection-list>
+  	</fd:field>  
+  	
+ <!-- ++++++++++ FORM for AT - agnification only software ++++++++++ -->
+  	<fd:field id="assistive_technology-assistive_technology_id" required="true">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.magn_sw"/>:
+    	</fd:label>
+    	<fd:datatype base="string"/>
+	    <fd:selection-list>
+		  	<fd:item value="1">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.magn_sw_id.1"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="2">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.magn_sw_id.2"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="3">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.magn_sw_id.3"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="0">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.other"/></fd:label>
+		  	</fd:item>
+		</fd:selection-list>
+  	</fd:field>   	
+  	
+ <!-- ++++++++++ FORM for AT - Speech and reading support software  ++++++++++ -->
+  	<fd:field id="assistive_technology-assistive_technology_id" required="true">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.speech_N_read_sw"/>:
+    	</fd:label>
+    	<fd:datatype base="string"/>
+	    <fd:selection-list>
+		  	<fd:item value="1">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.speech_N_read_sw_id.1"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="2">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.speech_N_read_sw_id.2"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="3">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.speech_N_read_sw_id.3"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="0">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.other"/></fd:label>
+		  	</fd:item>
+		</fd:selection-list>
+  	</fd:field>   	
+
+ <!-- ++++++++++ FORM for AT - Speech recognition software  ++++++++++ -->
+  	<fd:field id="assistive_technology-assistive_technology_id" required="true">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.speechrec_sw"/>:
+    	</fd:label>
+    	<fd:datatype base="string"/>
+	    <fd:selection-list>
+		  	<fd:item value="1">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.speechrec_sw_id.1"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="2">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.speechrec_sw_id.2"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="3">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.speechrec_sw_id.3"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="0">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.other"/></fd:label>
+		  	</fd:item>
+		</fd:selection-list>
+  	</fd:field>  	
+ <!-- ++++++++++ FORM for AT - Braille displays  ++++++++++ -->
+  	<fd:field id="assistive_technology-assistive_technology_id" required="true">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.braille"/>:
+    	</fd:label>
+    	<fd:datatype base="string"/>
+	    <fd:selection-list>
+		  	<fd:item value="1">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.sr_N_braille_id.1"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="2">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.sr_N_braille_id.2"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="3">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.sr_N_braille_id.3"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="4">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.sr_N_braille_id.4"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="0">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.other"/></fd:label>
+		  	</fd:item>
+		</fd:selection-list>
+  	</fd:field>   	
+
+<!-- ++++++++++ FORM for AT - Alternative input devices  ++++++++++ -->
+  	<fd:field id="assistive_technology-assistive_technology_id" required="true">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.alterin"/>:
+    	</fd:label>
+    	<fd:datatype base="string"/>
+	    <fd:selection-list>
+		  	<fd:item value="1">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.alterin_id.1"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="2">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.alterin_id.2"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="3">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.alterin_id.3"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="0">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.other"/></fd:label>
+		  	</fd:item>
+		</fd:selection-list>
+  	</fd:field>  	
+
+<!-- ++++++++++ FORM for AT - all ++++++++++ -->
+
+	<fd:field id="user_uses_assistive_technology-assistive_technology_other" required="false">
+      <fd:label><i18n:text key="amformas.recruit.ans.common.other"/>:</fd:label>
+      <fd:datatype base="string"/>
+    </fd:field>
+    
+   	<fd:field id="user_uses_assistive_technology-version" required="false">
+      <fd:label><i18n:text key="amformas.recruit.q.version"/>:</fd:label>
+      <fd:datatype base="string"/>
+    </fd:field>
+	<!-- 9.3 X -->
+  	<fd:field id="user_uses_assistive_technology-at_experience_id" required="true">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.assistive_technology.experience_id"/>:
+    	</fd:label>
+    	<fd:datatype base="string"/>
+	    <fd:selection-list>
+		  	<fd:item value="1">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.experience_id.1"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="2">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.experience_id.2"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="3">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.experience_id.3"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="4">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.experience_id.4"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="5">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.experience_id.5"/></fd:label>
+		  	</fd:item>
+		</fd:selection-list>
+  	</fd:field> 
+
+  	<!-- Q9.3 X -->
+ 
+  	<fd:field id="user_uses_assistive_technology-assistive_technology_other" required="false">
+	  	<fd:label><i18n:text key="amformas.recruit.q.assistive_technology_other"/>:</fd:label>
+  		<fd:datatype base="string"/>
+		<fd:selection-list>
+		  	<fd:item value="Yes">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.yes"/></fd:label>
+		  	</fd:item>
+		  	<fd:item value="No">
+		    	<fd:label><i18n:text key="amformas.recruit.ans.common.no"/></fd:label>
+		  	</fd:item>
+		</fd:selection-list>
+  	</fd:field>
+  	 
+</fd:widgets>
+
+</fd:form>

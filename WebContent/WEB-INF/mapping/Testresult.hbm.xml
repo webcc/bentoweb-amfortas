@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.Testresult" table="testresult" catalog="amfortas">
+        <id name="testresultId" type="integer">
+            <column name="testresult_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="testSuite" class="org.bentoweb.amfortas.hibernate.om.TestSuite" fetch="select">
+            <column name="test_suite_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="testProfile" class="org.bentoweb.amfortas.hibernate.om.TestProfile" fetch="select">
+            <column name="test_profile_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userProfile" class="org.bentoweb.amfortas.hibernate.om.UserProfile" fetch="select">
+            <column name="user_profile_id" not-null="true" />
+        </many-to-one>
+        <property name="scenarioId" type="string">
+            <column name="scenario_id" />
+        </property>
+        <property name="testcaseId" type="string">
+            <column name="testcase_id" />
+        </property>
+        <property name="date" type="timestamp">
+            <column name="date" length="19" />
+        </property>
+        <set name="openquestions" inverse="true">
+            <key>
+                <column name="testresult_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.Openquestion" />
+        </set>
+        <set name="yesnoquestions" inverse="true">
+            <key>
+                <column name="testresult_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.Yesnoquestion" />
+        </set>
+        <set name="likertscales" inverse="true">
+            <key>
+                <column name="testresult_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.Likertscale" />
+        </set>
+        <set name="headerLogs" inverse="true">
+            <key>
+                <column name="testresult_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.HeaderLog" />
+        </set>
+        <set name="yesnoopenquestions" inverse="true">
+            <key>
+                <column name="testresult_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.Yesnoopenquestion" />
+        </set>
+        <set name="multiplechoices" inverse="true">
+            <key>
+                <column name="testresult_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.Multiplechoice" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.Language" table="language" catalog="amfortas">
+        <id name="languageId" type="integer">
+            <column name="language_id" />
+            <generator class="identity" />
+        </id>
+        <property name="nameKey" type="string">
+            <column name="name_key" />
+        </property>
+        <property name="nameDefault" type="string">
+            <column name="name_default" />
+        </property>
+        <property name="shortcode" type="string">
+            <column name="shortcode" length="5" />
+        </property>
+        <set name="users" inverse="true">
+            <key>
+                <column name="language_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.User" />
+        </set>
+    </class>
+</hibernate-mapping>

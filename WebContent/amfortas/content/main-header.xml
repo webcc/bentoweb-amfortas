@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<header xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+	<span class="hidden"><a tabindex="0" href="#Content"><i18n:text catalogue="site" key="amformas.header.jump.content"/></a></span>
+	<a href="${cocoon.parameters.webapp_url}">BENTOWEB.ORG</a>
+</header>
+

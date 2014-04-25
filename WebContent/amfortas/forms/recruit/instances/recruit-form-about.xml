@@ -1,0 +1,55 @@
+<content xmlns:ft="http://apache.org/cocoon/forms/1.0#template"
+  xmlns:fi="http://apache.org/cocoon/forms/1.0#instance"
+  xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+	<jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+   
+   <h1><i18n:text key="amformas.recruit.title.about"/></h1>	
+   <p><i18n:text key="amformas.form.about.note"/></p>
+	<ft:form-template action="#{$continuation/id}.cont#Content" method="POST" >
+		<fi:group>
+        	<fi:styling layout="columns"/>
+        	<fi:items>
+		    	<ft:widget id="name_first"/>
+		        <ft:widget id="name_last"/>
+		        <ft:widget id="email"/>
+				<ft:widget id="password">
+       				<fi:styling type="password"/>
+      			</ft:widget>
+				<ft:widget id="confirmPassword">
+       				<fi:styling type="password"/>
+      			</ft:widget>
+		        <ft:widget id="sex">
+					<fi:styling list-type="radio" list-orientation="vertical"/> 
+				</ft:widget>
+				<ft:widget id="age_range_id">
+					<fi:styling list-type="radio" list-orientation="vertical"/> 
+				</ft:widget> 
+				
+			 	<fi:group>
+        			<fi:styling layout="combination"/>
+        			<fi:items>
+						<ft:widget id="language_id">
+							<fi:styling list-type="radio" list-orientation="vertical"/> 
+						</ft:widget> 
+						<ft:widget id="language_other"/>
+					</fi:items>
+				</fi:group>
+				
+			</fi:items>
+      	</fi:group>
+      	
+      	<fi:group>
+        	<fi:styling layout="rows"/> 
+        	<fi:items>
+        		<ft:widget id="thesubmit"/>
+			</fi:items>	
+		</fi:group>
+    
+    </ft:form-template>
+
+ </content> 
+<!--</body>
+</html>-->
+  

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.OperatingSystemSetting" table="operating_system_setting" catalog="amfortas">
+        <id name="operatingSystemSettingId" type="integer">
+            <column name="operating_system_setting_id" />
+            <generator class="identity" />
+        </id>
+        <property name="nameKey" type="string">
+            <column name="name_key" />
+        </property>
+        <property name="nameDefault" type="string">
+            <column name="name_default" />
+        </property>
+        <set name="userUsesOsSettings" inverse="true">
+            <key>
+                <column name="operating_system_setting_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserUsesOsSetting" />
+        </set>
+    </class>
+</hibernate-mapping>

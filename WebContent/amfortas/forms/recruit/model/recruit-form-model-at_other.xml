@@ -1,0 +1,19 @@
+<fd:form
+  xmlns:fd="http://apache.org/cocoon/forms/1.0#definition"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+<fd:widgets>
+  	<fd:field id="user_uses_assistive_technology-assistive_technology_id" required="false">
+    	<fd:label>
+    		<i18n:text key="amformas.recruit.q.at_others"/>
+    	</fd:label>
+    	<fd:datatype base="string"/>
+    	<fd:selection-list type="flow-jxpath" list-path="assistive_technologies" 
+                   value-path="value" label-path="label" />
+  	</fd:field>  	
+    <fd:submit id="thesubmit">
+  		<fd:label><i18n:text catalogue="recruit" key="amformas.forms.common.submit"/></fd:label>
+  	</fd:submit>
+  	
+ </fd:widgets>
+</fd:form>

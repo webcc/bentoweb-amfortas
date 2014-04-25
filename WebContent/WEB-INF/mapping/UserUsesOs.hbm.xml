@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.UserUsesOs" table="user_uses_os" catalog="amfortas">
+        <id name="userUsesOsId" type="integer">
+            <column name="user_uses_os_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="operatingSystem" class="org.bentoweb.amfortas.hibernate.om.OperatingSystem" fetch="select">
+            <column name="operationg_system_id" not-null="true" />
+        </many-to-one>
+        <property name="version" type="string">
+            <column name="version" />
+        </property>
+        <property name="osOther" type="string">
+            <column name="os_other" />
+        </property>
+        <set name="userUsesOsSettings" inverse="true">
+            <key>
+                <column name="user_uses_os_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserUsesOsSetting" />
+        </set>
+        <set name="testProfiles" inverse="true">
+            <key>
+                <column name="user_uses_os_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.TestProfile" />
+        </set>
+    </class>
+</hibernate-mapping>

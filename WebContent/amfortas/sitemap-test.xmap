@@ -1,0 +1,575 @@
+<?xml version="1.0"?>
+<!--
+			Copyright 2005 BenToWeb
+-->
+<map:sitemap xmlns:map="http://apache.org/cocoon/sitemap/1.0">
+  <!-- ===== Default components ===== -->
+  <map:components>
+
+    <!-- ===== Generators ===== -->
+	<map:generators default="file">
+		<map:generator name="assertions" src="org.bentoweb.amfortas.cocoon.generation.TestResultsGenerator"/>
+		<!-- The forms generator is necessary to produce the form.-->
+	    <map:generator name="form" src="org.apache.cocoon.forms.generation.FormsGenerator"/>
+	    <map:generator name="testcases" src="org.bentoweb.amfortas.cocoon.generation.TestCaseSet4ProfileGenerator">
+	    	<parameter name="mrulesfilepath" value="amfortas/resources/tcmapping/amml.xml"/>	    
+	    </map:generator>
+	</map:generators>  
+    
+    <!-- ===== Transformers ===== -->
+	<map:transformers default="xslt">
+	
+		<map:transformer name="sendmail" src="org.bentoweb.amfortas.cocoon.transformation.SendMailTransformer">
+			<parameter name="mailhost" value="mail.fit.fraunhofer.de"/>
+			<parameter name="ccAdmin" value="bika-amfortas@fit.fraunhofer.de"/>			
+			<parameter name="from" value="amfortas@bentoweb.org"/>
+			<parameter name="successLocalKey" value="amformas.mail.touser.success"/>
+			<parameter name="failLocalKey" value="amformas.mail.touser.fail"/>
+			<parameter name="i18n_catalogue" value="recruit"/>
+		</map:transformer>
+	<!--+
+	   | This transformer transforms our form we define in "form.xml".
+	   | The transformation is based on the template we provide
+	   | in "form_template.xml".
+	   +-->
+		<map:transformer name="form" src="org.apache.cocoon.forms.transformation.FormsTemplateTransformer"/>
+		
+	    <map:transformer name="i18n" src="org.apache.cocoon.transformation.I18nTransformer">
+			<catalogues default="recruit">
+		    	<catalogue id="recruit" name="recruit-messages" location="resources/i18n"/>
+		       	<catalogue id="site" name="site-messages" location="resources/i18n"/>
+		       	<catalogue id="email" name="email-messages" location="resources/i18n"/>
+		       	<catalogue id="admin" name="admin-messages" location="resources/i18n"/>
+	          	<catalogue id="forms" name="messages" location="resource://org/apache/cocoon/forms/system/i18n"/>
+		    </catalogues>
+		    <cache-at-startup>false</cache-at-startup>
+	    </map:transformer>
+	</map:transformers>
+	
+   	<!-- ===== Readers ===== -->
+    <map:readers default="resource" />
+
+    <!-- ===== Serializers ===== -->
+    <map:serializers default="xhtml" />
+
+    <!-- ===== Matchers ===== -->
+    <map:matchers default="wildcard" />
+
+    <!-- ===== Selectors ===== -->
+    <map:selectors default="request-parameter" />
+
+    <!-- ===== Actions ===== -->
+    <map:actions>
+    	<!-- CoWarp actions - added 03.jan.06 -->
+    	<map:action name="cowarp-is-logged-in" src="org.osoco.cowarp.acting.LoggedInAction"/>
+    	<map:action name="cowarp-login" src="org.osoco.cowarp.acting.LoginAction"/>
+    	<map:action name="cowarp-logout" src="org.osoco.cowarp.acting.LogoutAction"/>
+    	<!-- -->
+    	<map:action name="locale" logger="sitemap.action.locale" src="org.apache.cocoon.acting.LocaleAction">
+			<locale-attribute>locale</locale-attribute>
+			<use-locale>true</use-locale>
+			<default-locale language="en"/>
+			<store-in-request>false</store-in-request>
+			<create-session>false</create-session>
+			<store-in-session>false</store-in-session>
+			<store-in-cookie>false</store-in-cookie>
+    	</map:action>
+    </map:actions>
+    
+   	</map:components>
+	
+	<!-- ===== Flows ===== -->
+  	<map:flow language="javascript">
+    	<map:script src="resources/flow/recruit.js"/>
+    	<map:script src="resources/flow/login.js"/>
+    	<map:script src="resources/flow/runtest.js"/>
+    	<map:script src="resources/flow/storetest.js"/>
+    	<map:script src="resources/flow/mailconfirm.js"/> 
+    	<map:script src="resources/flow/admin_users.js"/>   
+    	<map:script src="resources/flow/admin_testsuites.js"/>   
+    	<map:script src="resources/flow/forgotpass.js"/>  	
+    	<map:script src="resources/flow/tcmap.js"/>
+    	<map:script src="resources/flow/testingprofiles.js"/>
+    	<map:script src="resources/flow/adminusersdetail.js"/>
+    	<map:script src="resources/flow/testresult.js"/>    	
+  	</map:flow>
+  	
+	<!-- =========================== Pipelines ================================= -->
+    <map:pipelines>
+	        <!-- ===== Global variables ===== -->
+	    <map:component-configurations>
+	        <global-variables>
+	            <webapp_url>http://www.bentoweb.org/amfortas/</webapp_url>
+	        </global-variables>
+	    </map:component-configurations>
+    
+	<map:pipeline>
+	<map:act type="locale" name="localeselector">
+	<!-- ===== redirect ===== -->
+	<!-- maintainance info -->
+	<!--
+	<map:match pattern="maintainance-info">
+		 <map:aggregate element="site">
+	   		<map:part src="content/maintainance-info.xml"/>
+	   	 </map:aggregate>
+		 <map:transform src="resources/xsl/site2html.xsl"/>
+		 <map:transform type="i18n">
+       		<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+		<map:serialize/> 
+	</map:match> -->
+	
+	<map:match pattern="assertions">
+ 		<map:generate type="assertions" src=""/>
+ 		<map:serialize type="xml"/>
+ 	</map:match> 
+ 	
+ 	<map:match pattern=""> <!-- for maintainance add '*' to pattern! -->
+ 		<map:redirect-to uri="./home.html"/>
+ 		<!--<map:redirect-to uri="maintainance-info"/>-->
+ 	</map:match>
+ 	
+ 	<!-- for testing the mapping generator -->
+ 	<map:match pattern="tc">
+ 		<map:generate type="testcases"/>
+ 		<map:serialize type="xml"/>
+ 	</map:match>
+ 	<map:match pattern="testmapping">
+ 		<map:generate type="xpathdirectory" src="context://amfortas/resources/testcases"> 
+			<map:parameter name="xpath" value="/*[local-name()='testCaseDescription']"/>     		
+			<!-- 
+			<map:parameter name="xpath" value="/*[local-name()='testCaseDescription']/*[local-name()='formalMetadata']/*[local-name()='description']"/>     		
+    		<map:parameter name="nsmapping" value="resources/properties/namespacemapping.properties"/>    		 
+    		<map:parameter name="nsmapping-reload" value="true"/>
+    		-->
+   			<map:parameter name="xmlFiles" value="\.xml$"/>
+  		</map:generate>
+  		<map:transform src="resources/xsl/tcmapping-all.xsl"/>
+		<map:transform src="resources/xsl/tcmapping-enduser.xsl"/>
+ 		<map:serialize type="xml"/> 
+ 	</map:match> 
+ 		
+ 	<map:match pattern="tcmap">
+ 		<map:call function="tcmap"/>
+ 	</map:match>
+ 	
+ 	<map:match pattern="forgotpass.go">
+ 		<map:call function="forgotpass"/>
+ 	</map:match>
+ 	
+	<map:match pattern="**.form"> 
+   		<map:aggregate element="site">
+	   		<map:part src="forms/{1}.xml"/>
+     		<map:part src="content/main-navigation.xml"/>
+     		<map:part src="content/main-header.xml"/>
+     		<map:part src="content/main-footer.xml"/>
+    	</map:aggregate>
+    	<map:transform type="jx">
+    		 <map:parameter name="webapp_url" value="{global:webapp_url}" />
+    	</map:transform>
+        <map:transform type="i18n">
+			<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+        <map:transform src="resources/xsl/site2html.xsl"/>
+        <map:serialize/>
+     </map:match>
+     
+	<map:match pattern="recruit-page-**"> 
+		<map:aggregate element="site">
+     		<map:part src="content/main-header.xml"/>
+     		<map:part src="content/main-navigation.xml"/>
+	   		<map:part src="forms/recruit/instances/recruit-form-{1}.xml"/>
+     		<map:part src="content/main-footer.xml"/>
+    	</map:aggregate>
+    	<map:transform type="jx">
+    		 <map:parameter name="webapp_url" value="{global:webapp_url}" />
+    	</map:transform>
+        <map:transform type="i18n">
+			<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+        <map:transform src="resources/xsl/site2html.xsl">
+        	<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+        <map:serialize/>
+     </map:match>
+     
+	<map:match pattern="auth-recruit-page-**"> 
+		<map:aggregate element="site">
+     		<map:part src="content/main-header.xml"/>
+     		<map:part src="content/main-auth-navigation.xml"/>
+	   		<map:part src="forms/recruit/instances/recruit-form-{1}.xml"/>
+     		<map:part src="content/main-footer.xml"/>
+    	</map:aggregate>
+    	<map:transform type="jx">
+    		 <map:parameter name="webapp_url" value="{global:webapp_url}" />
+    	</map:transform>
+        <map:transform type="i18n">
+			<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+        <map:transform src="resources/xsl/site2html.xsl">
+        	<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+        <map:serialize/>
+     </map:match>
+     
+ 	<map:match pattern="admin_users">
+   	   <map:act type="cowarp-is-logged-in">
+   	   		<map:parameter name="application" value="AmfortasApp" />
+   	   		<map:parameter name="role" value="amfortas.user.role.admin" />
+       		<map:call function="admin_users"/>
+       	</map:act>
+       	<map:redirect-to uri="sign-in.html"/>
+ 	</map:match>
+ 	<map:match pattern="admin_testsuites">
+   	   <map:act type="cowarp-is-logged-in">
+   	   		<map:parameter name="application" value="AmfortasApp" />
+   	   		<map:parameter name="role" value="amfortas.user.role.admin" />
+       		<map:call function="admin_testsuites"/>
+       	</map:act>
+       	<map:redirect-to uri="sign-in.html"/>
+ 	</map:match> 	
+
+	<!-- ===== recruitment questionnaire ===== -->
+	 <map:match pattern="start-recruit.html">
+       <map:call function="recruit"/>
+     </map:match>
+	 <map:match pattern="add-profile.html">
+       <map:call function="addprofile"/>
+     </map:match>
+
+   <!-- usage: cocoon:/dosendmail_<email template file> -->  
+   <map:match pattern="dosendmail_**">
+ 		<map:generate type="file" src="content/{1}"/>
+ 		<map:transform type="jx">
+   			<map:parameter name="webapp_url" value="{global:webapp_url}" />
+   		</map:transform> 		
+ 		 <map:transform type="i18n">
+			<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+ 		<map:transform type="sendmail"/>	
+ 		<map:serialize type="xml"/>
+ 	</map:match>
+ 	
+      <map:match pattern="recruit-success-pipeline">
+ 	   <map:aggregate element="site">
+ 	   		<map:part src="cocoon:/dosendmail_mail2user-email-verify.xml"/>
+	   		<map:part src="content/recruit-success.xml"/>
+     		<map:part src="content/main-navigation.xml"/>
+     		<map:part src="content/main-header.xml"/>
+     		<map:part src="content/main-footer.xml"/>
+    	</map:aggregate>
+    	<map:transform type="jx">
+    		 <map:parameter name="webapp_url" value="{global:webapp_url}" />
+    	</map:transform>
+        <map:transform type="i18n">
+			<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+        <map:transform src="resources/xsl/site2html.xsl"/>
+        <map:serialize/>     
+      </map:match>
+      
+      <map:match pattern="mail-verify-success">
+ 	   <map:aggregate element="site">
+ 	   		<map:part src="cocoon:/dosendmail_mail2admin-account-activate.xml"/>
+	   		<map:part src="content/page-action-reply.xml"/>
+     		<map:part src="content/main-navigation.xml"/>
+     		<map:part src="content/main-header.xml"/>
+     		<map:part src="content/main-footer.xml"/>
+    	</map:aggregate>
+    	<map:transform type="jx">
+    		 <map:parameter name="webapp_url" value="{global:webapp_url}" />
+    	</map:transform>
+        <map:transform type="i18n">
+			<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+        <map:transform src="resources/xsl/site2html.xsl"/>
+        <map:serialize/>     
+      </map:match>
+      
+      <map:match pattern="mail-forgotpass-success">
+ 	   <map:aggregate element="site">
+	   		<map:part src="cocoon:/dosendmail_mail2user-email-forgotpass.xml"/>
+	   		<map:part src="content/page-action-reply.xml"/>
+     		<map:part src="content/main-navigation.xml"/>
+     		<map:part src="content/main-header.xml"/>
+     		<map:part src="content/main-footer.xml"/>
+    	</map:aggregate>
+    	<map:transform type="jx">
+    		 <map:parameter name="webapp_url" value="{global:webapp_url}" />
+    	</map:transform>
+        <map:transform type="i18n">
+			<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+        <map:transform src="resources/xsl/site2html.xsl"/>
+        <map:serialize/>     
+      </map:match>      
+      
+        <map:match pattern="mail-account-status">
+ 	   <map:aggregate element="site">
+ 	   		<map:part src="cocoon:/dosendmail_mail2user-account-status.xml"/>
+	   		<map:part src="content/admin_users_response.xml"/>
+     		<map:part src="content/main-navigation.xml"/>
+     		<map:part src="content/main-header.xml"/>
+     		<map:part src="content/main-footer.xml"/>
+    	</map:aggregate>
+    	<map:transform type="jx">
+    		 <map:parameter name="webapp_url" value="{global:webapp_url}" />
+    	</map:transform>
+        <map:transform type="i18n">
+			<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+        <map:transform src="resources/xsl/site2html.xsl"/>
+        <map:serialize/>      
+      </map:match>
+     
+     <!-- ===== authentication process ===== -->
+     <map:match pattern="authenticate">
+		<map:act type="cowarp-login">
+			<!-- user logged-in -->
+  			<map:parameter name="application" value="AmfortasApp" />
+  			<map:parameter name="email" value="{request-param:email}" />
+  			<map:parameter name="password" value="{request-param:password}" />
+  			<map:redirect-to uri="./welcome"/>
+		</map:act>
+		<!-- user login failed -->
+		<map:call function="checkloginfailure" />
+     </map:match> 
+     
+    <!-- ===== authentication area ===== -->
+    <!-- run testcase testing -->
+   	 <map:match pattern="start-test">
+   	   <map:act type="cowarp-is-logged-in">
+   	   		<map:parameter name="application" value="AmfortasApp" />
+       		<map:call function="runtest"/>
+       	</map:act>
+       	<map:redirect-to uri="sign-in.html"/>
+     </map:match>
+   	 <map:match pattern="store-test">
+   	   <map:act type="cowarp-is-logged-in">
+   	   		<map:parameter name="application" value="AmfortasApp" />
+       		<map:call function="storetest"/>
+       	</map:act>
+       	<map:redirect-to uri="sign-in.html"/>
+     </map:match> 
+    <map:match pattern="dofetchtcdl_*">
+    	<map:generate type="file" src="http://www.bentoweb.org/ts/XHTML1_TestSuite2/metadata/{1}"/>
+    	<map:serialize type="xml" />
+    </map:match>
+    
+	<map:match pattern="testrun_*">
+		<map:act type="cowarp-is-logged-in">
+			<map:parameter name="application" value="AmfortasApp" />
+			<map:aggregate element="site">
+				<map:part src="cocoon:/dofetchtcdl_{../1}"/>
+				<map:part src="content/runtest.xml"/>
+   		  		<map:part src="content/main-auth-navigation.xml"/>
+   		  		<map:part src="content/main-header.xml"/>
+   		  		<map:part src="content/main-footer.xml"/>
+	    	</map:aggregate>
+	    	<map:transform type="jx">
+	    		<map:parameter name="webapp_url" value="{global:webapp_url}" />
+	    	</map:transform>
+	        <map:transform type="i18n">
+				<map:parameter name="locale" value="{#localeselector:locale}"/>
+	        </map:transform>
+	        <map:transform src="resources/xsl/tctest2html.xsl">
+	        	<map:parameter name="testcaseID" value="{flow-attr: testcaseID}" />
+	        	<map:parameter name="scenarioID" value="{flow-attr: scenarioID}" />
+	        	<map:parameter name="testfileURI" value="{flow-attr: testfileURI}" />
+	        	<map:parameter name="testsuiteID" value="{flow-attr: testsuiteID}" />
+	        	<!-- for now only show in english -->
+	        	<map:parameter name="locale" value="{#localeselector:locale}"/>
+	        </map:transform>
+	        <map:serialize/>
+       </map:act>
+        <map:redirect-to uri="sign-in.html"/>
+	</map:match>
+	
+	<map:match pattern="welcome">
+		<map:act type="cowarp-is-logged-in">
+			<map:parameter name="application" value="AmfortasApp" />
+			<map:call function="showactiveprofile"/>
+		</map:act>
+        <map:redirect-to uri="sign-in.html"/>
+	</map:match>
+	
+	<map:match pattern="selectprofile">
+		<map:act type="cowarp-is-logged-in">
+			<map:parameter name="application" value="AmfortasApp" />
+			<map:call function="selecttestprofile"/>
+		</map:act>
+        <map:redirect-to uri="sign-in.html"/>
+	</map:match>
+
+	<map:match pattern="adminusersdetail*">
+		<map:act type="cowarp-is-logged-in">
+			<map:parameter name="application" value="AmfortasApp" />
+			<map:parameter name="role" value="amfortas.user.role.admin" />
+			<map:call function="adminusersdetail"/>
+		</map:act>
+        <map:redirect-to uri="sign-in.html"/>
+	</map:match>
+	
+	<map:match pattern="viewtestresults">
+		<map:act type="cowarp-is-logged-in">
+			<map:parameter name="application" value="AmfortasApp" />
+			<map:parameter name="role" value="amfortas.user.role.admin" />
+			<map:call function="testresults"/>
+		</map:act>
+        <map:redirect-to uri="sign-in.html"/>
+	</map:match>
+	
+	<map:match pattern="**-auth.html"> 
+		<map:act type="cowarp-is-logged-in">
+			<map:parameter name="application" value="AmfortasApp" />
+ 	 		<map:aggregate element="site">
+		   		<map:part src="content/{../1}.xml"/>
+	     		<map:part src="content/main-auth-navigation.xml"/>
+	     		<map:part src="content/main-header.xml"/>
+	     		<map:part src="content/main-footer.xml"/>
+	    	</map:aggregate>
+	    	<map:transform type="jx">
+	    		 <map:parameter name="webapp_url" value="{global:webapp_url}" />
+	    		 <map:parameter name="user_role_name" value="{user_role_name}" />
+	    	</map:transform>
+	        <map:transform type="i18n">
+				<map:parameter name="locale" value="{#localeselector:locale}"/>
+				<!--<map:parameter name="locale" value="en"/>-->
+	        </map:transform>
+	        <map:transform src="resources/xsl/site2html.xsl"/>
+	        <map:serialize />
+        </map:act>
+        <map:redirect-to uri="sign-in.html"/>
+	</map:match>
+
+	<map:match pattern="**-form_auth.html">
+		<map:act type="cowarp-is-logged-in">
+			<map:parameter name="application" value="AmfortasApp" />
+	   		<map:aggregate element="site">
+		   		<map:part src="forms/{../1}.xml"/>
+	     		<map:part src="content/main-auth-navigation.xml"/>
+	     		<map:part src="content/main-header.xml"/>
+	     		<map:part src="content/main-footer.xml"/>
+	    	</map:aggregate>
+	    	<map:transform type="jx">
+	    		 <map:parameter name="webapp_url" value="{global:webapp_url}" />
+	    		 <map:parameter name="user_role_name" value="{user_role_name}" />
+	    	</map:transform>
+	        <map:transform type="i18n">
+				<map:parameter name="locale" value="{#localeselector:locale}"/>
+				<!--<map:parameter name="locale" value="en"/>-->
+	        </map:transform>
+	        <map:transform src="resources/xsl/site2html.xsl"/>
+	        <map:serialize/>
+       	</map:act>
+        <map:redirect-to uri="sign-in.html"/>
+     </map:match>	
+
+	<!-- ===== authentication log-out ===== -->
+	<map:match pattern="logout">
+		<map:act type="cowarp-logout">
+  			<map:parameter name="application" value="AmfortasApp"/>
+		</map:act>
+		<map:redirect-to uri=""/> 
+	</map:match>
+	
+    <!-- ===== non authentication area ===== -->
+	 <map:match pattern="sign-in.html">
+       <map:call function="login"/>
+     </map:match>
+    
+	<map:match pattern="*.html">
+  		<map:aggregate element="site">
+	   		<map:part src="content/{1}.xml"/>
+     		<map:part src="content/main-navigation.xml"/>
+     		<map:part src="content/main-header.xml"/>
+     		<map:part src="content/main-footer.xml"/>
+    	</map:aggregate>
+    	<map:transform type="jx">
+    		 <map:parameter name="webapp_url" value="{global:webapp_url}" />
+    	</map:transform>
+        <map:transform type="i18n">
+       		<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+        <map:transform src="resources/xsl/site2html.xsl"/>
+        <map:serialize/>		
+	</map:match>
+     
+   	 <map:match pattern="login-form">
+   		<map:aggregate element="site">
+	   		<map:part src="forms/login/login-form.xml"/>
+     		<map:part src="content/main-navigation.xml"/>
+     		<map:part src="content/main-header.xml"/>
+     		<map:part src="content/main-footer.xml"/>
+    	</map:aggregate>
+    	<map:transform type="jx">
+    		 <map:parameter name="webapp_url" value="{global:webapp_url}" />
+    	</map:transform>
+        <map:transform type="i18n">
+			<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+        <map:transform src="resources/xsl/site2html.xsl"/>
+        <map:serialize/>
+     </map:match>
+     
+     <map:match pattern="mail_confirm">
+     	<map:call function="mailconfirm"/>
+     </map:match>
+	
+	
+	<map:match pattern="**-form-model**.xml">
+     	<map:generate type="file" src="forms/recruit/model/{1}-form-model{2}.xml"/>
+     	<map:transform type="i18n">
+			<map:parameter name="locale" value="{#localeselector:locale}"/>
+        </map:transform>
+     	<map:serialize type="xml"/>
+    </map:match>
+    
+    
+		<map:match pattern="tee_*"> 
+			<map:aggregate element="site">
+				<map:part src="cocoon:/dofetchtcdl_{1}"/>
+				<map:part src="content/runtest.xml"/>
+   		  		<map:part src="content/main-auth-navigation.xml"/>
+   		  		<map:part src="content/main-header.xml"/>
+   		  		<map:part src="content/main-footer.xml"/>
+	    	</map:aggregate>	    	
+	    	<map:transform type="jx">
+	    		<map:parameter name="webapp_url" value="{global:webapp_url}" />
+	    	</map:transform>
+	        <map:transform type="i18n">
+				<map:parameter name="locale" value="{#localeselector:locale}"/>
+	        </map:transform>
+	        <map:transform src="resources/xsl/tctest2html.xsl">
+	        	<map:parameter name="testcaseID" value="{1}" />
+	        	<map:parameter name="scenarioID" value="s01" />
+	        	<map:parameter name="testfileURI" value="http://www.bentoweb.org/ts/XHTML1_TestSuite2/testfiles/" />
+	        	<map:parameter name="testsuiteID" value="2" />
+	        	<!-- for now only show in english -->
+	        	<map:parameter name="locale" value="{#localeselector:locale}"/>
+	        </map:transform>
+	        <map:serialize/>
+	</map:match>
+	
+	
+	
+	</map:act>
+	<!-- ===== continuation ===== -->
+	<map:match pattern="*.cont">
+       <map:call continuation="{1}"/>
+    </map:match>
+	
+	<!-- ===== resources ===== -->
+	<map:match pattern="resources/css/*">
+		<map:read src="resources/css/{1}"/>
+	</map:match>
+	
+     <!--<map:match pattern="resources/*/**">
+       <map:read src="resource://org/apache/cocoon/{1}/resources/{2}"/>
+     </map:match>-->
+
+
+		
+	</map:pipeline>
+	</map:pipelines>
+</map:sitemap>

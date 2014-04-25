@@ -1,0 +1,76 @@
+<content xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  
+  <jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+   
+    <h1><i18n:text catalogue="admin" key="amfortas.admin.users.title"/></h1>
+    <p><i18n:text catalogue="admin" key="amfortas.admin.users.info"/> ${l}</p>
+    
+    <div>
+    <form>
+    	<select id="filter" name="filter">
+			<option selected="true" value="">*</option>  
+    		<option value="noverified"><i18n:text catalogue="admin" key="amfortas.admin.user.status.noverified"/></option>
+    		<option value="noactivated"><i18n:text catalogue="admin" key="amfortas.admin.user.status.noactivated"/></option>
+    		<option value="activated"><i18n:text catalogue="admin" key="amfortas.admin.user.status.activated"/></option>    		    		
+    	</select>
+    	<input type="submit" value="Filter"/>
+    </form>
+    </div>
+    
+    <table>
+    	<tr>
+    		<th>ID</th> 
+    		<th><i18n:text catalogue="admin" key="amfortas.admin.user.firstname"/></th>
+    		<th><i18n:text catalogue="admin" key="amfortas.admin.user.lastname"/></th>
+    		<th><i18n:text catalogue="admin" key="amfortas.admin.user.email"/></th>
+    		<th><i18n:text catalogue="admin" key="amfortas.admin.user.date"/></th>
+    		<th><i18n:text catalogue="admin" key="amfortas.admin.user.status"/></th>
+    		<th><i18n:text catalogue="admin" key="amfortas.admin.user.actions"/></th>
+    	</tr>
+	<jx:forEach var="user" items="${usersList}">
+   		<tr>
+   			<td><a href="adminusersdetail?userid=${user.user.getUserId()}">${user.user.getUserId()}</a></td>
+   			<td><a href="adminusersdetail?userid=${user.user.getUserId()}">${user.user.getNameFirst()}</a></td>
+   			<td><a href="adminusersdetail?userid=${user.user.getUserId()}">${user.user.getNameLast()}</a></td>
+   			<td><a href="mailto:${user.user.getEmail()}">${user.user.getEmail()}</a></td>
+   			<td>${user.user.getDateRegister()}</td>
+   			<td>
+   				<jx:if test="${user.user.getStatusUser() == 0}">
+   					<i18n:text catalogue="admin" key="amfortas.admin.user.status.noverified"/>
+				</jx:if>
+   				<jx:if test="${user.user.getStatusUser() == 1}">
+   					<i18n:text catalogue="admin" key="amfortas.admin.user.status.noactivated"/>
+				</jx:if>
+   				<jx:if test="${user.user.getStatusUser() == 2}">
+   					<i18n:text catalogue="admin" key="amfortas.admin.user.status.activated"/>
+				</jx:if>   				
+   			</td>   			
+   			
+   			<td>
+   				<jx:if test="${user.user.getStatusUser() == 0}">
+	   				<a href="?user_admin_action=verify&amp;userkey=${user.user.getMailConfHash()}">
+						<i18n:text catalogue="admin" key="amfortas.admin.user.action.verify"/>
+					</a>
+				</jx:if>
+   				<jx:if test="${user.user.getStatusUser() == 1}">
+	  				<a href="?user_admin_action=activate&amp;userkey=${user.user.getMailConfHash()}">   				
+						<i18n:text catalogue="admin" key="amfortas.admin.user.action.activate"/>
+					</a>
+				</jx:if>
+   				<jx:if test="${user.user.getStatusUser() == 2}">
+	  				<a href="?user_admin_action=deactivate&amp;userkey=${user.user.getMailConfHash()}">   				
+						<i18n:text catalogue="admin" key="amfortas.admin.user.action.deactivate"/>
+					</a>
+				</jx:if>   
+				<br/>
+					<a href="?user_admin_action=statusmail&amp;usermail=${user.user.getEmail()}">
+						<i18n:text catalogue="admin" key="amfortas.admin.user.action.mailinfo"/>
+					</a>			
+   			</td>   			
+   		</tr>
+	</jx:forEach>
+    
+    </table>
+
+</content>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.UserUsesUserAgent" table="user_uses_user_agent" catalog="amfortas">
+        <id name="userUsesUaId" type="integer">
+            <column name="user_uses_ua_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="testProfile" class="org.bentoweb.amfortas.hibernate.om.TestProfile" fetch="select">
+            <column name="test_profile_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userAgent" class="org.bentoweb.amfortas.hibernate.om.UserAgent" fetch="select">
+            <column name="user_agent_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="atExperience" class="org.bentoweb.amfortas.hibernate.om.AtExperience" fetch="select">
+            <column name="at_experience_id" not-null="true" />
+        </many-to-one>
+        <property name="version" type="string">
+            <column name="version" />
+        </property>
+        <property name="browserOther" type="string">
+            <column name="browser_other" />
+        </property>
+        <set name="userUsesUaPlugins" inverse="true">
+            <key>
+                <column name="user_uses_ua_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserUsesUaPlugin" />
+        </set>
+        <set name="userUsesUaSettings" inverse="true">
+            <key>
+                <column name="user_uses_ua_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserUsesUaSetting" />
+        </set>
+    </class>
+</hibernate-mapping>

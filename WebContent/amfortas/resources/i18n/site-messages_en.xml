@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue xml:lang="en">
+	<!--  SOME COMMONS -->
+	<message key="amformas.forms.common.login">Login</message>
+	<message key="amformas.forms.forgotpass.title">
+		Password Reset
+	</message>
+	<message key="amformas.forms.forgotpass.link">
+		Forgot your password?
+	</message>
+
+	<!-- ==============================================================================
+		header
+		============================================================================== -->
+	<message key="amformas.header.jump.menu">
+		Goto navigation menu
+	</message>
+	<message key="amformas.header.jump.content">
+		Goto page content
+	</message>
+
+	<!-- ==============================================================================
+		non authentication area
+		============================================================================== -->
+	<!--
+		Navigation
+	-->
+	<message key="amformas.navigation.home">Home</message>
+	<message key="amformas.navigation.sign_in">Sign-In</message>
+	<message key="amformas.navigation.register">Register</message>
+	<message key="amformas.navigation.instructions">
+		Instructions
+	</message>
+	<message key="amformas.navigation.help">Help</message>
+	<message key="amformas.navigation.tutorial">Tutorial</message>
+	<message key="amformas.navigation.start">Start</message>
+	<message key="amformas.navigation.desc.head">
+		This the main navigation
+	</message>
+
+	<!--
+		Login
+	-->
+	<message key="amformas.login.title">Sign In</message>
+	<message key="amformas.login.email">Email address</message>
+	<message key="amformas.login.password">Password</message>
+	<message key="amformas.login.fail">Please try again</message>
+
+	<message key="amformas.login.text1">
+		<p>
+			If you want to sign in, you'll need to
+			<a href="register.html">Register</a>
+			first.
+		</p>
+		<p>
+			Sign In below to take part in the web accessibility
+			evaluation.
+		</p>
+		<p>
+			If you have more than one profile you can choose which one
+			to use on the next page.
+		</p>
+	</message>
+
+	<message key="amformas.login.text2">
+		<!--<p>
+			If this is your first visit to the website, please do the
+			<a href="tutorial.html">introductory tutorial</a>
+			</p>  -->
+		<p>
+			If you require any help please contact
+			<a href="mailto:amfortas@bentoweb.org">
+				amfortas@bentoweb.org
+			</a>
+		</p>
+	</message>
+
+
+	<!--
+		Login-failed
+	-->
+	<message key="amformas.login-failed.title">Sign-in failed</message>
+	<message key="amformas.login-failed.error.novalidation">
+		<p>
+			The sign-in process failed. You need to confirm your mail
+			address first, by following the link in our last mail. If
+			you have any problems, please contact:
+			<a href="mailto:amfortas@bentoweb.org">
+				amfortas@bentoweb.org
+			</a>
+		</p>
+	</message>
+	<message key="amformas.login-failed.error.notactive">
+		<p>
+			The sign-in process failed. You are registered but your
+			account isn't activated yet. You will receive an e-mail from
+			our administrator as soon as your account is active. Thank
+			you, for your patience.
+		</p>
+	</message>
+	<message key="amformas.login-failed.error.failure">
+		<p>
+			The sign-in process failed due to an invalid e-mail address
+			or password. Please, try again:
+			<a href="sign-in.html">Sign-in</a>
+		</p>
+	</message>
+	<!--
+		page: home.html text
+	-->
+	<message key="amformas.home.title">
+		Introduction to the BenToWeb Evaluation Website
+	</message>
+	<message key="amformas.home.text">
+		<p>
+			Thank you for working with us to make the web more
+			accessible.
+		</p>
+		<p>
+			The BenToWeb project has created this website to evaluate
+			the accessibility of features commonly found on web pages
+			that may cause users problems. These features include
+			images, forms, and the use of colour.
+		</p>
+		<p>
+			You will be asked to provide information about individual
+			features by answering questions and providing comments on
+			examples of them that you will be shown on this website. It
+			is important to understand the effects that the individual
+			features have for a variety of people using the web to
+			ensure that the accessibility of each aspect of the web is
+			addressed.
+		</p>
+		<p>
+			The BenToWeb consortium will process the information
+			resulting from the evaluations and report on it to the World
+			Wide Web Consortium (W3C) and the European Commission. The
+			W3C is the body that develops the standards for the Web, and
+			will have a important influence on how the accessibility of
+			the Web develops in the future. This is the first time that
+			such in-depth information from such a variety of users has
+			been gathered and will greatly increase our knowledge of how
+			people really use the Web. In working with us on this
+			project, you help make the web more usable for everyone.
+		</p>
+		<p>
+			As this is a new way of collecting information from people,
+			we ask you to be patient with any problems you encounter and
+			to provide feedback to us about any problems and how easy it
+			is to use (details of how to do this are found below).
+		</p>
+		<p>
+			Above all, please remember we are not evaluating your
+			capabilities in using the web or your knowledge, but the
+			effectiveness of the web in providing information to you.
+		</p>
+	</message>
+
+	<!--
+		page: recruit sucess
+	-->
+
+	<message key="amformas.recruit-success.title">
+		You successfully registered
+	</message>
+	<message key="amformas.recruit-success.text">
+		<p>
+			You will immediately receive an e-mail containing a link to
+			confirm your e-mail address.
+		</p>
+	</message>
+
+	<!--
+		page: register.html text
+	-->
+	<message key="amformas.register.title">Register</message>
+	<message key="amformas.register.text">
+		<p>
+			Please complete the following questionnaire. This will
+			enable us to present you with examples that match the main
+			assistive technology and web browser you most commonly use -
+			we call this your profile.
+		</p>
+		<p>
+			The questionnaire consists of three sections and all must be
+			completed to register you as a BenToWeb evaluator.
+		</p>
+		<p>
+			You can add other profiles later if you wish by selecting
+			the profile link in the menu. This may be useful if you use
+			different combinations of assistive technologies on
+			different occasions.
+		</p>
+		<p>
+			Once you have completed the questionnaire you will receive
+			an e-mail to confirm your mail address. Afterwards, our
+			adminstrator will activate your account. We will inform you
+			via e-mail as soon as the evaluation process starts.
+		</p>
+		<p>
+			<em>Note:</em>
+			All fields that are marked with the character '*' must be
+			answered.
+		</p>
+	</message>
+	<message key="amformas.register.link1">
+		Start with Section 1 of 3
+	</message>
+	<!--
+		page: instructions.help text
+	-->
+	<message key="amformas.instructions.title">
+		Instructions for user evaluation
+	</message>
+	<message key="amformas.instructions.text">
+		<p>
+			When you log in, the BenToWeb evaluation system will provide you 
+			with up to 20 example questions for the session, depending on how 
+			many are available that match your profile. These will be
+			tailored to the computer and any assistive technologies that
+			you use (the website will know about that from the
+			questionnaire you completed). Please work your way through
+			each example by first reading the instructions and then
+			answering the question that follows. There is a button
+			labelled ‘Next example’ at the bottom of each page which
+			will move you on to the next example once you are happy with
+			the answer you have given.
+		</p>
+		<p>
+			Sometimes you may find you are not able to complete the task asked about in the 
+			question.  Do not worry about this, we are not testing you ability to use your 
+			browser or assistive technology, we are testing how well things work on the Web.  
+			So sometimes your browser or assistive technology may not present things to you 
+			correctly and you will not be able to do the task - but this is exactly what we need 
+			to find out.  We hope this is not too frustrating for you. 
+		</p>
+		<p>
+			You may find that you receive the same question or a question about 
+			the same test file more than once.  Don’t worry about this, it is 
+			probably because we are testing a number of aspects of the same web 
+			format, for example, how it works for people with different disabilities 
+			and assistive technologies.  You can track that you are receiving a different 
+			question by noting the number in the sequence that appears at the top of 
+			the question page.  This will start with 1/20 (if the system has been able 
+			to find 20 questions that match your profile, it might be a smaller number), 
+			then 2/20 and so on as you progress through your set of example questions.
+		</p>
+		<p>
+			If you don’t know the answer, are unclear as to what is
+			being asked, or feel that the online application is simply
+			not working correctly please choose the ‘Don’t know’ button
+			at the bottom of the page. This will take you to another
+			page where you can provide feedback as to why you have not
+			provided an answer, and then a button to receive the ‘Next
+			example’.
+		</p>
+		<p>
+			Once you have completed all the examples in the set, your credit status 
+			will be calculated and you will be given the options to exit the application 
+			or evaluate another set of examples. You can also provide further feedback 
+			regarding the online application.
+		</p>
+		<p>
+			Thank you again for working with us to make the web more
+			accessible.
+		</p>
+	</message>
+	<!--
+		page: help.html text
+	-->
+	<message key="amformas.help.title">Help</message>
+	<message key="amformas.help.text">
+		<p>
+			In case of any problems, please don't hesitate to contact
+			us:
+			<a href="mailto:amfortas@bentoweb.org">
+				amfortas@bentoweb.org
+			</a>
+		</p>
+	</message>
+	<!--
+		page: maintainance-info
+	-->
+	<message key="amformas.maintainance.title">
+		Maintainance Information
+	</message>
+	<message key="amformas.maintainance.text">
+		Sorry, Amfortas is currently offline, cause of maintainance
+		work!
+	</message>
+
+	<!-- ==============================================================================
+		authentication area
+		============================================================================== -->
+	<!--
+		Navigation
+	-->
+	<message key="amformas.auth.navigation.home">Home</message>
+	<message key="amformas.auth.navigation.start_test">Start</message>
+	<message key="amformas.auth.navigation.profiles">Profiles</message>
+	<message key="amformas.auth.navigation.instructions">
+		Instructions
+	</message>
+	<message key="amformas.auth.navigation.help">Help</message>
+	<message key="amformas.auth.navigation.adminusers">
+		Admin Users
+	</message>
+	<message key="amformas.auth.navigation.admints">
+		Admin Suites
+	</message>
+	<message key="amformas.auth.navigation.testresults">
+		Test Results
+	</message>
+	<message key="amformas.auth.navigation.logout">Logout</message>
+
+
+	<!--
+		page: welcome text
+	-->
+	<message key="amformas.auth.welcome.title">Your profile</message>
+	<message key="amformas.auth.welcome.admin">Administrator</message>
+	<message key="amformas.auth.welcome.welcome">
+		Welcome to BenToWeb
+	</message>
+	<message key="amformas.auth.welcome.text">
+		<p>
+			Your profile enables us to present you with text examples
+			that match any assistive technologies, device to access the
+			web or specific web browsers you use.
+		</p>
+	</message>
+	<message key="amformas.auth.welcome.legend">
+		Your active profile
+	</message>
+	<message key="amformas.auth.welcome.ua">Browser:</message>
+	<message key="amformas.auth.welcome.at">
+		Assistive technology:
+	</message>
+	<message key="amformas.auth.welcome.dev">Device:</message>
+	<message key="amformas.auth.welcome.changeprofile">
+		Before you start testing, please check your profile and update it if necessary.
+	</message>
+	<message key="amformas.auth.welcome.start">
+		<a href="start-test">Start testing</a>
+	</message>
+
+	<!--
+		page: selectprofile text
+	-->
+	<message key="amformas.auth.selectprofile.title">
+		Profile selection
+	</message>
+	<message key="amformas.auth.selectprofile.text1">
+		<p>
+			Your profile was generated from the information you provided when you registered. 
+			If the information you provided when registering has changed (for example, you have 
+			upgraded the version of your assistive technology or your browser), please email our 
+			administrator make this the link?] with the changes and your profile will be updated.  
+			We will email you when this has been done and then you can undertake more testing.  
+			Any credit you have from previous testing will not be lost. 		
+		</p>
+		<p>
+			Please, check your account settings and contact our
+			administrator in case of any wrong configurations:
+			<a href="mailto: amfortas@bentoweb.org">
+				amfortas@bentoweb.org
+			</a>
+		</p>
+		<p></p>
+	</message>
+	<message key="amformas.auth.selectprofile.selection">
+		Profile selection
+	</message>
+	<message key="amformas.auth.selectprofile.legendactive">
+		Testing profile detail
+	</message>
+	<message key="amformas.auth.selectprofile.profile">Profile</message>
+	<message key="amformas.auth.selectprofile.selectsubmit">
+		Activate
+	</message>
+	<message key="amformas.auth.selectprofile.userprofile">
+		Personal data
+	</message>
+	<message key="amformas.auth.selectprofile.ua">Browser:</message>
+	<message key="amformas.auth.selectprofile.at">
+		Assistive technology:
+	</message>
+	<message key="amformas.auth.selectprofile.dev">Device:</message>
+	<message key="amformas.auth.selectprofile.os">
+		Operating system:
+	</message>
+	<message key="amformas.auth.selectprofile.uasettings">
+		Browser setting:
+	</message>
+	<message key="amformas.auth.selectprofile.ossettings">
+		Operating system setting:
+	</message>
+	<message key="amformas.auth.selectprofile.name">Name:</message>
+	<message key="amformas.auth.selectprofile.email">Email:</message>
+	<message key="amformas.auth.selectprofile.natlang">
+		Native language:
+	</message>
+	<message key="amformas.auth.selectprofile.langlevel">
+		English level:
+	</message>
+	<message key="amformas.auth.selectprofile.agerange">
+		Age range:
+	</message>
+	<message key="amformas.auth.selectprofile.disability">
+		Disability:
+	</message>
+	<message key="amformas.auth.selectprofile.status">status</message>
+	<message key="amformas.auth.selectprofile.created">
+		date creation
+	</message>
+	<message key="amformas.auth.selectprofile.detail">detail</message>
+	<message key="amformas.auth.selectprofile.show">show</message>
+	<message key="amformas.auth.selectprofile.activate">
+		activate
+	</message>
+	<message key="amformas.auth.selectprofile.active">active</message>
+	<message key="amformas.auth.selectprofile.inactive">
+		inactive
+	</message>
+	<message key="amformas.auth.selectprofile.action">action</message>
+	<message key="amformas.auth.selectprofile.tablecaption">
+		Detailed view and active profile selection
+	</message>
+
+	<!--
+		page: evaluation test
+	-->
+	<message key="amformas.auth.runtest.title">
+		Test Case Evaluation
+	</message>
+	<message key="amformas.auth.runtest.note">
+		Please read the question carefully, then follow the link to the
+		test case and answer the question.
+	</message>
+	<message key="amformas.auth.runtest.text1">
+		View the test case
+	</message>
+	<message key="amformas.auth.runtest.text2">
+		[opens a new window you should close before you go on]
+	</message>
+	<message key="amformas.auth.runtest.fieldset.legend">
+		Evaluation
+	</message>
+	<message key="amformas.auth.runtest.button">Submit</message>
+
+	<message key="amformas.auth.runtest.dontknow_button">
+		Don't know
+	</message>
+	<message key="amformas.auth.runtest.dontknow_label">
+		If you don't know what to answer please specify the reason,
+		press don't know button and the system will transfer you to the
+		next available test:
+	</message>
+
+	<!--
+		page evaluation succeed
+	-->
+	<message key="amformas.auth.runfinished.title">
+		Evaluation run finished
+	</message>
+	<message key="amformas.auth.runfinished.text">
+		<p>Gratulations, you finished your test cases.</p>
+		<p>
+			If you want to continue with further test cases, please
+			follow the link:
+			<a href="start-test">Start evaluation</a>
+		</p>
+	</message>
+
+	<!--
+		test suites
+	-->
+	<message key="amformas.auth.testsuites.title">Test Suites</message>
+	<message key="amformas.auth.testsuites.txtselect">
+		You are currently admitted to the following test suites, please
+		select one for testing:
+	</message>
+	<message key="amformas.auth.testsuites.txtnoselect">
+		Sorry, but this profile is not admitted for the current test
+		suite.
+	</message>
+	<message key="amformas.auth.testsuites.link.title">title</message>
+	<message key="amformas.auth.testsuites.link.action">link</message>
+	<message key="amformas.auth.testsuites.link.txt">
+		start testing
+	</message>
+
+	<!--
+		test results
+	-->
+	<message key="amformas.auth.testresults.title">Testresults</message>
+
+	<!--
+		info
+	-->
+	<message key="amformas.auth.info.notc.title">Information</message>
+	<message key="amformas.auth.info.notc.text">
+		<p>
+			No more test cases are available for your current test
+			profile.
+		</p>
+	</message>
+</catalogue>

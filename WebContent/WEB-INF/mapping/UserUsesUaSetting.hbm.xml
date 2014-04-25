@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.UserUsesUaSetting" table="user_uses_ua_setting" catalog="amfortas">
+        <composite-id name="id" class="org.bentoweb.amfortas.hibernate.om.UserUsesUaSettingId">
+            <key-property name="userAgentSettingId" type="integer">
+                <column name="user_agent_setting_id" />
+            </key-property>
+            <key-property name="userUsesUaId" type="integer">
+                <column name="user_uses_ua_id" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="userAgentSetting" class="org.bentoweb.amfortas.hibernate.om.UserAgentSetting" update="false" insert="false" fetch="select">
+            <column name="user_agent_setting_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userUsesUserAgent" class="org.bentoweb.amfortas.hibernate.om.UserUsesUserAgent" update="false" insert="false" fetch="select">
+            <column name="user_uses_ua_id" not-null="true" />
+        </many-to-one>
+        <property name="settingOther" type="string">
+            <column name="setting_other" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
+		 xmlns:jx="http://apache.org/cocoon/templates/jx/1.0">
+
+	<jx:if test="${(cocoon.parameters.user_role_name=='amfortas.user.role.user')}">		 
+		<h1><i18n:text catalogue="site" key="amformas.auth.welcome.title"/></h1>
+		<p><i18n:text catalogue="site" key="amformas.auth.welcome.welcome" />${username}</p>
+
+		<i18n:text catalogue="site" key="amformas.auth.welcome.text"/>
+		
+		<jx:if test="${hastp}">
+		<fieldset class="profilelist">
+			<legend><i18n:text catalogue="site" key="amformas.auth.welcome.legend"/></legend>
+			<jx:if test="${uaList.size()>0 || uaListOther.size()>0}">
+				<i18n:text catalogue="site" key="amformas.auth.welcome.ua"/>
+				<ul>
+				<jx:forEach var="ua" items="${uaList}">
+					<li><i18n:text catalogue="recruit" key="${ua.userAgent.getNameKey()}"/></li>
+				</jx:forEach>
+				<jx:forEach var="uao" items="${uaListOther}">
+					<li>${uao.getBrowserOther()}</li>
+				</jx:forEach>
+				</ul>
+			</jx:if>
+			<jx:if test="${(atList.size()>0) || (atListOther.size()>0)}">
+				<i18n:text catalogue="site" key="amformas.auth.welcome.at"/>
+				<ul>
+				<jx:forEach var="at" items="${atList}">
+					<li><i18n:text catalogue="recruit" key="${at.assistiveTechnology.getNameKey()}"/></li>
+				</jx:forEach>
+				<jx:forEach var="ato" items="${atListOther}">
+					<li>${ato.getAssistiveTechnologyOther()}</li>
+				</jx:forEach>
+				</ul>
+			</jx:if>
+			<jx:if test="${(device!=null) || (deviceOther!=null)}">
+				<i18n:text catalogue="site" key="amformas.auth.welcome.dev"/>
+				<ul>
+					<jx:if test="${device!=null}">
+							<li><i18n:text catalogue="recruit" key="${device}"/></li>
+					</jx:if>
+					<jx:if test="${deviceOther!=null}">
+							<li>${deviceOther}</li>
+					</jx:if>
+				</ul>
+			</jx:if>
+		</fieldset>
+		</jx:if>
+		<br />
+		<p><i18n:text catalogue="site" key="amformas.auth.welcome.changeprofile" /></p>
+		<p><i18n:text catalogue="site" key="amformas.auth.welcome.start" /></p>
+	</jx:if>
+	
+	<jx:if test="${(cocoon.parameters.user_role_name=='amfortas.user.role.admin')}">		 
+		<h1><i18n:text catalogue="site" key="amformas.auth.welcome.admin"/></h1>
+		<p><i18n:text catalogue="site" key="amformas.auth.welcome.welcome" />${username}</p>
+	</jx:if>
+	
+</content>

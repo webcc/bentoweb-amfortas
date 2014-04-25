@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.Likertscale" table="likertscale" catalog="amfortas">
+        <id name="likertId" type="integer">
+            <column name="likert_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="testresult" class="org.bentoweb.amfortas.hibernate.om.Testresult" fetch="select">
+            <column name="testresult_id" not-null="true" />
+        </many-to-one>
+        <property name="level" type="integer">
+            <column name="level" />
+        </property>
+    </class>
+</hibernate-mapping>

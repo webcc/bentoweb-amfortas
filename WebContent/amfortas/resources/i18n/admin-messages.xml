@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalogue> 
+	<!-- admin_users page -->
+	<message key="amfortas.admin.users.title">Admin users </message>
+	<message key="amfortas.admin.users.info">Number of users in database:</message>
+	<message key="amfortas.admin.user.firstname">First name</message>
+	<message key="amfortas.admin.user.lastname">Last name</message>
+	<message key="amfortas.admin.user.email">Email</message>
+	<message key="amfortas.admin.user.date">Date register</message>
+	<message key="amfortas.admin.user.status">Status</message>
+	<message key="amfortas.admin.user.actions">Actions</message>
+	<message key="amfortas.admin.user.status.noverified">Verification Pending</message>
+	<message key="amfortas.admin.user.status.noactivated">Activation Pending</message>
+	<message key="amfortas.admin.user.status.activated">Active</message>
+	<message key="amfortas.admin.user.action.activate">Activate</message>
+	<message key="amfortas.admin.user.action.verify">Verify</message>
+	<message key="amfortas.admin.user.action.deactivate">Deactivate</message>
+	<message key="amfortas.admin.user.action.mailinfo">Mail Status To User</message>
+	<!--  response page -->
+	<message key="amfortas.admin.response.verify">The user has been successfully verified.</message>
+	<message key="amfortas.admin.response.activate">The user has been successfully activated.</message>
+	<message key="amfortas.admin.response.deactivate">The user has been successfully deactivated.</message>
+	<message key="amfortas.admin.response.status">The user has been successfully informed.</message>	
+	<message key="amfortas.admin.response.fail_nouser">No user found.</message>
+	<message key="amfortas.admin.response.fail_nokey">No key provided.</message>
+	<message key="amfortas.admin.response.title">Admin users response</message>
+	<message key="amfortas.admin.response.backtouseradmin">Back to admin users page</message>
+	<!-- admin users detail -->
+	<message key="amfortas.admin.userdetail.title">Admin users</message>
+	<message key="amfortas.admin.userdetail.button.update">Update</message>
+	<message key="amfortas.admin.userdetail.link.previous">previous</message>
+	<message key="amfortas.admin.userdetail.txt.notexists">Sorry, no entry found in the database.</message> 
+	<message key="amfortas.admin.userdetail.link.back">Go back</message>
+	<message key="amfortas.admin.userdetail.link.next">next</message>
+	<message key="amfortas.admin.userdetail.legend.userdata">General user data</message>
+	<message key="amfortas.admin.userdetail.legend.testprofiles">Test profiles</message>
+	<message key="amfortas.admin.userdetail.legend.profiledetail">Test profile detail</message>
+	<message key="amfortas.admin.userdetail.legend.profiledetailuser">User profile detail</message>
+	<message key="amfortas.admin.userdetail.legend.profiles">Profiles</message>
+	<message key="amfortas.admin.userdetail.label.name">Name</message>
+	<message key="amfortas.admin.userdetail.label.nativelanguage">Native Language</message>
+	<message key="amfortas.admin.userdetail.label.status">Status</message>
+	<message key="amfortas.admin.userdetail.button.edit">Edit</message>
+	<message key="amfortas.admin.userdetail.txt.active">active</message>
+	<message key="amfortas.admin.userdetail.txt.veri">activation pending</message>
+	<message key="amfortas.admin.userdetail.txt.veripending">verification pending</message>
+	<message key="amfortas.admin.userdetail.txt.tpid">Id</message>
+	<message key="amfortas.admin.userdetail.txt.datecreated">Date created</message>
+	<message key="amfortas.admin.userdetail.txt.tcdone">TC done</message>
+	<message key="amfortas.admin.userdetail.txt.tcopen">TC open</message>
+	<message key="amfortas.admin.userdetail.txt.inactive">inactive</message>
+	<message key="amfortas.admin.userdetail.txt.englishlevel">English level</message>
+	<message key="amfortas.admin.userdetail.txt.webus">Web usage</message>
+	<message key="amfortas.admin.userdetail.txt.agerange">Age range</message>
+	<message key="amfortas.admin.userdetail.txt.disability">Disability</message>
+	<message key="amfortas.admin.userdetail.txt.delete">delete</message>
+	<message key="amfortas.admin.userdetail.link.verify">verify</message>
+	<message key="amfortas.admin.userdetail.link.activate">activate</message>
+	<message key="amfortas.admin.userdetail.link.deactivate">deactivate</message>
+	<message key="amfortas.admin.userdetail.label.testsuites">active for TS</message>
+	<message key="amfortas.admin.userdetail.table.tsname">Name</message>
+	<message key="amfortas.admin.userdetail.table.tsaction">action</message>
+	<!-- 
+		view test results
+	 -->
+	 <message key="amfortas.admin.testresults.title">View Test Results</message>
+</catalogue>

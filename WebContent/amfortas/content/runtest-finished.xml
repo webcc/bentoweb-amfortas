@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  		 xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  		 
+	<h1><i18n:text catalogue="site" key="amformas.auth.runfinished.title"/></h1>
+	<i18n:text catalogue="site" key="amformas.auth.runfinished.text"/>
+	
+</content>

@@ -1,0 +1,35 @@
+<content xmlns:ft="http://apache.org/cocoon/forms/1.0#template"
+  xmlns:fi="http://apache.org/cocoon/forms/1.0#instance"
+  xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  
+  <jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+   
+    <h1><i18n:text catalogue="site" key="amformas.forms.forgotpass.title"/></h1>
+    <div class="errormsg">
+    	<i18n:text catalogue="site" key="${errormsg}"/>
+    </div>
+	<!-- 
+	<ft:form-template action="forgotpass.go" method="POST" >
+	-->
+	<ft:form-template action="#{$continuation/id}.cont" method="POST" >
+	
+		<fi:group>
+        	<fi:items>
+		        	<ft:widget id="password">
+		        		<fi:styling type="password"/>
+		        	</ft:widget>
+		        	<ft:widget id="confirmPassword">
+		        		<fi:styling type="password"/>
+		        	</ft:widget>
+        	</fi:items>
+      	</fi:group>
+      	<fi:group>
+        	<fi:styling layout="rows"/> 
+        	<fi:items>
+        		<ft:widget id="thesubmit"/>
+			</fi:items>	
+		</fi:group>
+    </ft:form-template>
+ </content> 
+  

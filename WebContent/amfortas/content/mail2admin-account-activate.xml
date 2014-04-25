@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maildocument xmlns:mail="http://bentoweb.org/sendmail"
+ xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+ xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
+ xmlns:html="http://www.w3.org/1999/xhtml" 
+>
+<jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+	<mail:sendmail>
+		<mail:mailto>chairman@isdac.org</mail:mailto>
+		<mail:mailsubject>Admin mail for user account activation</mail:mailsubject>
+		<mail:mailbody>
+The user with email: ${email} verified her email and her user account activation is pending.
+		</mail:mailbody>
+	</mail:sendmail>
+</maildocument>

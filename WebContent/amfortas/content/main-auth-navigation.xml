@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigation xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
+			xmlns:jx="http://apache.org/cocoon/templates/jx/1.0">
+	<group title="">
+		<desc>This the main naviagation</desc>
+		<item link="welcome">
+			<title><i18n:text catalogue="site" key="amformas.auth.navigation.home"/></title>
+			<desc>Go to home page</desc>
+		</item>
+		<jx:if test="${(cocoon.parameters.user_role_name=='amfortas.user.role.user')}">
+			<item title="Start testing" link="start-test">
+				<title><i18n:text catalogue="site" key="amformas.auth.navigation.start_test"/></title>
+				<desc>Go to login page</desc>
+			</item>
+			<item title="Profiles" link="selectprofile">
+				<title><i18n:text catalogue="site" key="amformas.auth.navigation.profiles"/></title>
+				<desc>Go to profiles page</desc>
+			</item>
+			<item title="Instructions" link="instructions-auth.html">
+				<title><i18n:text catalogue="site" key="amformas.auth.navigation.instructions"/></title>
+				<desc>Go to register page</desc>
+			</item>
+			<item title="Help" link="help-auth.html">
+				<title><i18n:text catalogue="site" key="amformas.auth.navigation.help"/></title>
+				<desc>Go to help page</desc>
+			</item>
+		</jx:if>
+		<jx:if test="${cocoon.parameters.user_role_name=='amfortas.user.role.admin'}">
+			<item title="Admin Users" link="admin_users">
+				<title><i18n:text catalogue="site" key="amformas.auth.navigation.adminusers"/></title>
+				<desc>Go to users admin page</desc>
+			</item>
+			<item title="Users Stats" link="admin_all_profiles">
+				<title>Users Stats</title>
+				<desc>Go to Users Stats</desc>
+			</item>			
+			<item title="Admin Test Suites" link="admin_testsuites">
+				<title><i18n:text catalogue="site" key="amformas.auth.navigation.admints"/></title>
+				<desc>Go to testsuits admin page</desc>
+			</item>
+			<item title="View Test Results" link="viewtestresults">
+				<title><i18n:text catalogue="site" key="amformas.auth.navigation.testresults"/></title>
+				<desc>View test results</desc>
+			</item>		
+		</jx:if>	
+		<item title="Logout" link="logout">
+			<title><i18n:text catalogue="site" key="amformas.auth.navigation.logout"/></title>
+			<desc>Log out</desc>
+		</item>
+
+	</group>
+</navigation>

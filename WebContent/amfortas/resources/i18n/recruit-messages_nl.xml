@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+	<message key="amformas.form.about.note">
+                <em>Opmerking:</em>U kunt naderhand bijkomende profielen toevoegen door de
+		profiel link in het menu te selecteren. Dit kan zinvol zijn als u in diverse
+                omstandigheden verschillende combinaties van technologische hulpmiddelen gebruikt.
+	</message>
+	<message key="amformas.recruit.errorsum.msgtitle">Gegevens verzenden: probleemoverzicht</message>
+
+	<message key="amformas.forms.common.submit">Verzenden</message>
+	<message key="amformas.forms.common.back">Terug</message>
+	<message key="amformas.forms.common.reset">Wissen</message>
+
+	<message key="amformas.mail.touser.success">Mail successvol verzonden naar adres:</message>
+	<message key="amformas.mail.touser.fail">Verzenden mail naar adres mislukt:</message>
+
+<!--
+Vragenlijst voor aanmelding
+ -->
+	<message key="amformas.recruit.intro">Welkom. Gelieve onderstaande vragen te beantwoorden.</message>
+	<message key="amformas.recruit.sucesstitle">Registratie succesvol.</message>
+	<message key="amformas.recruit.successmsg1">Registratie was succesvol voor gebruiker:</message>
+        <message key="amformas.recruit.successmsg2">Dank u voor uw registratie. U kunt nu inloggen.</message>
+	<message key="amformas.recruit.title.common">Vragenlijst voor aanmelding - </message>
+        <message key="amformas.recruit.title.about">Sectie 1 van 3</message>
+        <message key="amformas.recruit.title.disability">Sectie 2 van 3</message>
+	<message key="amformas.recruit.title.at_select">Sectie 2.1</message>
+        <message key="amformas.recruit.title.at_screen_reader">Sectie 2.1 (Screenreader)</message>
+	<message key="amformas.recruit.title.at_talking_browser">Sectie 2.1 (Sprekende Browser)</message>
+	<message key="amformas.recruit.title.at_alternative_input">Sectie 2.1 (Alternatieve Invoer)</message>
+	<message key="amformas.recruit.title.at_braille">Sectie 2.1 (Braille)</message>
+	<message key="amformas.recruit.title.at_magnification_only">Sectie2.1 (Enkel Vergroting)</message>
+        <message key="amformas.recruit.title.at_speech_and_reading">Sectie 2.1 (Spraak en Lees programma)</message>
+	<message key="amformas.recruit.title.at_speech_recognition">Sectie 2.1 (Spraakherkenning)</message>
+        <message key="amformas.recruit.title.at_screen_reader_and_magnification">Sectie 2.1 (screenreader en Vergroting)</message>
+	<message key="amformas.recruit.title.at_settings">Sectie 3 (laatste)</message>
+	<message key="amformas.recruit.title.at_other">Sectie 2.1 (Andere technologie)</message>
+	<message key="amformas.recruit.title.browser_other">Sectie 3 (Andere browser)</message>
+	<message key="amformas.recruit.thanks">
+                Dank u voor het beantwoorden van deze vragen. Deze antwoorden zullen worden gebruikt om uw persoonlijk profiel te creκ±¥n om
+                de juiste Web voorbeelden te selecteren die u dan kunt evalueren.
+	</message>
+
+	<message key="amformas.recruit.button.next">Volgende</message>
+
+	<message key="amformas.recruit.ans.common.othersingle">Andere</message>
+	<message key="amformas.recruit.ans.common.other">Andere, gelieve te verduidelijken</message>
+	<message key="amformas.recruit.ans.common.other_ans">Indien andere, verklaar hier nader:</message>
+
+	<message key="amformas.recruit.ans.common.yes">Ja</message>
+	<message key="amformas.recruit.ans.common.no">Nee</message>
+
+	<message key="amformas.recruit.ans.common.notknow">Weet ik niet</message>
+	<message key="amformas.recruit.ans.common.none">Geen</message>
+
+	<message key="amformas.recruit.ans.common.good_id.1">Helemaal niet goed</message>
+	<message key="amformas.recruit.ans.common.good_id.2">Minder goed</message>
+	<message key="amformas.recruit.ans.common.good_id.3">Goed</message>
+	<message key="amformas.recruit.ans.common.good_id.4">Redelijk goed</message>
+	<message key="amformas.recruit.ans.common.good_id.5">Zeer goed</message>
+
+	<message key="amformas.recruit.ans.common.experience_id.1">Helemaal geen ervaring</message>
+	<message key="amformas.recruit.ans.common.experience_id.2">Weinig ervaring</message>
+	<message key="amformas.recruit.ans.common.experience_id.3">Ervaren</message>
+	<message key="amformas.recruit.ans.common.experience_id.4">Redelijk ervaren</message>
+	<message key="amformas.recruit.ans.common.experience_id.5">Zeer ervaren</message>
+
+	<message key="amformas.recruit.q.version">
+		Als u de versie weet, gelieve die hieronder vermelden:
+	</message>
+	<!-- end common answers -->
+	<!-- Start form1 -->
+	<!-- Q1 -->
+	<message key="amformas.recruit.q.name_first">Wat is uw voornaam?</message>
+	<message key="amformas.recruit.error.common.name_first">Uw naam moet minstens 2 tekens lang zijn.</message>
+	<!-- Q2 -->
+	<message key="amformas.recruit.q.name_last">Wat is uw familienaam?</message>
+	<!-- Q3 -->
+	<message key="amformas.recruit.q.sex">Wat is uw geslacht?</message>
+	<message key="amformas.recruit.ans.sex.male">Man</message>
+	<message key="amformas.recruit.ans.sex.female">Vrouw</message>
+	<!-- Q4 -->
+	<message key="amformas.recruit.q.email">Wat is uw email adres?</message>
+        <message key="amformas.recruit.q.password">Vul uw wachtwoord in</message>
+        <message key="amformas.recruit.q.confirmPassword">Gelieve uw wachtwoord nogmaals in te vullen</message>
+	<!-- Q5 -->
+	<message key="amformas.recruit.q.age_range_id">Hoe oud bent u?</message>
+	<message key="amformas.recruit.ans.age_range_id.1">Tussen 18 en 20</message>
+	<message key="amformas.recruit.ans.age_range_id.2">Tussen 21 en 30</message>
+	<message key="amformas.recruit.ans.age_range_id.3">Tussen 31 en 40</message>
+	<message key="amformas.recruit.ans.age_range_id.4">Tussen 41 en 50</message>
+	<message key="amformas.recruit.ans.age_range_id.5">Tussen 51 en 60</message>
+	<message key="amformas.recruit.ans.age_range_id.6">Tussen 61 en 70</message>
+	<message key="amformas.recruit.ans.age_range_id.7">Ouder dan 70</message>
+	<!-- Q6 -->
+	<message key="amformas.recruit.q.language_id">Wat is uw moedertaal?</message>
+	<message key="amformas.recruit.ans.language_id.0">Andere, gelieve te verduidelijken</message>
+	<message key="amformas.recruit.ans.language_id.1">Nederlands</message>
+	<message key="amformas.recruit.ans.language_id.2">Engels</message>
+	<message key="amformas.recruit.ans.language_id.3">Frans</message>
+	<message key="amformas.recruit.ans.language_id.4">Duits</message>
+	<message key="amformas.recruit.ans.language_id.5">Grieks</message>
+	<message key="amformas.recruit.ans.language_id.6">Italiaans</message>
+	<message key="amformas.recruit.ans.language_id.7">Spaans</message>
+	<!--  error messages -->
+	<message key="amformas.recruit.errormsg.field_req">Dit veld is verplicht.</message>
+	<message key="amformas.recruit.errormsg.field_firstname">De voornaam moet minstens 2 tekens lang zijn</message>
+	<message key="amformas.recruit.errormsg.field_lastname">De achternaam moet minstens 2 tekens lang zijn</message>
+        <message key="amformas.recruit.errormsg.pass_length">Het wachtwoord moet minimum 4 en maximum 20 tekens lang zijn</message>
+        <message key="amformas.recruit.errormsg.pass_not_equal">De twee wachtwoorden moeten identiek zijn.</message>
+	<message key="amformas.recruit.errormsg.email">Dit veld moet een geldig email adres bevatten</message>
+    <message key="amformas.recruit.errormsg.sex">U dient een geslacht te selecteren</message>
+	<message key="amformas.recruit.errormsg.language">U dient een taal te selecteren</message>
+	<message key="amformas.recruit.errormsg.age_range">U dient een leeftijdscategorie te selecteren</message>
+	<message key="amformas.recruit.errormsg.email_reserved">Dit emailadres is reeds toegewezen</message>
+	<message key="amformas.recruit.errormsg.other_lang">De taal moet minstens 2 tekens lang zijn.</message>
+	<message key="amformas.recruit.errormsg.common.other">Wanneer u de andere optie selecteert, moet het Β“andereΒ” veld ingevuld worden.</message>
+
+	<message key="amformas.recruit.errormsg.language_id_otherempty">U moet een taal ingeven.</message>
+	<message key="amformas.recruit.errormsg.language_id_noother">U hebt al een taal geselecteerd.</message>
+
+
+	<message key="amformas.recruit.errormsg.experience_id">U dient een ervaringsniveau op te geven.</message>
+	<message key="amformas.recruit.errormsg.language_experience_id">U dient een ervaringsniveau voor de taal op te geven.</message>
+        <message key="amformas.recruit.errormsg.assistive_technology">U dient te antwoorden of u wel of geen technologische hulpmiddelen gebruikt.</message>
+
+        <message key="amformas.recruit.errormsg.assistive_technology_types_id">U dient Γ©Γ©n van de technologische hulpmiddelen te selecteren.</message>
+        <message key="amformas.recruit.errormsg.assistive_technology_types_id_otherempty">U dient een technologisch hulpmiddel op te geven.</message>
+        <message key="amformas.recruit.errormsg.assistive_technology_types_id_noother">U hebt reeds een technologisch hulpmiddel geselecteerd.</message>
+
+        <message key="amformas.recruit.errormsg.user_agent_id_otherempty">U moet een user-agent ingeven.</message>
+        <message key="amformas.recruit.errormsg.user_agent_id_noother">U hebt al een user-agent geselecteerd.</message>
+
+	<message key="amformas.recruit.errormsg.os_id_otherempty">U moet een  besturingssysteem ingeven.</message>
+	<message key="amformas.recruit.errormsg.os_id_noother">U hebt al een besturingssysteem geselecteerd.</message>
+
+        <message key="amformas.recruit.errormsg.device_id_otherempty">U moet een toestel/appParaat ingeven.</message>
+        <message key="amformas.recruit.errormsg.device_id_noother">U hebt al een toestel/apparaat geselecteerd.</message>
+
+        <message key="amformas.recruit.errormsg.user_agent_setting_otherempty">U moet ten minste Γ©Γ©n user-agent instelling ingeven.</message>
+        <message key="amformas.recruit.errormsg.user_agent_setting_noother">U hebt geselecteerd dat u geen user-agent instelling gebruikt.</message>
+
+	<message key="amformas.recruit.errormsg.user_uses_os_setting_yesno">U dient aan te geven of u de instellingen in het besturingssysteem al dan niet aanpast.</message>
+	<message key="amformas.recruit.errormsg.user_uses_os_setting_otherempty">U moet ten minste Γ©Γ©n operating system instelling opgeven.</message>
+        <message key="amformas.recruit.errormsg.user_uses_os_setting_noother">U hebt geselecteerd dat u geen operating system instelling gebruikt.</message>
+
+	<message key="amformas.recruit.errormsg.hours_per_week">U dient een bereik voor 'uren per week' op te geven.</message>
+
+	<!-- End of form1 -->
+	<!-- Start form2 -->
+
+	<!-- Q7 -->
+	<message key="amformas.recruit.q.language_experience_id">Hoe zou u uw kennis van het Engels omschrijven?</message>
+	<!-- Q8 -->
+	<message key="amformas.recruit.q.disability_id">
+        Wat is de aard van uw handicap? Vink alles aan wat van toepassing is.
+	</message>
+
+	<message key="amformas.recruit.errormsg.disability_id_none">Minstens Γ©Γ©n handicap dient geselecteerd te worden.</message>
+
+
+	<message key="amformas.recruit.ans.disability_id.1">Blind</message>
+	<message key="amformas.recruit.ans.disability_id.2">Kleurenblind</message>
+	<message key="amformas.recruit.ans.disability_id.3">Slechtziend</message>
+	<message key="amformas.recruit.ans.disability_id.4">Doof</message>
+	<message key="amformas.recruit.ans.disability_id.5">Slechthorend</message>
+	<message key="amformas.recruit.ans.disability_id.6">Dyslexie</message>
+        <message key="amformas.recruit.ans.disability_id.8">Beperkte handfunctie</message>
+        <message key="amformas.recruit.ans.disability_id.9">Motorische beperking</message>
+	<message key="amformas.recruit.ans.disability_id.10">Leermoeilijkheden</message>
+	<message key="amformas.recruit.ans.disability_id.11">Spraakhandicap</message>
+	<message key="amformas.recruit.ans.disability_id.12">Afasie</message>
+	<message key="amformas.recruit.ans.disability_id.13">Functionele ongeletterdheid</message>
+        <message key="amformas.recruit.ans.disability_id.14">ADHD – (aandachtsstoornis met hyperactiviteit)</message>
+        <message key="amformas.recruit.ans.disability_id.15">Doofblind</message>
+	<message key="amformas.recruit.ans.disability_id.16">Dyscalculie</message>
+
+	<!-- Q9 -->
+        <message key="amformas.recruit.q.assistive_technology">Gebruikt u technologische hulpmiddelen?</message>
+	<!-- Q9.1 -->
+	<message key="amformas.recruit.q.assistive_technology_types_id">
+                Selecteer uit onderstaande lijst het technologisch hulpmiddel dat u meestal gebruikt om het internet te bezoeken. In het volgende onderdeel krijgt u de kans om nog bijkomende technologische hulpmiddelen toe te voegen.
+	</message>
+        <message key="amformas.recruit.ans.assistive_technology_types_id.1">Scherm voorlees programma (screenreader)</message>
+	<message key="amformas.recruit.ans.user_agent_types.talking_browser">Sprekende browser software</message>
+        <message key="amformas.recruit.ans.assistive_technology_types_id.3">Scherm voorlees programma (screenreader)  in combinatie met vergrotingssoftware</message>
+	<message key="amformas.recruit.ans.assistive_technology_types_id.4">Enkel vergrotingssoftware</message>
+	<message key="amformas.recruit.ans.assistive_technology_types_id.5">Spraak- en leesondersteunende software</message>
+	<message key="amformas.recruit.ans.assistive_technology_types_id.6">Spraakherkenningssoftware</message>
+	<message key="amformas.recruit.ans.assistive_technology_types_id.7">Brailleregel</message>
+	<message key="amformas.recruit.ans.assistive_technology_types_id.8">Alternatieve invoerapparatuur</message>
+	<message key="amformas.recruit.ans.assistive_technology_types_id.other">Indien uw apparatuur niet overeenstemt met de hierboven genoemde categorieΓ«n, beschrijf ze hier a.u.b. :</message>
+
+        <message key="amformas.recruit.q.at_others">Bedoelt u Γ©Γ©n van de technologieΓ«n in de lijst (geef aan a.u.b.)?</message>
+	<message key="amformas.recruit.q.at_others_note">
+		<em>Note:</em> Uw ingegeven tekst voor 'andere technologieΓ«n' werd gededecteerd en komt overeen met volgende ingaves in onze database.
+	</message>
+	<!-- Start Form 3a -->
+	<message key="amformas.recruit.atgeneral.other">Andere, gelieve te verduidelijken</message>
+	<!-- Q 9.2 -->
+	<message key="amformas.recruit.q.screen_readers">
+        Selecteer uit de onderstaande lijst welke schermlezer/screenreader u meestal gebruikt. Als uw schermlezer niet wordt vermeld, kies dan andere.
+	</message>
+	<message key="amformas.recruit.ans.screen_reader_id.1">JAWS</message>
+	<message key="amformas.recruit.ans.screen_reader_id.2">Window Eyes</message>
+	<message key="amformas.recruit.ans.screen_reader_id.3">Hal</message>
+	<message key="amformas.recruit.ans.screen_reader_id.4">Mobile Speak Pocket</message>
+	<message key="amformas.recruit.ans.screen_reader_id.5">OutSpoken</message>
+	<message key="amformas.recruit.ans.screen_reader_id.6">Reader (Sensory Software)</message>
+	<message key="amformas.recruit.ans.screen_reader_id.7">WinVision</message>
+
+	<!-- Q 9.3 -->
+	<message key="amformas.recruit.q.assistive_technology.experience_id">
+	Wat is uw ervaring met dit hulpmiddel?
+	</message>
+	<!-- Q 9.3a -->
+	<message key="amformas.recruit.q.assistive_technology_other">
+        Gebruikt u meestal nog andere technologische hulpmiddelen om het internet te bezoeken in combinatie met degene die u al aangegeven hebt?
+	</message>
+	<!-- Q10 -->
+	<message key="amformas.recruit.q.user_agents">
+	Welke webbrowser gebruikt u meestal, als u er een gebruikt?  (Het systeem heeft dit waarschijnlijk automatisch geΓ―dentificeerd, gelieve dit na te kijken)
+	</message>
+	<message key="amformas.recruit.ans.user_agent.msie">Microsoft Internet Explorer</message>
+	<message key="amformas.recruit.ans.user_agent.netscape">Netscape</message>
+	<message key="amformas.recruit.ans.user_agent.firefox">Firefox</message>
+	<message key="amformas.recruit.ans.user_agent.opera">Opera</message>
+	<message key="amformas.recruit.ans.user_agent.safari">Safari</message>
+	<message key="amformas.recruit.ans.user_agent.amaya">Amaya</message>
+	<message key="amformas.recruit.ans.user_agent.camino">Camino</message>
+	<message key="amformas.recruit.ans.user_agent.chimera">Chimera</message>
+	<message key="amformas.recruit.ans.user_agent.clue">Clue</message>
+	<message key="amformas.recruit.ans.user_agent.flock">Flock</message>
+	<message key="amformas.recruit.ans.user_agent.galeon">Galeon</message>
+	<message key="amformas.recruit.ans.user_agent.hotjava">HotJava</message>
+	<message key="amformas.recruit.ans.user_agent.icab">iCab</message>
+	<message key="amformas.recruit.ans.user_agent.kmeleon">K-Meleon</message>
+	<message key="amformas.recruit.ans.user_agent.konqueror">Konqueror</message>
+	<message key="amformas.recruit.ans.user_agent.links">Links</message>
+	<message key="amformas.recruit.ans.user_agent.lynx">Lynx</message>
+	<message key="amformas.recruit.ans.user_agent.mozilla">Mozilla</message>
+	<message key="amformas.recruit.ans.user_agent.nautilus">Nautilus</message>
+	<message key="amformas.recruit.ans.user_agent.netscape_navigator">Netscape Navigator</message>
+	<message key="amformas.recruit.ans.user_agent.shiira">Shiira</message>
+	<message key="amformas.recruit.ans.user_agent.xsmiles">X-Smiles</message>
+	<!-- other usaer agents -->
+	<message key="amformas.recruit.ans.user_agent.adobe_acrobat_reader">Adobe Acrobat Reader</message>
+	<message key="amformas.recruit.ans.user_agent.adobe_svg_viewer">Adobe SVG Viewer</message>
+	<message key="amformas.recruit.ans.user_agent.apple_quicktime">Apple QuickTime</message>
+	<message key="amformas.recruit.ans.user_agent.corel_svg_viewer">Corel SVG Viewer</message>
+	<message key="amformas.recruit.ans.user_agent.formsplayer">formsPlayer</message>
+	<message key="amformas.recruit.ans.user_agent.macromedia_flash_player">Macromedia Flash Player</message>
+	<message key="amformas.recruit.ans.user_agent.macromedia_shockwave">Macromedia Shockwave</message>
+	<message key="amformas.recruit.ans.user_agent.realnetworks_realplayer">RealNetworks RealPlayer</message>
+	<message key="amformas.recruit.ans.user_agent.sun_java-plugin">Sun Java Plug-in</message>
+	<message key="amformas.recruit.ans.user_agent.mathplayer">MathPlayer</message>
+	<message key="amformas.recruit.ans.user_agent.windows_media_player">Windows Media Player</message>
+	<!--  Q10a -->
+	<!-- Talking browser -->
+	<message key="amformas.recruit.q.talking_browsers">
+		Selecteer uit onderstaande lijst welke sprekende browser u het meest gebruikt. Als uw sprekende browser niet wordt vermeld, kies dan andere.
+	</message>
+	<message key="amformas.recruit.ans.talking_browser_id.1">Homepage reader</message>
+	<message key="amformas.recruit.ans.talking_browser_id.2">FreedomBox</message>
+	<message key="amformas.recruit.ans.talking_browser_id.3">EdWeb</message>
+	<message key="amformas.recruit.ans.user_agent.braillesurf">BrailleSurf</message>
+	<message key="amformas.recruit.ans.user_agent.emacspeak">EmacSpeak</message>
+	<message key="amformas.recruit.ans.user_agent.multiweb">MultiWeb</message>
+	<message key="amformas.recruit.ans.user_agent.pwwebspeak">pwWebSpeak</message>
+	<message key="amformas.recruit.ans.user_agent.sensus_internet_browser">Sensus Internet Browser</message>
+	<message key="amformas.recruit.ans.user_agent.simply_web_2000">Simply Web 2000</message>
+	<message key="amformas.recruit.ans.user_agent.webbie">Webbie</message>
+
+	<!-- browser other -->
+	<message key="amformas.recruit.q.browser_other">Bedoelt u Γ©Γ©n van volgende browsers?</message>
+	<message key="amformas.recruit.q.browser_other_note">
+		<em>Note:</em> Uw ingegeven tekst voor 'andere browser' werd gededecteerd en komt overeen met volgende ingaves in onze database.
+	</message>
+	<!-- Q10.1 -->
+	<message key="amformas.recruit.q.user_agent_setting">
+	Past u de instellingen van de browser aan om het gebruik ervan makkelijker te maken?
+	</message>
+	<!-- Q10.2 -->
+	<message key="amformas.recruit.q.user_agent_setting.user_agent_setting_id">
+	Indien ja, van welke aspecten van de weergave past u de instellingen aan?
+        Geef alles aan wat van toepassing is
+	</message>
+	<message key="amformas.recruit.ans.user_agent_setting_id.1">Lettertype</message>
+	<message key="amformas.recruit.ans.user_agent_setting_id.2">Lettergrootte </message>
+	<message key="amformas.recruit.ans.user_agent_setting_id.3">Tekstkleur</message>
+	<message key="amformas.recruit.ans.user_agent_setting_id.4">Achtergrondkleur </message>
+	<!-- Q10.3 -->
+	<message key="amformas.recruit.q.user_uses_os.user_uses_os_id">
+	Wat is het besturingssysteem (vb. Windows) dat u meestal gebruikt? (automatisch geΓ―dentificeerd, gelieve dit na te kijken)
+	</message>
+
+	<message key="amformas.recruit.ans.user_uses_os_id.null">Andere</message>
+	<message key="amformas.recruit.ans.user_uses_os_id.win9">Microsoft Windows 95/98/Me</message>
+	<message key="amformas.recruit.ans.user_uses_os_id.windows_nt">Microsoft Windows NT/2000/XP</message>
+	<message key="amformas.recruit.ans.user_uses_os_id.mac">Macintosh OS</message>
+	<message key="amformas.recruit.ans.user_uses_os_id.linux">Linux</message>
+	<message key="amformas.recruit.ans.user_uses_os_id.unix">UNIX</message>
+	<message key="amfortas.recruit.q.user_uses_os_id_vesion">
+	Als u de versie kent van het besturingssysteem dat u gebruikt (vb. XP, ME, 98, MacOS Tiger) verklaar u dan nader:
+	</message>
+	<!-- Q10.4 -->
+	<message key="amformas.recruit.q.os_settings">
+	Past u de instellingen in het besturingssysteem (vb. Windows XP) aan om het  gebruik ervan te vergemakkelijken?
+	</message>
+
+	<message key="amformas.recruit.q.os_settings_id">
+	Indien ja, van welke aspecten van de weergave verandert u dan de instellingen?
+	Selecteer alles wat van toepassing is.
+	</message>
+	<message key="amformas.recruit.ans.os_settings_id.1">Lettergrootte</message>
+	<message key="amformas.recruit.ans.os_settings_id.2">Kleurenschema</message>
+	<message key="amformas.recruit.ans.os_settings_id.3">Schermresolutie</message>
+
+	<!--  Q11 -->
+	<message key="amformas.recruit.q.device_id">
+        Welk toestel/apparaat gebruikt u meestal om het internet te bezoeken?
+	</message>
+	<message key="amformas.recruit.ans.device_id.1">Computer</message>
+	<message key="amformas.recruit.ans.device_id.2">Televisie</message>
+	<message key="amformas.recruit.ans.device_id.3">PDA</message>
+	<message key="amformas.recruit.ans.device_id.4">Mobiele telefoon</message>
+
+	<!-- Q11.1  -->
+	<message key="amformas.recruit.q.device_experience_id">
+        Wat is uw ervaring met het gebruik van dit toestel/apparaat om het internet te bezoeken?
+	</message>
+
+	<!-- Q12 -->
+	<message key="amformas.recruit.q.hours_per_week">
+	Hoeveel uur per week gebruikt u het internet?
+	</message>
+	<message key="amformas.recruit.ans.hours_per_week_id.1">Ik gebruik nooit internet.</message>
+	<message key="amformas.recruit.ans.hours_per_week_id.2">Tussen 1 en 5 uur per week.</message>
+	<message key="amformas.recruit.ans.hours_per_week_id.3">Tussen 6 en 10 uur per week.</message>
+	<message key="amformas.recruit.ans.hours_per_week_id.4">Tussen 11 en 20 uur per week.</message>
+	<message key="amformas.recruit.ans.hours_per_week_id.5">Meer dan 20 uur.</message>
+
+	<!--
+	xxxx Assistive Technology
+	-->
+
+	<!-- Screen reader and magnification combination software -->
+	<message key="amformas.recruit.q.sr_N_magn_sw">
+        Selecteer uit onderstaande lijst welke schermlezer/screenreader in combinatie met  vergrotingssoftware u meestal gebruikt. Als uw schermlezer in combinatie met vergrotingssoftware niet wordt vermeld, kies dan andere.
+	</message>
+	<message key="amformas.recruit.ans.sr_N_magn_sw_id.1">ZoomText</message>
+	<message key="amformas.recruit.ans.sr_N_magn_sw_id.2">SuperNova</message>
+	<message key="amformas.recruit.ans.sr_N_magn_sw_id.3">VoiceOver</message>
+	<message key="amformas.recruit.ans.sr_N_magn_sw_id.4">Blindows</message>
+	<message key="amformas.recruit.ans.sr_N_magn_sw_id.5">Virgo</message>
+	<message key="amformas.recruit.ans.sr_N_magn_sw_id.6">ZoomText</message>
+
+	<!-- Magnification only software -->
+	<message key="amformas.recruit.q.magn_sw">
+	Selecteer uit onderstaande lijst welke vergrotingssoftware u meestal gebruikt. Als uw vergrotingssoftware niet wordt vermeld, kies dan andere.
+	</message>
+	<message key="amformas.recruit.ans.magn_sw_id.1">Lunar</message>
+	<message key="amformas.recruit.ans.magn_sw_id.2">MAGic</message>
+	<message key="amformas.recruit.ans.magn_sw_id.3">Biggy</message>
+	<message key="amformas.recruit.ans.magn_sw_id.4">BigShot</message>
+
+	<!-- Speech and reading support software -->
+	<message key="amformas.recruit.q.speech_N_read_sw">
+	Selecteer uit onderstaande lijst welke spraak- en leesondersteunende software u meestal gebruikt. Als uw spraak en leesondersteunende software niet wordt vermeld, kies dan andere.
+	</message>
+	<message key="amformas.recruit.ans.speech_N_read_sw_id.1">BrowseAloud</message>
+	<message key="amformas.recruit.ans.speech_N_read_sw_id.2">ReadPlease</message>
+	<message key="amformas.recruit.ans.speech_N_read_sw_id.3">Kurzweil 3000</message>
+	<message key="amformas.recruit.ans.speech_N_read_sw_id.4">e-Read</message>
+
+	<!-- Speech recognition software -->
+	<message key="amformas.recruit.q.speechrec_sw">
+	Selecteer uit onderstaande lijst welke spraakherkenningssoftware u meestal gebruikt. Als uw spraakherkenningssoftware niet wordt vermeld, kies dan andere.
+	</message>
+	<message key="amformas.recruit.ans.speechrec_sw_id.1">Dragon Naturally Speaking</message>
+	<message key="amformas.recruit.ans.speechrec_sw_id.2">ViaVoice</message>
+	<message key="amformas.recruit.ans.speechrec_sw_id.3">QPointer</message>
+	<message key="amformas.recruit.ans.speechrec_sw_id.4">JawBone</message>
+
+	<!-- Braille displays -->
+	<message key="amformas.recruit.q.braille">
+	Selecteer uit onderstaande lijst welke brailleregel u meestal gebruikt. Als uw brailleregel niet wordt vermeld, kies dan andere.
+	</message>
+	<message key="amformas.recruit.ans.sr_N_braille_id.1">Alva</message>
+	<message key="amformas.recruit.ans.sr_N_braille_id.2">Baum</message>
+	<message key="amformas.recruit.ans.sr_N_braille_id.3">Papenmeier</message>
+	<message key="amformas.recruit.ans.sr_N_braille_id.4">Tieman</message>
+	<message key="amformas.recruit.ans.sr_N_braille_id.5">Braille display (unspecified product)</message>
+	<message key="amformas.recruit.ans.sr_N_braille_id.6">Handy Tech Braille display</message>
+	<message key="amformas.recruit.ans.sr_N_braille_id.7">Hedo Braille display</message>
+	<message key="amformas.recruit.ans.sr_N_braille_id.8">Visiobraille Braille display</message>
+	<message key="amformas.recruit.ans.sr_N_braille_id.9">Focus 40 Braille Display</message>
+	<message key="amformas.recruit.ans.sr_N_braille_id.10">Focus 80 Braille Display</message>
+	<message key="amformas.recruit.ans.sr_N_braille_id.11">PAC Mate 20 Portable Braille Display</message>
+	<message key="amformas.recruit.ans.sr_N_braille_id.12">PAC Mate 40 Portable Braille Display</message>
+	<message key="amformas.recruit.q.braille_version">
+	Als u de versie kent van uw braille display, bepaal dan nader hieronder:
+	</message>
+
+	<!-- Alternative input devices -->
+	<message key="amformas.recruit.q.alterin">
+	Selecteer uit onderstaande lijst welk alternatief invoerapparaat u meestal gebruikt. Als uw alternatief invoerapparaat niet wordt vermeld, kies dan andere.
+	</message>
+	<message key="amformas.recruit.ans.alterin_id.1">Switch and scanning apparaten</message>
+	<message key="amformas.recruit.ans.alterin_id.2">Alternatief toetsenbord</message>
+	<message key="amformas.recruit.ans.alterin_id.3">Hoofdmuis/apparaat dat beweging volgt</message>
+	<!-- additional AT -->
+	<message key="amformas.recruit.ans.altern_other.1">desktop video magnifier</message>
+	<message key="amformas.recruit.ans.altern_other.2">portable video magnifier</message>
+	<message key="amformas.recruit.ans.altern_other.3">video magnifier that plugs into a television</message>
+	<message key="amformas.recruit.ans.altern_other.4">PC sharing video magnifier</message>
+	<!--
+		fieldsets - stettings
+	-->
+		<message key="amformas.recruit.setting.fs.browser">Browser</message>
+		<message key="amformas.recruit.setting.fs.os">Besturingssysteem</message>
+		<message key="amformas.recruit.setting.fs.device">Toestel</message>
+</catalogue>

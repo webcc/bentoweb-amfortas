@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+	<message key="amformas.form.about.note">
+		<em>Note:</em>you can add further profiles later by selecting 
+		the profile link in the menu. This may be useful if you use 
+		different combinations of assistive technologies on different 
+		occasions.
+	</message>
+	<message key="amformas.recruit.errorsum.msgtitle">Submission problems summary</message>
+			
+	<message key="amformas.forms.common.submit">Submit</message>
+	<message key="amformas.forms.common.back">Back</message>	
+	<message key="amformas.forms.common.reset">Reset</message>	
+
+	<message key="amformas.mail.touser.success">Successfully sending mail to address:</message>
+	<message key="amformas.mail.touser.fail">Failed sending mail to address:</message>
+<!-- 
+	Recruitment questionnaire
+ -->
+	<message key="amformas.recruit.intro">Welcome. Please answer the questions below.</message>
+	<message key="amformas.recruit.sucesstitle">Registration successful.</message>
+	<message key="amformas.recruit.successmsg1">Registration was successful for user:</message>	
+	<message key="amformas.recruit.successmsg2">Thank you for your registration. Now you can login.</message>			
+	<message key="amformas.recruit.title.common">Reqruitement Questionnaire - </message>
+	<message key="amformas.recruit.title.about">Section 1 of 3</message>
+	<message key="amformas.recruit.title.disability">Section 2 of 3</message>
+	<message key="amformas.recruit.title.at_select">Section 2.1</message>
+	<message key="amformas.recruit.title.at_screen_reader">Section 2.1 (Screen Readers)</message>		
+	<message key="amformas.recruit.title.at_talking_browser">Section 2.1 (Talking Browsers)</message>		
+	<message key="amformas.recruit.title.at_alternative_input">Section 2.1 (Alternative Input)</message>		
+	<message key="amformas.recruit.title.at_braille">Section 2.1 (Braille Display)</message>		
+	<message key="amformas.recruit.title.at_magnification_only">Section 2.1 (Magnification only software)</message>		
+	<message key="amformas.recruit.title.at_speech_and_reading">Section 2.1 (Speech and reading support software)</message>		
+	<message key="amformas.recruit.title.at_speech_recognition">Section 2.1 (Speech recognition software)</message>		
+	<message key="amformas.recruit.title.at_screen_reader_and_magnification">Section 2.1 (Screen reader and magnification combination software)</message>		
+	<message key="amformas.recruit.title.at_settings">Section 3 of 3</message>		
+	<message key="amformas.recruit.title.at_other">Section 2.1 (Other technology)</message>
+	<message key="amformas.recruit.title.browser_other">Section 3 (Other browser)</message>		
+	<message key="amformas.recruit.thanks">
+		Thank you for answering these questions. These will be used to create your personal 
+		profile for selecting appropriate Web examples for you to evaluate.	
+	</message>
+
+   	<message key="amformas.recruit.button.next">Next</message>
+
+	<message key="amformas.recruit.ans.common.othersingle">Other</message>
+	<message key="amformas.recruit.ans.common.other">Other, please specify</message>
+	<message key="amformas.recruit.ans.common.other_ans">If other, please specify here:</message>
+	
+	<message key="amformas.recruit.ans.common.yes">Yes</message>
+	<message key="amformas.recruit.ans.common.no">No</message>
+	
+	<message key="amformas.recruit.ans.common.notknow">Don’t know</message>
+	<message key="amformas.recruit.ans.common.none">None</message>	
+	
+	<message key="amformas.recruit.ans.common.good_id.1">Not at all good</message>
+	<message key="amformas.recruit.ans.common.good_id.2">Not very good</message>
+	<message key="amformas.recruit.ans.common.good_id.3">Good</message>
+	<message key="amformas.recruit.ans.common.good_id.4">Quite good</message>
+	<message key="amformas.recruit.ans.common.good_id.5">Very good</message>
+	
+	<message key="amformas.recruit.ans.common.experience_id.1">Not at all experienced</message>
+	<message key="amformas.recruit.ans.common.experience_id.2">Not very experienced</message>
+	<message key="amformas.recruit.ans.common.experience_id.3">Experienced</message>
+	<message key="amformas.recruit.ans.common.experience_id.4">Quite experienced</message>
+	<message key="amformas.recruit.ans.common.experience_id.5">Very experienced</message>	
+	
+	<message key="amformas.recruit.q.version">
+		If you know the version could you use please state below:
+	</message>
+
+<!-- end common answers -->	
+<!-- Start form1 -->	
+	<!-- Q1 -->
+	<message key="amformas.recruit.q.name_first">What is your first name?</message>
+	<message key="amformas.recruit.error.common.name_first">Name should have at least 2 characters</message>
+	<!-- Q2 -->
+	<message key="amformas.recruit.q.name_last">What is your surname?</message>
+	<!-- Q3 -->
+	<message key="amformas.recruit.q.sex">What is your sex?</message>
+	<message key="amformas.recruit.ans.sex.male">Male</message>
+	<message key="amformas.recruit.ans.sex.female">Female</message>
+	<!-- Q4 -->
+	<message key="amformas.recruit.q.email">What is your email address? (This is used for login name)</message>
+	<message key="amformas.recruit.q.password">Please insert password (At least 4 chars)</message>
+	<message key="amformas.recruit.q.confirmPassword">Please insert confirm password</message>	
+	<!-- Q5 -->
+	<message key="amformas.recruit.q.age_range_id">How old are you?</message>
+	<message key="amformas.recruit.ans.age_range_id.1">Between 18 and 20</message>
+	<message key="amformas.recruit.ans.age_range_id.2">Between 21 and 30</message>	
+	<message key="amformas.recruit.ans.age_range_id.3">Between 31 and 40</message>
+	<message key="amformas.recruit.ans.age_range_id.4">Between 41 and 50</message>
+	<message key="amformas.recruit.ans.age_range_id.5">Between 51 and 60</message>
+	<message key="amformas.recruit.ans.age_range_id.6">Between 61 and 70</message>	
+	<message key="amformas.recruit.ans.age_range_id.7">Over 70</message>		
+	<!-- Q6 -->
+	<message key="amformas.recruit.q.language_id">What is your native language?</message>
+	<message key="amformas.recruit.ans.language_id.0">Other, please specify</message>
+	<message key="amformas.recruit.ans.language_id.1">Dutch</message>
+	<message key="amformas.recruit.ans.language_id.2">English</message>
+	<message key="amformas.recruit.ans.language_id.3">French</message>
+	<message key="amformas.recruit.ans.language_id.4">German</message>
+	<message key="amformas.recruit.ans.language_id.5">Greek</message>
+	<message key="amformas.recruit.ans.language_id.6">Italian</message>
+	<message key="amformas.recruit.ans.language_id.7">Spanish</message>	
+	<!--  error messages -->
+	<message key="amformas.recruit.errormsg.field_req">This field is required.</message>
+	<message key="amformas.recruit.errormsg.field_firstname">The first name should have at least 2 characters</message>
+	<message key="amformas.recruit.errormsg.field_lastname">The last name should have at least 2 characters</message>
+	<message key="amformas.recruit.errormsg.pass_length">The password should have min 4 characters and max 20</message>
+	<message key="amformas.recruit.errormsg.pass_not_equal">The two passwords have to be equal.</message>
+	<message key="amformas.recruit.errormsg.email">This field has to contain a valid email address</message> 
+	<message key="amformas.recruit.errormsg.sex">You should select a sex</message> 
+	<message key="amformas.recruit.errormsg.language">You should select a language</message> 
+	<message key="amformas.recruit.errormsg.age_range">You should select an age range</message> 
+	<message key="amformas.recruit.errormsg.email_reserved">This email address is already reserved</message> 
+	<message key="amformas.recruit.errormsg.other_lang">The language should have at least 2 characters</message>
+	<message key="amformas.recruit.errormsg.common.other">When you select the other option you need to fill the other field.</message>
+	
+	<message key="amformas.recruit.errormsg.language_id_otherempty">You need to provide a language.</message>
+	<message key="amformas.recruit.errormsg.language_id_noother">You have already selected a language.</message>
+	
+	<message key="amformas.recruit.errormsg.experience_id">You need to provide a level of experience.</message>
+	<message key="amformas.recruit.errormsg.language_experience_id">You need to provide a language level of experience.</message>
+	<message key="amformas.recruit.errormsg.assistive_technology">You need to answer whether you use or no any assistive technologies.</message>
+	
+	<message key="amformas.recruit.errormsg.assistive_technology_types_id">You need to select one of the assistive technologies .</message>
+	<message key="amformas.recruit.errormsg.assistive_technology_types_id_otherempty">You need to provide an assistive technology.</message>
+	<message key="amformas.recruit.errormsg.assistive_technology_types_id_noother">You have already selected an assistive technology.</message>
+	
+	<message key="amformas.recruit.errormsg.user_agent_id_otherempty">You need to provide a user agent.</message>
+	<message key="amformas.recruit.errormsg.user_agent_id_noother">You have already selected a user agent.</message>
+	
+	<message key="amformas.recruit.errormsg.os_id_otherempty">You need to provide an operating system.</message>
+	<message key="amformas.recruit.errormsg.os_id_noother">You have already selected an operating system.</message>
+	
+	<message key="amformas.recruit.errormsg.device_id_otherempty">You need to provide a device.</message>
+	<message key="amformas.recruit.errormsg.device_id_noother">You have already selected a device.</message>
+	
+	<message key="amformas.recruit.errormsg.user_agent_setting_otherempty">You need to provide at least one user agent setting.</message>
+	<message key="amformas.recruit.errormsg.user_agent_setting_noother">You have selected that you do not use user agent setting.</message>
+	
+	<message key="amformas.recruit.errormsg.user_uses_os_setting_yesno">You need to select whether you adjust or no the settings in the operating system.</message>
+	<message key="amformas.recruit.errormsg.user_uses_os_setting_otherempty">You need to provide at least one operating system setting.</message>
+	<message key="amformas.recruit.errormsg.user_uses_os_setting_noother">You have selected that you do not use operating system setting.</message>
+	
+	<message key="amformas.recruit.errormsg.hours_per_week">You should select an hours per week range.</message>
+	
+
+    <!-- End of form1 -->		
+    <!-- Start form2 -->
+	<message key="screenreader_other">Screenreader other</message>
+	<message key="screenreader_with_magnification_other">Screen reader and magnification other</message>
+	<message key="magnification_software_other">Magnification only software other</message>
+	<message key="speech_and_hearing_support_other">Speech and reading support software other</message>
+	<message key="speech_recognition_other">Speech recognition software other</message>
+	<message key="braille_display_other">Braille display other</message>
+	<message key="alternative_input_device_other">Alternative input devices other</message>
+		
+		
+		
+	<!-- Q7 -->	
+	<message key="amformas.recruit.q.language_experience_id">How would you rate your level of English?</message>
+	<!-- Q8 -->
+	<message key="amformas.recruit.q.disability_id">
+		What is the nature of your disability? Please select all those that apply.
+	</message>
+	
+	<message key="amformas.recruit.errormsg.disability_id_none">At least one disability should be selected.</message>
+	
+	<message key="amformas.recruit.ans.disability_id.1">Blindness</message>
+	<message key="amformas.recruit.ans.disability_id.2">Colour vision deficiency</message>
+	<message key="amformas.recruit.ans.disability_id.3">Low vision</message>
+	<message key="amformas.recruit.ans.disability_id.4">Deafness</message>
+	<message key="amformas.recruit.ans.disability_id.5">Hard of hearing</message>
+	<message key="amformas.recruit.ans.disability_id.6">Dyslexia</message>
+	<message key="amformas.recruit.ans.disability_id.7">Intellectual disability</message>
+	<message key="amformas.recruit.ans.disability_id.8">Dexterity impairment</message>
+	<message key="amformas.recruit.ans.disability_id.9">Motor impairment</message>
+	<message key="amformas.recruit.ans.disability_id.10">Learning difficulties</message>
+	<message key="amformas.recruit.ans.disability_id.11">Speech impairment</message>
+	<message key="amformas.recruit.ans.disability_id.12">Aphasia</message>
+	<message key="amformas.recruit.ans.disability_id.13">Functional illiteracy</message>
+	<message key="amformas.recruit.ans.disability_id.14">ADHD (Attention deficit hyperactivity disorder)</message>
+	<message key="amformas.recruit.ans.disability_id.15">Deaf-Blindness</message>
+	<message key="amformas.recruit.ans.disability_id.16">Dyscalculus</message>		
+		
+	<!-- Q9 -->	
+	<message key="amformas.recruit.q.assistive_technology">
+		Do you use any assistive technologies? 
+	</message>
+	<!-- Q9.1 -->	
+	<message key="amformas.recruit.q.assistive_technology_types_id">
+		Please select one of the assistive technologies you use in your most common 
+		profile to access the Internet from those listed below. You will be given 
+		the choice to select additional assistive technologies in the next section.
+	</message>
+		<message key="amformas.recruit.ans.assistive_technology_types_id.1">Screen readers</message>
+		<message key="amformas.recruit.ans.user_agent_types.talking_browser">Talking browser software</message>
+		<message key="amformas.recruit.ans.assistive_technology_types_id.3">Screen reader and magnification combination software</message>
+		<message key="amformas.recruit.ans.assistive_technology_types_id.4">Magnification only software</message>
+		<message key="amformas.recruit.ans.assistive_technology_types_id.5">Speech and reading support software</message>
+		<message key="amformas.recruit.ans.assistive_technology_types_id.6">Speech recognition software</message>
+		<message key="amformas.recruit.ans.assistive_technology_types_id.7">Braille display</message>
+		<message key="amformas.recruit.ans.assistive_technology_types_id.8">Alternative input devices</message>
+		<message key="amformas.recruit.ans.assistive_technology_types_id.other">If you cannot match your equipment to the categories listed above, please describe it here:</message>
+
+		<message key="amformas.recruit.q.at_others">Do you mean one of the listed technologies (please select)?</message>
+		<message key="amformas.recruit.q.at_others_note">
+			<em>Note:</em> Your text input for 'other technologies' has been detected and has matched following entries in our database. 
+		</message>
+		<!-- Start Form 3a -->
+		<message key="amformas.recruit.atgeneral.other">Other, please specify</message>
+		<!-- Q 9.2 -->
+	<message key="amformas.recruit.q.screen_readers">
+		Please select from the list below which screen reader
+		you use in your most common profile. If your screen reader
+		is not listed please choose other. 
+	</message>
+		<message key="amformas.recruit.ans.screen_reader_id.1">JAWS</message>
+		<message key="amformas.recruit.ans.screen_reader_id.2">Window Eyes</message>
+		<message key="amformas.recruit.ans.screen_reader_id.3">Hal</message>
+		<message key="amformas.recruit.ans.screen_reader_id.4">Mobile Speak Pocket</message>
+		<message key="amformas.recruit.ans.screen_reader_id.5">OutSpoken</message>
+		<message key="amformas.recruit.ans.screen_reader_id.6">Reader (Sensory Software)</message>
+		<message key="amformas.recruit.ans.screen_reader_id.7">WinVision</message>		
+		<message key="amformas.recruit.ans.screen_reader_id.8">Infovox Desktop</message>
+		<message key="amformas.recruit.ans.screen_reader_id.9">LSR (Linux Screen Reader)</message>
+		<message key="amformas.recruit.ans.screen_reader_id.10">NVDA (NonVisual Desktop Access)</message>
+		<message key="amformas.recruit.ans.screen_reader_id.11">Thunder</message>
+		<message key="amformas.recruit.ans.screen_reader_id.12">Microsoft Narrator</message>
+			
+	<!-- Q 9.3 -->	
+	<message key="amformas.recruit.q.assistive_technology.experience_id">
+		What is your level of experience with this assistive technology? 
+	</message>
+	
+	<!-- Q 9.3a -->	
+	<message key="amformas.recruit.q.assistive_technology_other">
+		In your most common profile to access the Internet, do you use any 
+		other assistive technologies in combination with those you have 
+		already identified? 
+	</message>
+ 
+	<!-- Q10 -->
+	<message key="amformas.recruit.q.user_agents">
+		What is the Web browser, if any, that you use in your most common profile? 
+		(The system has probably identified it automatically, please check)
+	</message>
+		<message key="amformas.recruit.ans.user_agent.msie">Microsoft Internet Explorer</message>
+		<message key="amformas.recruit.ans.user_agent.netscape">Netscape</message>
+		<message key="amformas.recruit.ans.user_agent.firefox">Firefox</message>
+		<message key="amformas.recruit.ans.user_agent.opera">Opera</message>
+		<message key="amformas.recruit.ans.user_agent.safari">Safari</message>
+		<message key="amformas.recruit.ans.user_agent.amaya">Amaya</message>
+		<message key="amformas.recruit.ans.user_agent.camino">Camino</message>
+		<message key="amformas.recruit.ans.user_agent.chimera">Chimera</message>
+		<message key="amformas.recruit.ans.user_agent.clue">Clue</message>
+		<message key="amformas.recruit.ans.user_agent.flock">Flock</message>
+		<message key="amformas.recruit.ans.user_agent.galeon">Galeon</message>
+		<message key="amformas.recruit.ans.user_agent.hotjava">HotJava</message>
+		<message key="amformas.recruit.ans.user_agent.icab">iCab</message>
+		<message key="amformas.recruit.ans.user_agent.kmeleon">K-Meleon</message>
+		<message key="amformas.recruit.ans.user_agent.konqueror">Konqueror</message>
+		<message key="amformas.recruit.ans.user_agent.links">Links</message>
+		<message key="amformas.recruit.ans.user_agent.lynx">Lynx</message>
+		<message key="amformas.recruit.ans.user_agent.mozilla">Mozilla</message>
+		<message key="amformas.recruit.ans.user_agent.nautilus">Nautilus</message>
+		<message key="amformas.recruit.ans.user_agent.netscape_navigator">Netscape Navigator</message>
+		<message key="amformas.recruit.ans.user_agent.shiira">Shiira</message>
+		<message key="amformas.recruit.ans.user_agent.xsmiles">X-Smiles</message>
+		<!-- other usaer agents -->
+		<message key="amformas.recruit.ans.user_agent.adobe_acrobat_reader">Adobe Acrobat Reader</message>
+		<message key="amformas.recruit.ans.user_agent.adobe_svg_viewer">Adobe SVG Viewer</message>
+		<message key="amformas.recruit.ans.user_agent.apple_quicktime">Apple QuickTime</message>
+		<message key="amformas.recruit.ans.user_agent.corel_svg_viewer">Corel SVG Viewer</message>
+		<message key="amformas.recruit.ans.user_agent.formsplayer">formsPlayer</message>
+		<message key="amformas.recruit.ans.user_agent.macromedia_flash_player">Macromedia Flash Player</message>
+		<message key="amformas.recruit.ans.user_agent.macromedia_shockwave">Macromedia Shockwave</message>
+		<message key="amformas.recruit.ans.user_agent.realnetworks_realplayer">RealNetworks RealPlayer</message>
+		<message key="amformas.recruit.ans.user_agent.sun_java-plugin">Sun Java Plug-in</message>
+		<message key="amformas.recruit.ans.user_agent.mathplayer">MathPlayer</message>
+		<message key="amformas.recruit.ans.user_agent.windows_media_player">Windows Media Player</message>
+		
+		<message key="amformas.recruit.ans.user_agent.msie_ieweb">Microsoft Internet Explorer with WebFormator</message>
+		<message key="amformas.recruit.ans.user_agent.msie_dadzilla">Dadzilla</message>
+		<message key="amformas.recruit.ans.user_agent.msie_seamonkey">SeaMonkey</message>
+		<message key="amformas.recruit.ans.user_agent.msie_firevox">Fire Vox</message>
+		<message key="amformas.recruit.ans.user_agent.msie_mathml">Formula MathML Viewer</message>
+	<!--  Q10a -->
+	<!-- Talking browser -->
+	<message key="amformas.recruit.q.talking_browsers">
+		Please select from the list below which talking browser
+		you use in your most common profile. If your talking browser
+		is not listed please choose other. 
+	</message>
+		<message key="amformas.recruit.ans.user_agent.homepage_reader">Homepage reader</message>
+		<message key="amformas.recruit.ans.user_agent.freedombox">FreedomBox</message>
+		<message key="amformas.recruit.ans.user_agent.edweb">EdWeb</message>
+		<message key="amformas.recruit.ans.user_agent.braillesurf">BrailleSurf</message>
+		<message key="amformas.recruit.ans.user_agent.emacspeak">EmacSpeak</message>
+		<message key="amformas.recruit.ans.user_agent.multiweb">MultiWeb</message>
+		<message key="amformas.recruit.ans.user_agent.pwwebspeak">pwWebSpeak</message>
+		<message key="amformas.recruit.ans.user_agent.sensus_internet_browser">Sensus Internet Browser</message>
+		<message key="amformas.recruit.ans.user_agent.simply_web_2000">Simply Web 2000</message>
+		<message key="amformas.recruit.ans.user_agent.webbie">Webbie</message>
+	
+	<!-- browser other -->
+	<message key="amformas.recruit.q.browser_other">Do you mean one of the following browsers?</message>
+	<message key="amformas.recruit.q.browser_other_note">
+		<em>Note:</em> Your text input for 'other browser' has been detected and has matched following entries in our database. 
+	</message>
+	 
+	<!-- Q10.1 -->
+	<message key="amformas.recruit.q.user_agent_setting">
+		Do you adjust the settings in the browser to make it easier to use?
+	</message>
+	<!-- Q10.2 -->
+	<message key="amformas.recruit.q.user_agent_setting.user_agent_setting_id">
+		If yes, which aspects of the presentation do you adjust the settings for?  
+		Please select all those that apply.
+	</message>
+		<message key="amformas.recruit.ans.user_agent_setting_id.1">Text font (i.e. Arial)</message>
+		<message key="amformas.recruit.ans.user_agent_setting_id.2">Text size</message>
+		<message key="amformas.recruit.ans.user_agent_setting_id.3">Text colour</message>
+		<message key="amformas.recruit.ans.user_agent_setting_id.4">Background colour</message>
+	<!-- Q10.3 -->
+	<message key="amformas.recruit.q.user_uses_os.user_uses_os_id">
+		What is the operating system (e.g. Windows) that you use in your most common profile? (automatically identified, please check)
+	</message>
+	
+		<message key="amformas.recruit.ans.user_uses_os_id.null">Other</message>
+		<message key="amformas.recruit.ans.user_uses_os_id.win9">Microsoft Windows 95/98/Me</message>
+		<message key="amformas.recruit.ans.user_uses_os_id.windows_nt">Microsoft Windows NT/2000/XP</message>		
+		<message key="amformas.recruit.ans.user_uses_os_id.mac">Macintosh OS</message>		
+		<message key="amformas.recruit.ans.user_uses_os_id.linux">Linux</message>		
+		<message key="amformas.recruit.ans.user_uses_os_id.unix">UNIX</message>		
+	<message key="amfortas.recruit.q.user_uses_os_id_vesion">
+		If you know the version of the Operating System (e.g. XP, ME, 98, MacOS Tiger
+		you use please state below:
+	</message>
+	
+	<!-- Q10.4 -->
+	<message key="amformas.recruit.q.os_settings">
+		Do you adjust the settings in the operating system (e.g. Windows XP) to make it easier to use? 
+	</message>
+	
+	<message key="amformas.recruit.q.os_settings_id">
+		If yes, which aspects of the presentation do you adjust the settings for?  
+		Please select all those that apply.
+	</message>
+		<message key="amformas.recruit.ans.os_settings_id.1">Text size</message>
+		<message key="amformas.recruit.ans.os_settings_id.2">Colour scheme</message>
+		<message key="amformas.recruit.ans.os_settings_id.3">Screen resolution</message>
+
+
+	<!--  Q11 -->
+	<message key="amformas.recruit.q.device_id">
+		What device do you use in your most common profile to access the internet?
+	</message>
+		<message key="amformas.recruit.ans.device_id.1">Computer</message>
+		<message key="amformas.recruit.ans.device_id.2">Television</message>
+		<message key="amformas.recruit.ans.device_id.3">PDA</message>
+		<message key="amformas.recruit.ans.device_id.4">Mobile phone</message>
+
+
+	<!-- Q11.1  -->
+	<message key="amformas.recruit.q.device_experience_id">
+		What is your level of experience with using this device to access the Internet?
+	</message>
+	<!-- Q12 -->
+	<message key="amformas.recruit.q.hours_per_week">
+		How many hours per week do you use the World Wide Web? 
+	</message>
+		<message key="amformas.recruit.ans.hours_per_week_id.1">Never use the web.</message>
+		<message key="amformas.recruit.ans.hours_per_week_id.2">Between 1 and 5 hours per week.</message>
+		<message key="amformas.recruit.ans.hours_per_week_id.3">Between 6 and 10 hours per week.</message>
+		<message key="amformas.recruit.ans.hours_per_week_id.4">Between 11 and 20 hours per week.</message>
+		<message key="amformas.recruit.ans.hours_per_week_id.5">More than 20 hours.</message>
+
+	<!-- 
+	xxxx Assistive Technology
+	-->
+	<!-- Screen reader and magnification combination software -->
+	<message key="amformas.recruit.q.sr_N_magn_sw">
+		Please select from the list below which screen reader and magnification combination software 
+		you use in your most common profile. If your Screen reader and magnification combination software
+		is not listed please choose other. 
+	</message>
+	
+		<message key="amformas.recruit.ans.sr_N_magn_sw_id.1">ZoomText</message>
+		<message key="amformas.recruit.ans.sr_N_magn_sw_id.2">SuperNova</message>
+		<message key="amformas.recruit.ans.sr_N_magn_sw_id.3">VoiceOver</message>
+		<message key="amformas.recruit.ans.sr_N_magn_sw_id.4">Blindows</message>
+		<message key="amformas.recruit.ans.sr_N_magn_sw_id.5">Virgo</message>
+		<message key="amformas.recruit.ans.sr_N_magn_sw_id.6">MAGic with speech</message>
+		<message key="amformas.recruit.ans.sr_N_magn_sw_id.7">Orca</message>
+		<message key="amformas.recruit.ans.sr_N_magn_sw_id.8">Gnopernicus</message>
+
+	<!-- Magnification only software -->
+	<message key="amformas.recruit.q.magn_sw">
+		Please select from the list below which magnification only software
+		you use in your most common profile. If your Magnification Software
+		is not listed please choose other.	
+	</message>
+		<message key="amformas.recruit.ans.magn_sw_id.1">Lunar</message>
+		<message key="amformas.recruit.ans.magn_sw_id.2">MAGic</message>
+		<message key="amformas.recruit.ans.magn_sw_id.3">Biggy</message>
+		<message key="amformas.recruit.ans.magn_sw_id.4">BigShot</message>
+		<message key="amformas.recruit.ans.magn_sw_id.5">Microsoft Magnifier</message>
+ <!-- 
+	<message key="amformas.recruit.q.magn_sw_version">
+		If you know the version of magnification software you use please state below:
+	</message>			
+ -->
+	<!-- Speech and reading support software -->
+	<message key="amformas.recruit.q.speech_N_read_sw">
+		Please select from the list below which speech and reading support software
+		you use in your most common profile. If your Speech and Reading Software
+		is not listed please choose other.		
+	</message>
+		<message key="amformas.recruit.ans.speech_N_read_sw_id.1">BrowseAloud</message>
+		<message key="amformas.recruit.ans.speech_N_read_sw_id.2">ReadPlease</message>
+		<message key="amformas.recruit.ans.speech_N_read_sw_id.3">Kurzweil 3000</message>
+		<message key="amformas.recruit.ans.speech_N_read_sw_id.4">e-Read</message>
+<!-- 
+	<message key="amformas.recruit.q.speech_N_read_version">
+		If you know the version of speech and reading support software you use please state below:
+	</message>			
+ -->
+	<!-- Speech recognition software -->
+	<message key="amformas.recruit.q.speechrec_sw">
+		Please select from the list below which speech recognition software
+		you use in your most common profile. If your Speech Recognition Software
+		is not listed please choose other.	
+	</message>
+		<message key="amformas.recruit.ans.speechrec_sw_id.1">Dragon Naturally Speaking</message>
+		<message key="amformas.recruit.ans.speechrec_sw_id.2">ViaVoice</message>
+		<message key="amformas.recruit.ans.speechrec_sw_id.3">QPointer</message>
+		<message key="amformas.recruit.ans.speechrec_sw_id.4">JawBone</message>
+
+	<!-- Braille displays -->
+	<message key="amformas.recruit.q.braille">
+		Please select from the list below which braille display
+		you use in your most common profile. If your Braille Display
+		is not listed please choose other.			
+	</message>
+		<message key="amformas.recruit.ans.sr_N_braille_id.1">Alva</message>
+		<message key="amformas.recruit.ans.sr_N_braille_id.2">Baum</message>
+		<message key="amformas.recruit.ans.sr_N_braille_id.3">Papenmeier</message>
+		<message key="amformas.recruit.ans.sr_N_braille_id.4">Tieman or Optelec</message>
+		<message key="amformas.recruit.ans.sr_N_braille_id.5">Braille display (unspecified product)</message>
+		<message key="amformas.recruit.ans.sr_N_braille_id.6">Handy Tech Braille display</message>
+		<message key="amformas.recruit.ans.sr_N_braille_id.7">Hedo Braille display</message>
+		<message key="amformas.recruit.ans.sr_N_braille_id.8">Visiobraille Braille display</message>
+		<message key="amformas.recruit.ans.sr_N_braille_id.9">Focus 40 Braille Display</message>
+		<message key="amformas.recruit.ans.sr_N_braille_id.10">Focus 80 Braille Display</message>
+		<message key="amformas.recruit.ans.sr_N_braille_id.11">PAC Mate 20 Portable Braille Display</message>
+		<message key="amformas.recruit.ans.sr_N_braille_id.12">PAC Mate 40 Portable Braille Display</message>
+	<message key="amformas.recruit.q.braille_version">
+		If you know the version of braille displays you use please state below:
+	</message>		
+	
+	<!-- Alternative input devices -->
+	<message key="amformas.recruit.q.alterin">
+		Please select from the list below which alternative input device
+		you use in your most common profile. If your Alternative Input
+		is not listed please choose other.	
+	</message>
+		<message key="amformas.recruit.ans.alterin_id.1">Switch and scanning devices</message>
+		<message key="amformas.recruit.ans.alterin_id.2">Alternative keyboard</message>
+		<message key="amformas.recruit.ans.alterin_id.3">Headmouse/tracking device</message>
+		<message key="amformas.recruit.ans.alterin_id.4">CCTV (undefined product)</message>
+		<message key="amformas.recruit.ans.alterin_id.5">HMC EasyMouse</message>
+		<message key="amformas.recruit.ans.alterin_id.6">Head pointer</message>
+		<message key="amformas.recruit.ans.alterin_id.7">Lucy laser keyboard</message>
+		<message key="amformas.recruit.ans.alterin_id.8">Maltron one-handed keyboard</message>
+
+	<!-- additional AT -->
+		<message key="amformas.recruit.ans.altern_other.1">desktop video magnifier</message>
+		<message key="amformas.recruit.ans.altern_other.2">portable video magnifier</message>
+		<message key="amformas.recruit.ans.altern_other.3">video magnifier that plugs into a television</message>
+		<message key="amformas.recruit.ans.altern_other.4">PC sharing video magnifier</message>
+	<!-- 
+		fieldsets - stettings
+	 -->
+		<message key="amformas.recruit.setting.fs.browser">Browser</message>
+		<message key="amformas.recruit.setting.fs.os">Operating system</message>
+		<message key="amformas.recruit.setting.fs.device">Device</message>
+</catalogue>

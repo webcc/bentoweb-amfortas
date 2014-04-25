@@ -1,0 +1,39 @@
+<content xmlns:ft="http://apache.org/cocoon/forms/1.0#template"
+  xmlns:fi="http://apache.org/cocoon/forms/1.0#instance"
+  xmlns:jx="http://apache.org/cocoon/templates/jx/1.0"
+  xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+  
+  <jx:import uri="resource://org/apache/cocoon/forms/generation/jx-macros.xml"/>
+   
+    <h1><i18n:text catalogue="site" key="amformas.login.title"/></h1>
+        <div class="errormsg">
+        ${errormsg}
+    	<i18n:text key="${errormsg}"/>
+    </div>
+    
+    <i18n:text catalogue="site" key="amformas.login.text1"/>   
+    
+	<!-- <ft:form-template action="#{$continuation/id}.cont" method="POST" > -->
+	<ft:form-template action="authenticate" method="POST" >
+	<fieldset>
+		<legend><i18n:text catalogue="site" key="amformas.login.title"/></legend>
+		<fi:group>
+        	<fi:items>
+		        	<ft:widget id="email"/>
+		        	<ft:widget id="password">
+		        		<fi:styling type="password"/>
+		        	</ft:widget>
+        	</fi:items>
+      	</fi:group>
+      	<fi:group>
+        	<fi:styling layout="rows"/> 
+        	<fi:items>
+        		<ft:widget id="thesubmit"/>
+			</fi:items>	
+		</fi:group>
+		<p><a href="forgotpass.go"><i18n:text catalogue="site" key="amformas.forms.forgotpass.link"/></a></p>
+	</fieldset>
+    </ft:form-template>
+		<i18n:text catalogue="site" key="amformas.login.text2"/>  	
+ </content> 
+  

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+    <class name="org.bentoweb.amfortas.hibernate.om.TestProfile" table="test_profile" catalog="amfortas">
+        <id name="testProfileId" type="integer">
+            <column name="test_profile_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="user" class="org.bentoweb.amfortas.hibernate.om.User" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userUsesOs" class="org.bentoweb.amfortas.hibernate.om.UserUsesOs" fetch="select">
+            <column name="user_uses_os_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userUsesDevice" class="org.bentoweb.amfortas.hibernate.om.UserUsesDevice" fetch="select">
+            <column name="user_uses_device_id" not-null="true" />
+        </many-to-one>
+        <property name="isActive" type="boolean">
+            <column name="is_active" />
+        </property>
+        <property name="dateCreation" type="timestamp">
+            <column name="date_creation" length="19" />
+        </property>
+        <property name="lastLogin" type="timestamp">
+            <column name="last_login" length="19" />
+        </property>
+        <set name="userUsesUserAgents" inverse="true">
+            <key>
+                <column name="test_profile_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserUsesUserAgent" />
+        </set>
+        <set name="userUsesAssistiveTechnologies" inverse="true">
+            <key>
+                <column name="test_profile_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.UserUsesAssistiveTechnology" />
+        </set>
+        <set name="testcaseSets" inverse="true">
+            <key>
+                <column name="test_profile_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.TestcaseSet" />
+        </set>
+        <set name="testresults" inverse="true">
+            <key>
+                <column name="test_profile_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.Testresult" />
+        </set>
+        <set name="testProfileHasTestSuites" inverse="true">
+            <key>
+                <column name="test_profile_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.TestProfileHasTestSuite" />
+        </set>
+        <set name="testProfileHasUserProfiles" inverse="true">
+            <key>
+                <column name="test_profile_id" not-null="true" />
+            </key>
+            <one-to-many class="org.bentoweb.amfortas.hibernate.om.TestProfileHasUserProfile" />
+        </set>
+    </class>
+</hibernate-mapping>
