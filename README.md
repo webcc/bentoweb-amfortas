@@ -10,6 +10,11 @@ The user testing framework to analyse the developed Test Suites has two major co
 + Apache HTTP Server
 + TCDL
 
+## Config
+### Database Config
++ Open WebContent\WEB-INF\cocoon.xconf
++ Look for  jdbc name="amfortas" and edit info
+
 ## Run
 Visit : http://localhost:8080/Amfortas/amfortas/home.html
 
