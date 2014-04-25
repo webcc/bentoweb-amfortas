@@ -10,13 +10,13 @@ The user testing framework to analyse the developed Test Suites has two major co
 + Apache HTTP Server
 + TCDL
 
-## Config
-### Database Config
+## Config and Run
++ Build webapp (eclipse recommended)
++ Deploy to container (tomcat 7 recommended)
 + Open WebContent\WEB-INF\cocoon.xconf
-+ Look for  jdbc name="amfortas" and edit info
-
-## Run
-Visit : http://localhost:8080/Amfortas/amfortas/home.html
++ Look for  jdbc name="amfortas" and edit DB info
++ Look for smtp-host, edit if required
++ Open Browser: http://localhost:8080/Amfortas/amfortas/home.html
 
 
 
