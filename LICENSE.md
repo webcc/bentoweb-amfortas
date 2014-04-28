@@ -1,6 +1,6 @@
 # BenToWeb Public License
 
-Copyright � 2004-2007 BenToWeb Consortium:
+Copyright © 2004-2007 BenToWeb Consortium:
 
 + Fraunhofer-Gesellschaft - Fraunhofer Institute for Applied Information Technology FIT (Germany)
 + Katholieke Universiteit Leuven Research & Development (Belgium)
