@@ -7,7 +7,7 @@ Copyright © 2004-2007 BenToWeb Consortium:
 + University of the Aegean (Greece)
 + University of York (United Kingdom)
 + University of Linz (Austria)
-+ Stichting Bartimeus Accessibility (The Netherlands)
++ Stichting Bartiméus Accessibility (The Netherlands)
 + ISdAC International Association (Belgium)
 + FernUniversität in Hagen (Germany)
 
