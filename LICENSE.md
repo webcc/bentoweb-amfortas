@@ -1,15 +1,15 @@
-# BenToWeb Public License, Version 1.0 - BenToWeb Consortium
+# BenToWeb Public License
 
-Copyright © 2004-2007 BenToWeb Consortium:
+Copyright ï¿½ 2004-2007 BenToWeb Consortium:
 
 + Fraunhofer-Gesellschaft - Fraunhofer Institute for Applied Information Technology FIT (Germany)
 + Katholieke Universiteit Leuven Research & Development (Belgium)
 + University of the Aegean (Greece)
 + University of York (United Kingdom)
 + University of Linz (Austria)
-+ Stichting Bartiméus Accessibility (The Netherlands)
++ Stichting Bartimeus Accessibility (The Netherlands)
 + ISdAC International Association (Belgium)
-+ FernUniversität in Hagen (Germany)
++ FernUniversitÃ¤t in Hagen (Germany)
 
 BenToWeb was a research project partly financed by the Information Society
 Technologies Programme of the European Commission of the Sixth Framework
